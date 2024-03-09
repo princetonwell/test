@@ -17,6 +17,7 @@
 :root {
 
   /**
+
    * colors
    */
 
@@ -897,9 +898,20 @@ color:orange;
   opacity: 1;
 }
 
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
 
+/**
+ * responsive for smaller than 575px screen
+ */
 
-
+/* 当视口宽度最多为575px时隐藏按钮 */
+@media (max-width: 768px) {
+  .glide__arrows {
+    display: none;
+  }
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
@@ -910,7 +922,6 @@ color:orange;
  */
 
 @media (min-width: 575px) {
-
   /**
    * CUSTOM PROPERTY
    */
@@ -922,7 +933,6 @@ color:orange;
      */
 
     --fs-1: 4.2rem;
-
   }
 
 
@@ -964,7 +974,6 @@ color:orange;
  */
 
 @media (min-width: 768px) {
-
   /**
    * CUSTOM PROPERTY
    */
@@ -1291,7 +1300,6 @@ color:orange;
  */
 
 @media (min-width: 1200px) {
-
   /**
    * CUSTOM PROPERTY
    */
