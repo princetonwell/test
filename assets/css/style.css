@@ -709,6 +709,21 @@ color:orange;
   #BLOG
 \*-----------------------------------*/
 
+/* 添加到你的 CSS 文件中 */
+.blog-content h2,
+.blog-content h3 {
+  margin-bottom: 1.5rem; /* 或者 24px，根据需要调整 */
+}
+
+.blog-content p {
+  margin-bottom: 1.25rem; /* 或者 20px，根据实际视觉效果微调 */
+}
+
+.blog-content figure {
+  margin-bottom: 1.5rem;
+}
+
+
 .blog .section-title { margin-block-end: 50px; }
 
 .blog-list {
