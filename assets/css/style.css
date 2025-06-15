@@ -709,6 +709,36 @@ color:orange;
   #BLOG
 \*-----------------------------------*/
 
+.blog-image {
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto 2em;         /* ✅ 居中 + 下方间距 */
+  max-width: 720px;            /* ✅ 控制最大宽度 */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.blog-image img {
+  width: 100%;
+  display: block;
+  border-radius: inherit;
+}
+
+
+.blog-image figcaption,
+.image-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 8px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
 /* 添加到你的 CSS 文件中 */
 .blog-content h2,
 .blog-content h3 {
