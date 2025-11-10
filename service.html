@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Our Services | Massage Therapy & Acupuncture in Richmond Hill | Princeton Wellness Centre</title>
+
+  <meta name="description" content="Discover our comprehensive wellness services including Registered Massage Therapy, Acupuncture, Osteopathic Manual Practice, Hot Stone Massage, Tuina, and Ear Candling at Princeton Wellness Centre in Richmond Hill, Toronto.">
+
+  <meta name="geo.region" content="CA-ON" />
+  <meta name="geo.placename" content="Richmond Hill" />
+
+  <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --light-steel-blue: hsl(218, 33%, 77%);
+      --green: #0d883d;
+      --light-green: #10dc60;
+      --orange-1: #f4a942;
+      --orange-2: #c67200;
+      --orange-3: #d38315;
+      --sonic-silver: hsl(0, 0%, 47%);
+      --light-gray: hsl(0, 0%, 84%);
+      --cultured: hsl(0, 0%, 97%);
+      --white: hsl(0, 0%, 100%);
+      --black: hsl(0, 0%, 0%);
+      --jet: hsl(0, 0%, 20%);
+      --primaryColor: #f1f1f1;
+      --black2: #555;
+      --grey: #959595;
+      --grey2: #666;
+      --grey3: #ccc;
+
+      --gradient: linear-gradient(90deg, var(--light-green) 0%, var(--green) 100%);
+
+      --ff-roboto: "Roboto", sans-serif;
+      --ff-poppins: "Poppins", sans-serif;
+
+      --fs-1: 4rem;
+      --fs-2: 3.6rem;
+      --fs-3: 3.2rem;
+      --fs-4: 2.4rem;
+      --fs-5: 2.2rem;
+      --fs-6: 1.8rem;
+      --fs-7: 1.6rem;
+
+      --fw-800: 800;
+      --fw-700: 700;
+      --fw-600: 600;
+      --fw-500: 500;
+
+      --section-padding: 120px;
+
+      --shadow-1: 4px 4px 15px rgba(0, 0, 0, 0.1);
+      --shadow-2: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --shadow-3: 0px 20px 60px rgba(0, 0, 0, 0.08);
+      --shadow-4: 0px 10px 30px hsla(225, 68%, 53%, 0.3);
+
+      --radius-6: 6px;
+      --radius-4: 4px;
+      --radius-20: 20px;
+
+      --transition: 0.25s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--ff-roboto);
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: var(--black);
+      overflow-x: hidden;
+    }
+
+    html {
+      font-size: 10px;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 25px;
+    }
+
+    .section {
+      padding: var(--section-padding) 0;
+    }
+
+    /* Header Styles */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      box-shadow: var(--shadow-2);
+      z-index: 1000;
+    }
+
+    .header-top {
+      background: var(--orange-1);
+      color: var(--white);
+      padding: 15px 0;
+      font-size: 1.4rem;
+    }
+
+    .header-top .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact-list {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-link {
+      color: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-link:hover {
+      color: var(--light-green);
+    }
+
+    .social-list {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .social-link {
+      color: var(--white);
+      font-size: 1.8rem;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      color: var(--light-green);
+    }
+
+    .header-bottom {
+      padding: 20px 0;
+    }
+
+    .header-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--ff-poppins);
+      font-size: 2.4rem;
+      font-weight: var(--fw-800);
+      color: var(--orange-1);
+      text-decoration: none;
+    }
+
+    .navbar {
+      display: flex;
+    }
+
+    .navbar-list {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .navbar-link {
+      color: var(--orange-1);
+      font-family: var(--ff-poppins);
+      font-weight: var(--fw-600);
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: var(--transition);
+    }
+
+    .navbar-link:hover,
+    .navbar-link.active {
+      color: var(--green);
+    }
+
+    .btn {
+      background: var(--gradient);
+      color: var(--white);
+      padding: 15px 25px;
+      border: none;
+      border-radius: var(--radius-4);
+      font-weight: var(--fw-600);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-4);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--orange-1) 0%, var(--orange-2) 100%);
+      color: var(--white);
+      padding: 150px 0 100px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-1);
+      font-weight: var(--fw-800);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: var(--fs-6);
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-top: 80px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-20);
+      overflow: hidden;
+      box-shadow: var(--shadow-3);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--gradient);
+    }
+
+    .service-image {
+      position: relative;
+      height: 250px;
+      background: var(--cultured);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .service-image img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.1);
+    }
+
+    .service-content {
+      padding: 30px;
+    }
+
+    .service-title {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-4);
+      color: var(--orange-2);
+      margin-bottom: 15px;
+      font-weight: var(--fw-700);
+    }
+
+    .service-description {
+      color: var(--grey2);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: var(--jet);
+      font-size: 1.5rem;
+    }
+
+    .service-features li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: bold;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--light-gray);
+      padding-top: 20px;
+    }
+
+    .price-info {
+      font-family: var(--ff-poppins);
+      font-weight: var(--fw-600);
+      color: var(--orange-2);
+    }
+
+    .book-btn {
+      background: var(--gradient);
+      color: var(--white);
+      border: none;
+      padding: 12px 20px;
+      border-radius: var(--radius-4);
+      font-weight: var(--fw-600);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .book-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-4);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--orange-1);
+      color: var(--white);
+      text-align: center;
+      padding: 80px 0;
+      margin-top: 80px;
+    }
+
+    .cta-section h2 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-2);
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: var(--fs-6);
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      background: var(--white);
+      color: var(--orange-1);
+      padding: 18px 35px;
+      font-size: var(--fs-6);
+      font-weight: var(--fw-700);
+      border-radius: var(--radius-4);
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mobile Navigation */
+    .nav-toggle-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--orange-1);
+      color: var(--orange-1);
+      font-size: 2rem;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    /*-----------------------------------*\
+      #FOOTER - Updated to match index.html
+    \*-----------------------------------*/
+
+    .footer-top {
+      background-color: var(--orange-2);
+      color: var(--white);
+      padding: 60px 0;
+    }
+
+    .footer-top .container {
+      display: grid;
+      gap: 40px;
+    }
+
+    .footer-brand .logo { 
+      color: var(--white);
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .footer-text {
+      color: var(--white);
+      line-height: 1.8;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    .schedule {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: var(--radius-6);
+    }
+
+    .schedule-icon {
+      background-image: var(--gradient);
+      color: var(--white);
+      font-size: 22px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .schedule .span {
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    .footer-list-title {
+      color: var(--white);
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-5);
+      font-weight: var(--fw-700);
+      margin-bottom: 20px;
+    }
+
+    .footer-list {
+      list-style: none;
+    }
+
+    .footer-link {
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      transition: var(--transition);
+      opacity: 0.85;
+    }
+
+    .footer-link ion-icon {
+      color: var(--light-green);
+      font-size: 16px;
+    }
+
+    .footer-link:hover {
+      opacity: 1;
+      padding-left: 5px;
+    }
+
+    .footer-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .footer-item .item-icon {
+      background-image: var(--gradient);
+      color: var(--white);
+      font-size: 20px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .footer-item .item-text,
+    .footer-item a {
+      color: var(--white);
+      line-height: 1.6;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-item a:hover {
+      color: var(--light-green);
+    }
+
+    .footer-bottom {
+      background-color: var(--orange-3);
+      padding: 30px 0;
+    }
+
+    .footer-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .copyright {
+      color: var(--white);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .copyright a {
+      color: var(--white);
+      text-decoration: underline;
+      transition: var(--transition);
+    }
+
+    .copyright a:hover {
+      color: var(--light-green);
+    }
+
+    .footer .social-list {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer .social-link {
+      padding: 12px;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: var(--white);
+      font-size: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      transition: var(--transition);
+    }
+
+    .footer .social-link:hover {
+      background-image: var(--gradient);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-top {
+        display: none;
+      }
+
+      .header-bottom .btn {
+        display: none;
+      }
+
+      .nav-toggle-btn {
+        display: block;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: var(--shadow-2);
+        max-height: 0;
+        overflow: hidden;
+        transition: var(--transition);
+      }
+
+      .navbar.active {
+        max-height: 300px;
+        top: 80px;
+      }
+
+      .navbar-list {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 140px 0 80px;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero p {
+        font-size: 1.7rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 50px;
+        padding: 0 5px;
+      }
+
+      .service-card {
+        margin: 0 10px;
+      }
+
+      .service-content {
+        padding: 30px 25px 25px;
+      }
+
+      .service-title {
+        font-size: 2.2rem;
+      }
+
+      .cta-section {
+        padding: 70px 0;
+        margin-top: 70px;
+      }
+
+      .cta-section h2 {
+        font-size: 3rem;
+      }
+
+      .cta-section p {
+        font-size: 1.6rem;
+      }
+
+      .footer-top .container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 575px) {
+      .footer-top .container { 
+        grid-template-columns: 1fr 1fr; 
+      }
+    }
+
+    @media (min-width: 992px) {
+      .footer-top .container { 
+        grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr; 
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+      }
+
+      .service-content {
+        padding: 25px 20px 20px;
+      }
+
+      .service-title {
+        font-size: 2rem;
+      }
+
+      .service-price {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+      }
+
+      .book-btn {
+        width: 100%;
+      }
+
+      .cta-section h2 {
+        font-size: 2.5rem;
+      }
+
+      .cta-btn {
+        padding: 16px 32px;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <ul class="contact-list">
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:info@princetonwellness.ca" class="contact-link">info@princetonwellness.ca</a>
+          </li>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
+          </li>
+        </ul>
+
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <a href="index.html" class="logo">Princeton Wellness Centre</a>
+        
+        <nav class="navbar" id="navbar">
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="#" class="navbar-link active">Services</a></li>
+            <li><a href="index.htmlabout.html" class="navbar-link">About Us</a></li>
+            <li><a href="blog1.html" class="navbar-link">Blog</a></li>
+            <li><a href="contact.html" class="navbar-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn">Book Appointment</a>
+        
+        <button class="nav-toggle-btn" id="nav-toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Our Wellness Services</h1>
+      <p>Experience the perfect blend of traditional Chinese healing methods and modern Western techniques. Our certified practitioners are dedicated to your health and wellness journey.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section">
+    <div class="container">
+      <div class="services-grid">
+        
+        <!-- Registered Massage Therapy -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="./assets/images/icon/registered_massage_therapy_icon.webp" alt="Registered Massage Therapy" width="120" height="120">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Registered Massage Therapy</h3>
+            <p class="service-description">
+              Professional therapeutic massage by certified practitioners for comprehensive wellness. Our registered massage therapists use evidence-based techniques to address your specific health concerns and promote overall well-being.
+            </p>
+            <ul class="service-features">
+              <li>Deep tissue massage</li>
+              <li>Swedish massage techniques</li>
+              <li>Injury rehabilitation</li>
+              <li>Stress and tension relief</li>
+              <li>Insurance coverage available</li>
+            </ul>
+            <div class="service-price">
+              <div class="price-info">From $90 - 60 min</div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registered Acupuncturist -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="./assets/images/icon/registered_acupuncturist_icon.webp" alt="Registered Acupuncturist" width="120" height="120">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Registered Acupuncturist</h3>
+            <p class="service-description">
+              Licensed acupuncture expert providing traditional Chinese medicine for pain relief, healing, and holistic health care. Our treatments help restore energy balance and promote natural healing.
+            </p>
+            <ul class="service-features">
+              <li>Traditional needle acupuncture</li>
+              <li>Electroacupuncture</li>
+              <li>Cupping therapy</li>
+              <li>Moxibustion treatment</li>
+              <li>Chronic pain management</li>
+            </ul>
+            <div class="service-price">
+              <div class="price-info">From $85 - 60 min</div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Osteopathic Manual Practitioner -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="./assets/images/icon/osteopathic_manual_practitioner_icon.webp" alt="Osteopathic Manual Practitioner" width="120" height="120">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Osteopathic Manual Practitioner</h3>
+            <p class="service-description">
+              Expert hands-on body manipulation techniques for comprehensive pain relief and wellness. Our osteopathic approach focuses on treating the whole person, not just symptoms.
+            </p>
+            <ul class="service-features">
+              <li>Structural assessment</li>
+              <li>Joint mobilization</li>
+              <li>Soft tissue manipulation</li>
+              <li>Postural correction</li>
+              <li>Movement restoration</li>
+            </ul>
+            <div class="service-price">
+              <div class="price-info">From $95 - 60 min</div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hot Stone Massage -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="./assets/images/icon/hot_stone_massage_icon.webp" alt="Hot Stone Massage" width="120" height="120">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Hot Stone Massage</h3>
+            <p class="service-description">
+              Luxurious warm stone therapy for ultimate relaxation and deep muscle tension relief. The heated stones help improve circulation and melt away stress and tension.
+            </p>
+            <ul class="service-features">
+              <li>Heated basalt stones</li>
+              <li>Deep muscle relaxation</li>
+              <li>Improved circulation</li>
+              <li>Stress reduction</li>
+              <li>Ultimate relaxation experience</li>
+            </ul>
+            <div class="service-price">
+              <div class="price-info">From $110 - 60 min</div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tuina -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="./assets/images/icon/tuina_icon.webp" alt="Tuina Massage" width="120" height="120">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Tuina</h3>
+            <p class="service-description">
+              Traditional Chinese therapeutic massage focusing on energy balance and muscle pain relief. This ancient technique uses specific hand movements to stimulate acupoints and meridians.
+            </p>
+            <ul class="service-features">
+              <li>Traditional Chinese techniques</li>
+              <li>Energy meridian balancing</li>
+              <li>Acupoint stimulation</li>
+              <li>Muscle tension relief</li>
+              <li>Improved qi circulation</li>
+            </ul>
+            <div class="service-price">
+              <div class="price-info">From $80 - 60 min</div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ear Candling -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="./assets/images/icon/ear_candling_icon.webp" alt="Ear Candling" width="120" height="120">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Ear Candling</h3>
+            <p class="service-description">
+              Gentle alternative therapy using specially designed candles to promote ear health and general well-being. This relaxing treatment helps create a sense of balance and tranquility.
+            </p>
+            <ul class="service-features">
+              <li>Natural ear cleansing</li>
+              <li>Relaxation therapy</li>
+              <li>Sinus pressure relief</li>
+              <li>Stress reduction</li>
+              <li>Gentle, non-invasive</li>
+            </ul>
+            <div class="service-price">
+              <div class="price-info">From $60 - 45 min</div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Begin Your Wellness Journey?</h2>
+      <p>Book your appointment today and experience the healing power of our integrated wellness approach.</p>
+      <a href="#" class="cta-btn">Schedule Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Princeton Wellness Centre.</a>
+
+          <p class="footer-text">
+            We provide you with the best massage and acupuncture services combining traditional Chineses and Western techniques.
+          </p>
+
+          <div class="schedule">
+            <div class="schedule-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+
+            <span class="span">
+              Monday - Sunday:<br>
+              8:00AM - 10:00PM
+            </span>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Other Links</p>
+          </li>
+
+          <li>
+            <a href="index.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="index.htmlabout.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Services</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="index.htmlabout.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Our Team</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="blog1.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Latest Blog</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#shop" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Shop</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Massage</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Osteopathy</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Tuina</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Acupuncture</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Hot Stone</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Ear Candling</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="item-text">
+              <a href="https://www.google.com/maps/dir//11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2" 
+              target="_blank" rel="noopener noreferrer">
+              11 Princeton Ave<br>Richmond Hill, ON L4S 2E2</a>
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+14168718855" class="footer-link">416-871-8855</a>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:info@princetonwellness.ca" class="footer-link">info@princetonwellness.ca</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2025 Princeton Wellness Centre. Powered by <a href="https://www.plansale.ca" target="_blank">Plansale</a>
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navbar = document.getElementById('navbar');
+
+    navToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+
+    // Close navigation when clicking on links
+    const navLinks = document.querySelectorAll('.navbar-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+      });
+    });
+
+    // Book Now button functionality
+    const bookButtons = document.querySelectorAll('.book-btn');
+    bookButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Booking system will be implemented. Please call 416-871-8855 to book your appointment.');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+      } else {
+        header.style.background = 'var(--white)';
+        header.style.backdropFilter = 'none';
+      }
+    });
+  </script>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+      

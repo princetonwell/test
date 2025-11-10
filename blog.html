@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness Blog | Princeton Wellness Centre</title>
+    <meta name="description" content="Discover expert insights on massage therapy, acupuncture, and holistic wellness. Read our latest blog posts from Princeton Wellness Centre's healthcare professionals.">
+    <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --light-steel-blue: hsl(218, 33%, 77%);
+            --green: #0d883d;
+            --light-green: #10dc60;
+            --orange-1: #f4a942;
+            --orange-2: #c67200;
+            --orange-3: #d38315;
+            --sonic-silver: hsl(0, 0%, 47%);
+            --light-gray: hsl(0, 0%, 84%);
+            --cultured: hsl(0, 0%, 97%);
+            --white: hsl(0, 0%, 100%);
+            --black: hsl(0, 0%, 0%);
+            --jet: hsl(0, 0%, 20%);
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --border-gray: #e9ecef;
+
+            --gradient: linear-gradient(90deg, var(--light-green) 0%, var(--green) 100%);
+
+            --ff-roboto: "Roboto", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+
+            --fs-1: 4rem;
+            --fs-2: 3.6rem;
+            --fs-3: 3.2rem;
+            --fs-4: 2.4rem;
+            --fs-5: 2.2rem;
+            --fs-6: 1.8rem;
+            --fs-7: 1.6rem;
+
+            --fw-800: 800;
+            --fw-700: 700;
+            --fw-600: 600;
+            --fw-500: 500;
+
+            --section-padding: 120px;
+
+            --shadow-1: 4px 4px 15px rgba(0, 0, 0, 0.1);
+            --shadow-2: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-3: 0px 20px 60px rgba(0, 0, 0, 0.08);
+            --shadow-4: 0px 10px 30px hsla(225, 68%, 53%, 0.3);
+
+            --radius-6: 6px;
+            --radius-4: 4px;
+            --radius-20: 20px;
+
+            --transition: 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--ff-roboto);
+            font-size: 1.6rem;
+            line-height: 1.6;
+            color: var(--black);
+            background-color: var(--cultured);
+            overflow-x: hidden;
+        }
+
+        html {
+            font-size: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .section {
+            padding: var(--section-padding) 0;
+        }
+
+        /* Header Styles - Matching service.html */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: var(--shadow-2);
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: var(--orange-1);
+            color: var(--white);
+            padding: 15px 0;
+            font-size: 1.4rem;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-list {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-link {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--light-green);
+        }
+
+        .social-list {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .social-link {
+            color: var(--white);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--light-green);
+        }
+
+        .header-bottom {
+            padding: 20px 0;
+        }
+
+        .header-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--ff-poppins);
+            font-size: 2.4rem;
+            font-weight: var(--fw-800);
+            color: var(--orange-1);
+            text-decoration: none;
+        }
+
+        .navbar {
+            display: flex;
+        }
+
+        .navbar-list {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .navbar-link {
+            color: var(--orange-1);
+            font-family: var(--ff-poppins);
+            font-weight: var(--fw-600);
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: var(--transition);
+        }
+
+        .navbar-link:hover,
+        .navbar-link.active {
+            color: var(--green);
+        }
+
+        .btn {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 15px 25px;
+            border: none;
+            border-radius: var(--radius-4);
+            font-weight: var(--fw-600);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-4);
+        }
+
+        .nav-toggle-btn {
+            display: none;
+            background: none;
+            border: 1px solid var(--orange-1);
+            color: var(--orange-1);
+            font-size: 2rem;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(135deg, var(--orange-1) 0%, var(--orange-2) 100%);
+            color: var(--white);
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-family: var(--ff-poppins);
+            font-size: var(--fs-1);
+            font-weight: var(--fw-800);
+            margin-bottom: 20px;
+        }
+
+        .blog-header p {
+            font-size: var(--fs-6);
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: var(--white);
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-gray);
+            position: sticky;
+            top: 100px;
+            z-index: 100;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tag {
+            padding: 0.8rem 2rem;
+            background: var(--cultured);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: var(--fw-600);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
+
+        .filter-tag:hover,
+        .filter-tag.active {
+            background: var(--gradient);
+            color: var(--white);
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 0.8rem 1.5rem 0.8rem 3rem;
+            border: 2px solid var(--border-gray);
+            border-radius: 25px;
+            width: 300px;
+            font-size: 1.4rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--light-green);
+        }
+
+        .search-box::before {
+            content: "🔍";
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.6rem;
+        }
+
+        /* Blog Grid */
+        .blog-grid-section {
+            padding: 60px 0;
+            background: var(--cultured);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius-20);
+            overflow: hidden;
+            box-shadow: var(--shadow-3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-card-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-category {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-weight: var(--fw-600);
+        }
+
+        .blog-card-content {
+            padding: 25px;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            color: var(--text-light);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-card-title {
+            font-family: var(--ff-poppins);
+            font-size: 2rem;
+            font-weight: var(--fw-700);
+            color: var(--orange-2);
+            margin-bottom: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .blog-card-excerpt {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.5rem;
+        }
+
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--light-green);
+            font-weight: var(--fw-600);
+            text-decoration: none;
+            transition: gap 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .read-more-btn:hover {
+            gap: 1rem;
+            color: var(--green);
+        }
+
+        /* Featured Post */
+        .featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--white);
+            border-radius: var(--radius-20);
+            overflow: hidden;
+            box-shadow: var(--shadow-3);
+            margin-bottom: 20px;
+        }
+
+        .featured-post-image {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .featured-post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-post-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 20px;
+            font-size: 1.3rem;
+            font-weight: var(--fw-600);
+            margin-bottom: 2rem;
+            width: fit-content;
+        }
+
+        .featured-post-title {
+            font-family: var(--ff-poppins);
+            font-size: 3rem;
+            font-weight: var(--fw-700);
+            color: var(--orange-2);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .featured-post-excerpt {
+            font-size: 1.6rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: var(--orange-1);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .newsletter-content h2 {
+            font-family: var(--ff-poppins);
+            font-size: var(--fs-2);
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-content p {
+            font-size: var(--fs-6);
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.5rem;
+        }
+
+        .newsletter-form button {
+            padding: 1.5rem 3rem;
+            background: var(--white);
+            color: var(--orange-1);
+            border: none;
+            border-radius: 50px;
+            font-weight: var(--fw-700);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--orange-2);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 60px;
+        }
+
+        .page-btn {
+            padding: 1.2rem 2rem;
+            background: var(--white);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: var(--radius-6);
+            border: 2px solid var(--border-gray);
+            transition: all 0.3s ease;
+            font-weight: var(--fw-600);
+            font-size: 1.4rem;
+        }
+
+        .page-btn:hover,
+        .page-btn.active {
+            background: var(--gradient);
+            color: var(--white);
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        /* Footer Styles - Matching service.html */
+        .footer-top {
+            background-color: var(--orange-2);
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .footer-top .container {
+            display: grid;
+            gap: 40px;
+        }
+
+        .footer-brand .logo { 
+            color: var(--white);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .footer-text {
+            color: var(--white);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .schedule {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: var(--radius-6);
+        }
+
+        .schedule-icon {
+            background-image: var(--gradient);
+            color: var(--white);
+            font-size: 22px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .schedule .span {
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .footer-list-title {
+            color: var(--white);
+            font-family: var(--ff-poppins);
+            font-size: var(--fs-5);
+            font-weight: var(--fw-700);
+            margin-bottom: 20px;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-link {
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0;
+            transition: var(--transition);
+            opacity: 0.85;
+        }
+
+        .footer-link ion-icon {
+            color: var(--light-green);
+            font-size: 16px;
+        }
+
+        .footer-link:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-item .item-icon {
+            background-image: var(--gradient);
+            color: var(--white);
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .footer-item .item-text,
+        .footer-item a {
+            color: var(--white);
+            line-height: 1.6;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-item a:hover {
+            color: var(--light-green);
+        }
+
+        .footer-bottom {
+            background-color: var(--orange-3);
+            padding: 30px 0;
+        }
+
+        .footer-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: var(--white);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .copyright a {
+            color: var(--white);
+            text-decoration: underline;
+            transition: var(--transition);
+        }
+
+        .copyright a:hover {
+            color: var(--light-green);
+        }
+
+        .footer .social-list {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer .social-link {
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            font-size: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            transition: var(--transition);
+        }
+
+        .footer .social-link:hover {
+            background-image: var(--gradient);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+
+            .header-bottom .btn {
+                display: none;
+            }
+
+            .nav-toggle-btn {
+                display: block;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: var(--shadow-2);
+                max-height: 0;
+                overflow: hidden;
+                transition: var(--transition);
+            }
+
+            .navbar.active {
+                max-height: 300px;
+                top: 80px;
+            }
+
+            .navbar-list {
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .blog-header {
+                padding: 140px 0 80px;
+            }
+
+            .blog-header h1 {
+                font-size: 3.5rem;
+            }
+
+            .filter-section {
+                position: static;
+            }
+
+            .filter-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-post-image {
+                height: 250px;
+            }
+
+            .featured-post-content {
+                padding: 30px 25px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-top .container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom .container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 575px) {
+            .footer-top .container { 
+                grid-template-columns: 1fr 1fr; 
+            }
+        }
+
+        @media (min-width: 992px) {
+            .footer-top .container { 
+                grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-header h1 {
+                font-size: 2.8rem;
+            }
+
+            .featured-post-title {
+                font-size: 2.2rem;
+            }
+
+            .blog-card-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <a href="mailto:info@princetonwellness.ca" class="contact-link">info@princetonwellness.ca</a>
+                    </li>
+                    <li class="contact-item">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
+                    </li>
+                </ul>
+
+                <ul class="social-list">
+                    <li>
+                        <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <a href="index.html" class="logo">Princeton Wellness Centre</a>
+                
+                <nav class="navbar" id="navbar">
+                    <ul class="navbar-list">
+                        <li><a href="index.html" class="navbar-link">Home</a></li>
+                        <li><a href="service.html" class="navbar-link">Services</a></li>
+                        <li><a href="index.htmlabout.html" class="navbar-link">About Us</a></li>
+                        <li><a href="blog.html" class="navbar-link active">Blog</a></li>
+                        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="btn">Book Appointment</a>
+                
+                <button class="nav-toggle-btn" id="nav-toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <h1>Health & Wellness Blog</h1>
+            <p>Expert insights on massage therapy, acupuncture, and holistic wellness from our certified professionals</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-tags">
+                    <a href="#" class="filter-tag active" data-category="all">All Posts</a>
+                    <a href="#" class="filter-tag" data-category="massage">Massage Therapy</a>
+                    <a href="#" class="filter-tag" data-category="acupuncture">Acupuncture</a>
+                    <a href="#" class="filter-tag" data-category="lifestyle">Healthy Lifestyle</a>
+                    <a href="#" class="filter-tag" data-category="wellness">Wellness Tips</a>
+                    <a href="#" class="filter-tag" data-category="nutrition">Nutrition</a>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search articles..." id="searchInput">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid" id="blogGrid">
+                <!-- Featured Post -->
+                <article class="featured-post" data-category="lifestyle">
+                    <div class="featured-post-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Why Sitting Is the New Smoking">
+                    </div>
+                    <div class="featured-post-content">
+                        <span class="featured-badge">Featured Post</span>
+                        <h2 class="featured-post-title">Why Sitting Is the New Smoking</h2>
+                        <p class="featured-post-excerpt">Discover the hidden dangers of prolonged sitting and learn practical strategies to combat the risks of a sedentary lifestyle with our holistic wellness approaches.</p>
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 24, 2024</span>
+                            <span class="meta-item">⏱️ 8 min read</span>
+                            <span class="meta-item">👤 Wellness Team</span>
+                        </div>
+                        <a href="blog1.html" class="read-more-btn">Read Full Article →</a>
+                    </div>
+                </article>
+
+                <!-- Regular Blog Cards -->
+                <article class="blog-card" data-category="acupuncture">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="The Science Behind Acupuncture">
+                        <span class="blog-category">Acupuncture</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 20, 2024</span>
+                            <span class="meta-item">⏱️ 6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">The Science Behind Acupuncture: How It Really Works</h3>
+                        <p class="blog-card-excerpt">Explore the fascinating mechanisms behind acupuncture and understand how this ancient practice provides real, measurable health benefits backed by modern research.</p>
+                        <a href="blog2.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="massage">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cupping Therapy for Athletes">
+                        <span class="blog-category">Therapy</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 18, 2024</span>
+                            <span class="meta-item">⏱️ 5 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Cupping Therapy: Ancient Healing for Modern Athletes</h3>
+                        <p class="blog-card-excerpt">Discover why professional athletes worldwide are turning to cupping therapy for faster recovery, improved performance, and natural pain relief.</p>
+                        <a href="blog3.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="wellness">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Desk Stretches">
+                        <span class="blog-category">Wellness</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 15, 2024</span>
+                            <span class="meta-item">⏱️ 4 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">5 Desk Stretches to Combat Office Syndrome</h3>
+                        <p class="blog-card-excerpt">Simple yet effective stretches you can do right at your desk to prevent muscle tension, improve posture, and boost energy throughout your workday.</p>
+                        <a href="blog4.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="massage">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Benefits of Regular Massage">
+                        <span class="blog-category">Massage</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 12, 2024</span>
+                            <span class="meta-item">⏱️ 7 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">The Benefits of Regular Massage Therapy</h3>
+                        <p class="blog-card-excerpt">Learn how incorporating regular massage therapy into your wellness routine can transform your physical health, mental well-being, and overall quality of life.</p>
+                        <a href="blog5.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="wellness">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68e71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hot Stone Massage Benefits">
+                        <span class="blog-category">Therapy</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 10, 2024</span>
+                            <span class="meta-item">⏱️ 6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Hot Stone Massage: Deep Relaxation Meets Therapeutic Healing</h3>
+                        <p class="blog-card-excerpt">Explore the unique benefits of hot stone massage therapy and how the combination of heat and therapeutic touch can provide profound healing and relaxation.</p>
+                        <a href="blog6.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="nutrition">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Nutrition for Recovery">
+                        <span class="blog-category">Nutrition</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 08, 2024</span>
+                            <span class="meta-item">⏱️ 8 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Nutrition for Faster Recovery: Foods That Heal</h3>
+                        <p class="blog-card-excerpt">Discover the power of anti-inflammatory foods and targeted nutrition strategies that can accelerate your body's natural healing processes and enhance treatment results.</p>
+                        <a href="blog7.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="acupuncture">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Traditional Chinese Medicine">
+                        <span class="blog-category">TCM</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 05, 2024</span>
+                            <span class="meta-item">⏱️ 9 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Traditional Chinese Medicine Meets Modern Wellness</h3>
+                        <p class="blog-card-excerpt">Learn how ancient TCM practices like Tuina massage and acupuncture are being integrated with modern healthcare approaches for optimal wellness outcomes.</p>
+                        <a href="blog8.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="lifestyle">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68e71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Stress Management">
+                        <span class="blog-category">Lifestyle</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 03, 2024</span>
+                            <span class="meta-item">⏱️ 6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Natural Stress Management: Beyond Medication</h3>
+                        <p class="blog-card-excerpt">Explore natural, evidence-based approaches to managing stress and anxiety through holistic therapies, mindfulness practices, and lifestyle modifications.</p>
+                        <a href="blog9.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-btn">« Previous</a>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn">Next »</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated with Our Latest Insights</h2>
+                <p>Subscribe to receive expert wellness tips, treatment updates, and exclusive health content directly in your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+
+                <div class="footer-brand">
+                    <a href="#" class="logo">Princeton Wellness Centre.</a>
+
+                    <p class="footer-text">
+                        We provide you with the best massage and acupuncture services combining traditional Chineses and Western techniques.
+                    </p>
+
+                    <div class="schedule">
+                        <div class="schedule-icon">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </div>
+
+                        <span class="span">
+                            Monday - Sunday:<br>
+                            8:00AM - 10:00PM
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Other Links</p>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.htmlabout.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">About Us</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Services</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.htmlabout.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Our Team</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Latest Blog</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#shop" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Shop</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Our Services</p>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Massage</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Osteopathy</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Tuina</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Acupuncture</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Hot Stone</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Ear Candling</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <address class="item-text">
+                            <a href="https://www.google.com/maps/dir//11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2" 
+                            target="_blank" rel="noopener noreferrer">
+                            11 Princeton Ave<br>Richmond Hill, ON L4S 2E2</a>
+                        </address>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+
+                        <a href="tel:+14168718855" class="footer-link">416-871-8855</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <a href="mailto:info@princetonwellness.ca" class="footer-link">info@princetonwellness.ca</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    &copy; 2025 Princeton Wellness Centre. Powered by <a href="https://www.plansale.ca" target="_blank">Plansale</a>
+                </p>
+
+                <ul class="social-list">
+                    <li>
+                        <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navbar = document.getElementById('navbar');
+
+        navToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close navigation when clicking on links
+        const navLinks = document.querySelectorAll('.navbar-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+
+        // Filter functionality
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const blogCards = document.querySelectorAll('.blog-card, .featured-post');
+        const searchInput = document.getElementById('searchInput');
+
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Update active filter
+                filterTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                
+                const category = tag.dataset.category;
+                
+                // Filter articles
+                blogCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            blogCards.forEach(card => {
+                const title = card.querySelector('.blog-card-title, .featured-post-title').textContent.toLowerCase();
+                const excerpt = card.querySelector('.blog-card-excerpt, .featured-post-excerpt').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert(`Thank you for subscribing with email: ${email}`);
+            e.target.reset();
+        });
+
+        // Smooth scrolling for pagination
+        document.querySelectorAll('.page-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('.blog-header').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
