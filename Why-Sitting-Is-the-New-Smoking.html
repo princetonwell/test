@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Sitting Is the New Smoking | Princeton Wellness Centre Blog</title>
+    <meta name="description" content="Explore the health risks associated with a sedentary lifestyle and learn how to mitigate them with Princeton Wellness Centre's holistic approaches.">
+    <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #10dc60;
+            --dark-green: #0d883d;
+            --orange-1: #f4a942;
+            --orange-2: #c67200;
+            --orange-3: #d38315;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --gradient: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--orange-1);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-green);
+        }
+
+        /* Blog Hero Section */
+        .blog-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .blog-hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Main Content */
+        .blog-content {
+            padding: 4rem 0;
+            background: var(--light-gray);
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .main-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sidebar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Typography */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            color: var(--orange-2);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .content-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            color: var(--orange-3);
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+            border-left: 4px solid var(--primary-green);
+            border-radius: 8px;
+        }
+
+        .content-text {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Featured Images */
+        .featured-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .featured-image:hover {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gradient);
+            color: white;
+            border-radius: 15px;
+            transform: perspective(1px) translateZ(0);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        /* Action Items */
+        .action-list {
+            background: linear-gradient(135deg, #fff3e0, #ffeaa7);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .action-list h3 {
+            color: var(--orange-2);
+            margin-bottom: 1rem;
+        }
+
+        .action-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .action-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .action-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--dark-green);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar Styles */
+        .sidebar h3 {
+            color: var(--orange-2);
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .recent-posts {
+            list-style: none;
+        }
+
+        .recent-posts li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .recent-posts a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .recent-posts a:hover {
+            color: var(--primary-green);
+        }
+
+        .services-list {
+            list-style: none;
+        }
+
+        .services-list li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .blog-hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling and animations */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Princeton Wellness Centre</a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="#blog" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content fade-in">
+                <h1>Why Sitting Is the New Smoking</h1>
+                <div class="blog-meta">
+                    <div class="meta-item">
+                        <span>📅</span>
+                        <span>February 24, 2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>⏱️</span>
+                        <span>8 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>👤</span>
+                        <span>Princeton Wellness Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <article class="main-content fade-in">
+                    <div class="intro-text">
+                        In today's digital era, our lifestyles have become significantly more sedentary. The phrase "sitting is the new smoking" has gained traction as researchers uncover the extensive health risks associated with prolonged sitting. At Princeton Wellness Centre, we understand the importance of addressing these modern health challenges through holistic wellness approaches.
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Person sitting at desk" class="featured-image">
+                    <div class="image-caption">The modern workplace often requires prolonged periods of sitting</div>
+
+                    <h2 class="content-subtitle">The Hidden Dangers of Prolonged Sitting</h2>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">9+</span>
+                            <span class="stat-label">Hours daily sitting average</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label">Increased heart disease risk</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">2x</span>
+                            <span class="stat-label">Higher diabetes risk</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">15%</span>
+                            <span class="stat-label">Reduced life expectancy</span>
+                        </div>
+                    </div>
+
+                    <p class="content-text">
+                        Research has shown that sitting for extended periods can lead to a cascade of health problems that affect virtually every system in your body. When we sit, our muscles become inactive, our metabolism slows down, and our bodies begin to shut down many of the processes that keep us healthy.
+                    </p>
+
+                    <p class="content-text">
+                        The cardiovascular system is particularly vulnerable to the effects of prolonged sitting. Blood flow decreases, which can lead to the formation of blood clots and increase the risk of heart disease and stroke. Additionally, the body's ability to regulate blood sugar levels becomes impaired, increasing the risk of type 2 diabetes.
+                    </p>
+
+                    <h2 class="content-subtitle">The Physical Impact on Your Body</h2>
+
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Spine alignment diagram" class="featured-image">
+                    <div class="image-caption">Poor posture from prolonged sitting affects spinal alignment</div>
+
+                    <p class="content-text">
+                        Beyond the internal health risks, prolonged sitting also takes a significant toll on our musculoskeletal system. Poor posture while sitting can lead to:
+                    </p>
+
+                    <div class="action-list">
+                        <h3>Common Physical Problems from Prolonged Sitting:</h3>
+                        <ul>
+                            <li>Chronic back pain and spinal misalignment</li>
+                            <li>Tight hip flexors and weakened glutes</li>
+                            <li>Forward head posture and neck strain</li>
+                            <li>Reduced core stability and strength</li>
+                            <li>Poor circulation in the legs</li>
+                            <li>Increased risk of deep vein thrombosis</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="content-subtitle">Mental Health Implications</h2>
+
+                    <p class="content-text">
+                        The effects of a sedentary lifestyle extend beyond physical health. Studies have shown strong correlations between prolonged sitting and mental health issues, including increased rates of depression and anxiety. The lack of movement and natural light exposure, combined with poor posture, can significantly impact mood and cognitive function.
+                    </p>
+
+                    <h2 class="content-subtitle">Breaking the Cycle: Practical Solutions</h2>
+
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Active workplace" class="featured-image">
+                    <div class="image-caption">Incorporating movement into your workday is essential for health</div>
+
+                    <div class="action-list">
+                        <h3>Evidence-Based Strategies to Combat Sedentary Lifestyle:</h3>
+                        <ul>
+                            <li>Take a 2-minute movement break every 30 minutes</li>
+                            <li>Use a standing desk for part of your workday</li>
+                            <li>Practice desk-based stretches and exercises</li>
+                            <li>Walk or bike to work when possible</li>
+                            <li>Schedule walking meetings</li>
+                            <li>Set hourly reminders to change positions</li>
+                            <li>Engage in regular physical activity outside work hours</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="content-subtitle">How Princeton Wellness Centre Can Help</h2>
+
+                    <p class="content-text">
+                        At Princeton Wellness Centre, we offer a comprehensive approach to combating the effects of a sedentary lifestyle through our range of therapeutic services:
+                    </p>
+
+                    <p class="content-text">
+                        <strong>Massage Therapy:</strong> Our registered massage therapists can help address muscle tension, improve circulation, and restore proper muscle function that may be compromised by prolonged sitting.
+                    </p>
+
+                    <p class="content-text">
+                        <strong>Acupuncture:</strong> This traditional healing method can help improve energy flow, reduce inflammation, and address pain patterns associated with poor posture and sedentary behavior.
+                    </p>
+
+                    <p class="content-text">
+                        <strong>Osteopathic Treatment:</strong> Our osteopathic practitioners focus on restoring proper body mechanics and addressing structural imbalances caused by prolonged sitting.
+                    </p>
+
+                    <div class="cta-section">
+                        <h3>Ready to Combat Your Sedentary Lifestyle?</h3>
+                        <p>Don't let prolonged sitting compromise your health. Our team of wellness professionals is here to help you develop a personalized plan to address the effects of sedentary behavior and improve your overall well-being.</p>
+                        <a href="contact.html" class="cta-button">Book Your Consultation Today</a>
+                    </div>
+
+                    <h2 class="content-subtitle">Conclusion</h2>
+
+                    <p class="content-text">
+                        While the comparison between sitting and smoking may seem dramatic, the research clearly shows that prolonged sitting poses significant health risks that shouldn't be ignored. The good news is that these risks are largely preventable through conscious lifestyle changes and regular movement.
+                    </p>
+
+                    <p class="content-text">
+                        At Princeton Wellness Centre, we're committed to helping you navigate the challenges of modern life while maintaining optimal health. Through our combination of traditional and Western therapeutic approaches, we can help you address the physical and mental impacts of a sedentary lifestyle and develop sustainable habits for long-term wellness.
+                    </p>
+                </article>
+
+                <aside class="sidebar">
+                    <div class="sidebar-card fade-in">
+                        <h3>Recent Blog Posts</h3>
+                        <ul class="recent-posts">
+                            <li><a href="#">The Science Behind Acupuncture: How It Really Works</a></li>
+                            <li><a href="#">Cupping Therapy: Ancient Healing for Modern Athletes</a></li>
+                            <li><a href="#">5 Desk Stretches to Combat Office Syndrome</a></li>
+                            <li><a href="#">The Benefits of Regular Massage Therapy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card fade-in">
+                        <h3>Our Services</h3>
+                        <ul class="services-list">
+                            <li>Registered Massage Therapy</li>
+                            <li>Acupuncture Treatment</li>
+                            <li>Osteopathic Manual Practice</li>
+                            <li>Hot Stone Massage</li>
+                            <li>Traditional Chinese Tuina</li>
+                            <li>Ear Candling</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card fade-in">
+                        <h3>Contact Information</h3>
+                        <p><strong>📞 Phone:</strong> 416-871-8855</p>
+                        <p><strong>📧 Email:</strong> info@princetonwellness.ca</p>
+                        <p><strong>📍 Address:</strong> 11 Princeton Ave<br>Richmond Hill, ON L4S 2E2</p>
+                        <p><strong>🕒 Hours:</strong> Mon-Sun: 8:00AM - 10:00PM</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>1
