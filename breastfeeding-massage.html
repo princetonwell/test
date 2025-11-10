@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Sitting Is the New Smoking | Princeton Wellness Centre Blog</title>
-    <meta name="description" content="Explore the health risks associated with a sedentary lifestyle and learn how to mitigate them with Princeton Wellness Centre's holistic approaches.">
+    <title>Breast Milk Duct Blockage: Why Timely Massage Is Essential | Princeton Wellness Centre Blog</title>
+    <meta name="description" content="Learn about blocked milk ducts during breastfeeding and how timely massage therapy can prevent mastitis and support healthy nursing.">
     <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-           :root {
+        :root {
             --light-steel-blue: hsl(218, 33%, 77%);
             --green: #0d883d;
             --light-green: #10dc60;
@@ -90,7 +90,7 @@
             padding: var(--section-padding) 0;
         }
 
-        /* Header Styles - Matching service.html */
+        /* Header Styles */
         .header {
             position: fixed;
             top: 0;
@@ -123,7 +123,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
 
         .contact-list {
             display: flex;
@@ -162,7 +161,6 @@
         .social-link:hover {
             color: var(--light-green);
         }
-
 
         .logo {
             font-family: var(--ff-poppins);
@@ -225,11 +223,9 @@
             cursor: pointer;
         }
 
-        
-
         /* Blog Hero Section */
         .blog-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
             height: 70vh;
@@ -279,39 +275,36 @@
             background: var(--white);
             padding: 3rem;
             border-radius: 15px;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-1);
         }
 
         .sidebar {
             display: flex;
             flex-direction: column;
             gap: 2rem;
-
-            
         }
 
         .sidebar-card {
             background: var(--white);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-        .contact-link {
+        .sidebar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-3);
+        }
+
+        .sidebar-card .contact-link {
             color: var(--orange-2);
             text-decoration: none;
             transition: var(--transition);
         }
 
-        .contact-link:hover {
+        .sidebar-card .contact-link:hover {
             color: var(--light-green);
-        }
-
-        }
-
-        .sidebar-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
         }
 
         /* Typography */
@@ -337,7 +330,7 @@
             margin-bottom: 2rem;
             padding: 1.5rem;
             background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
-            border-left: 4px solid var(--primary-green);
+            border-left: 4px solid var(--green);
             border-radius: 8px;
         }
 
@@ -354,7 +347,7 @@
             object-fit: cover;
             border-radius: 15px;
             margin: 2rem 0;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-1);
             transition: transform 0.3s ease;
         }
 
@@ -368,41 +361,6 @@
             color: var(--text-light);
             font-size: 1.2rem;
             margin-top: 0.5rem;
-        }
-
-        /* Stats Cards */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 2rem;
-            background: var(--gradient);
-            color: white;
-            border-radius: 15px;
-            transform: perspective(1px) translateZ(0);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-number {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            opacity: 0.9;
         }
 
         /* Action Items */
@@ -434,9 +392,28 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: var(--primary-green);
+            color: var(--green);
             font-weight: bold;
             font-size: 1.2rem;
+        }
+
+        /* Expert Profile Card */
+        .expert-profile {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--orange-2);
+        }
+
+        .expert-profile h3 {
+            color: var(--orange-2);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .expert-profile p {
+            margin-bottom: 1rem;
         }
 
         /* CTA Section */
@@ -447,7 +424,6 @@
             border-radius: 15px;
             text-align: center;
             margin: 3rem 0;
-          
         }
 
         .cta-button {
@@ -460,7 +436,6 @@
             font-weight: 600;
             margin-top: 1rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            
         }
 
         .cta-button:hover {
@@ -492,7 +467,7 @@
         }
 
         .recent-posts a:hover {
-            color: var(--primary-green);
+            color: var(--green);
         }
 
         .services-list {
@@ -504,54 +479,7 @@
             color: var(--text-light);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .blog-hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .blog-meta {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .content-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .main-content {
-                padding: 2rem;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Smooth scrolling and animations */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeIn 0.6s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-
-        /* Footer Styles - Matching service.html */
+        /* Footer Styles */
         .footer-top {
             background-color: var(--orange-2);
             color: var(--white);
@@ -563,7 +491,7 @@
             gap: 40px;
         }
 
-        .footer-brand .logo { 
+        .footer-brand .logo {
             color: var(--white);
             display: inline-block;
             margin-bottom: 15px;
@@ -758,46 +686,25 @@
                 gap: 15px;
             }
 
-            .blog-header {
-                padding: 140px 0 80px;
+            .blog-hero {
+                height: 50vh;
             }
 
-            .blog-header h1 {
-                font-size: 3.5rem;
+            .blog-hero-content h1 {
+                font-size: 2.5rem;
             }
 
-            .filter-section {
-                position: static;
-            }
-
-            .filter-container {
+            .blog-meta {
                 flex-direction: column;
-                align-items: stretch;
+                gap: 1rem;
             }
 
-            .search-box input {
-                width: 100%;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .featured-post {
+            .content-wrapper {
                 grid-template-columns: 1fr;
             }
 
-            .featured-post-image {
-                height: 250px;
-            }
-
-            .featured-post-content {
-                padding: 30px 25px;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
+            .main-content {
+                padding: 2rem;
             }
 
             .footer-top .container {
@@ -811,33 +718,34 @@
         }
 
         @media (min-width: 575px) {
-            .footer-top .container { 
-                grid-template-columns: 1fr 1fr; 
+            .footer-top .container {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (min-width: 992px) {
-            .footer-top .container { 
-                grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr; 
+            .footer-top .container {
+                grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr;
             }
         }
 
-        @media (max-width: 480px) {
-            .blog-header h1 {
-                font-size: 2.8rem;
-            }
-
-            .featured-post-title {
-                font-size: 2.2rem;
-            }
-
-            .blog-card-title {
-                font-size: 1.8rem;
-            }
+        /* Smooth scrolling and animations */
+        html {
+            scroll-behavior: smooth;
         }
 
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.6s ease forwards;
+        }
 
-
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -874,7 +782,7 @@
         <div class="header-bottom">
             <div class="container">
                 <a href="index.html" class="logo">Princeton Wellness Centre</a>
-                
+
                 <nav class="navbar" id="navbar">
                     <ul class="navbar-list">
                         <li><a href="index.html" class="navbar-link">Home</a></li>
@@ -886,7 +794,7 @@
                 </nav>
 
                 <a href="#" class="btn">Book Appointment</a>
-                
+
                 <button class="nav-toggle-btn" id="nav-toggle">
                     <ion-icon name="menu-outline"></ion-icon>
                 </button>
@@ -898,19 +806,19 @@
     <section class="blog-hero">
         <div class="container">
             <div class="blog-hero-content fade-in">
-                <h1>Why Sitting Is the New Smoking</h1>
+                <h1>Breast Milk Duct Blockage: Why Timely Massage Is Essential</h1>
                 <div class="blog-meta">
                     <div class="meta-item">
                         <span>📅</span>
-                        <span>February 24, 2024</span>
+                        <span>February 24, 2025</span>
                     </div>
                     <div class="meta-item">
                         <span>⏱️</span>
-                        <span>8 min read</span>
+                        <span>7 min read</span>
                     </div>
                     <div class="meta-item">
                         <span>👤</span>
-                        <span>Princeton Wellness Team</span>
+                        <span>Lisa, TCM & Acupuncture Specialist</span>
                     </div>
                 </div>
             </div>
@@ -923,130 +831,128 @@
             <div class="content-wrapper">
                 <article class="main-content fade-in">
                     <div class="intro-text">
-                        In today's digital era, our lifestyles have become significantly more sedentary. The phrase "sitting is the new smoking" has gained traction as researchers uncover the extensive health risks associated with prolonged sitting. At Princeton Wellness Centre, we understand the importance of addressing these modern health challenges through holistic wellness approaches.
+                        During breastfeeding, many mothers experience tenderness, hardness, or swelling in their breasts — often a sign of blocked milk ducts. If left untreated, the blockage can quickly lead to inflammation, infection, or even high fever. At Princeton Wellness Centre, we emphasize timely breast massage and lymphatic drainage to prevent mastitis and support healthy breastfeeding.
                     </div>
 
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Person sitting at desk" class="featured-image">
-                    <div class="image-caption">The modern workplace often requires prolonged periods of sitting</div>
+                    <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Mother breastfeeding baby" class="featured-image">
+                    <div class="image-caption">Breastfeeding is a beautiful journey that requires proper support and care</div>
 
-                    <h2 class="content-subtitle">The Hidden Dangers of Prolonged Sitting</h2>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <span class="stat-number">9+</span>
-                            <span class="stat-label">Hours daily sitting average</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">40%</span>
-                            <span class="stat-label">Increased heart disease risk</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">2x</span>
-                            <span class="stat-label">Higher diabetes risk</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">15%</span>
-                            <span class="stat-label">Reduced life expectancy</span>
-                        </div>
-                    </div>
+                    <h2 class="content-subtitle">Understanding Blocked Milk Ducts</h2>
 
                     <p class="content-text">
-                        Research has shown that sitting for extended periods can lead to a cascade of health problems that affect virtually every system in your body. When we sit, our muscles become inactive, our metabolism slows down, and our bodies begin to shut down many of the processes that keep us healthy.
-                    </p>
-
-                    <p class="content-text">
-                        The cardiovascular system is particularly vulnerable to the effects of prolonged sitting. Blood flow decreases, which can lead to the formation of blood clots and increase the risk of heart disease and stroke. Additionally, the body's ability to regulate blood sugar levels becomes impaired, increasing the risk of type 2 diabetes.
-                    </p>
-
-                    <h2 class="content-subtitle">The Physical Impact on Your Body</h2>
-
-                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Spine alignment diagram" class="featured-image">
-                    <div class="image-caption">Poor posture from prolonged sitting affects spinal alignment</div>
-
-                    <p class="content-text">
-                        Beyond the internal health risks, prolonged sitting also takes a significant toll on our musculoskeletal system. Poor posture while sitting can lead to:
+                        Blocked ducts occur when milk flow is obstructed, often due to stress, improper feeding posture, tight clothing, or fatigue. This common breastfeeding challenge can happen to any nursing mother, but with proper care and attention, it can be effectively managed and prevented.
                     </p>
 
                     <div class="action-list">
-                        <h3>Common Physical Problems from Prolonged Sitting:</h3>
+                        <h3>Common Early Signs of Blocked Ducts:</h3>
                         <ul>
-                            <li>Chronic back pain and spinal misalignment</li>
-                            <li>Tight hip flexors and weakened glutes</li>
-                            <li>Forward head posture and neck strain</li>
-                            <li>Reduced core stability and strength</li>
-                            <li>Poor circulation in the legs</li>
-                            <li>Increased risk of deep vein thrombosis</li>
+                            <li>Localized hardness or lump in the breast</li>
+                            <li>Pain or warmth to the touch</li>
+                            <li>Reduced milk flow or baby's refusal to feed on one side</li>
+                            <li>Feeling of heaviness or pressure in the chest</li>
+                            <li>Tenderness in specific areas of the breast</li>
                         </ul>
                     </div>
-
-                    <h2 class="content-subtitle">Mental Health Implications</h2>
 
                     <p class="content-text">
-                        The effects of a sedentary lifestyle extend beyond physical health. Studies have shown strong correlations between prolonged sitting and mental health issues, including increased rates of depression and anxiety. The lack of movement and natural light exposure, combined with poor posture, can significantly impact mood and cognitive function.
+                        When untreated, these symptoms may worsen and cause breast inflammation, redness, and fever, which can be painful and emotionally distressing for new mothers. Early intervention is crucial to prevent the progression to mastitis, a more serious infection that may require medical treatment.
                     </p>
 
-                    <h2 class="content-subtitle">Breaking the Cycle: Practical Solutions</h2>
+                    <h2 class="content-subtitle">Why Professional Massage Is So Important</h2>
 
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Active workplace" class="featured-image">
-                    <div class="image-caption">Incorporating movement into your workday is essential for health</div>
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Therapeutic massage treatment" class="featured-image">
+                    <div class="image-caption">Professional therapeutic massage provides targeted relief and healing</div>
+
+                    <p class="content-text">
+                        Gentle and professional breast massage (乳腺疏通推拿) is not just about temporary relief — it addresses the root cause of blockage and promotes long-term breast health. This specialized treatment helps:
+                    </p>
 
                     <div class="action-list">
-                        <h3>Evidence-Based Strategies to Combat Sedentary Lifestyle:</h3>
+                        <h3>Benefits of Professional Breast Massage:</h3>
                         <ul>
-                            <li>Take a 2-minute movement break every 30 minutes</li>
-                            <li>Use a standing desk for part of your workday</li>
-                            <li>Practice desk-based stretches and exercises</li>
-                            <li>Walk or bike to work when possible</li>
-                            <li>Schedule walking meetings</li>
-                            <li>Set hourly reminders to change positions</li>
-                            <li>Engage in regular physical activity outside work hours</li>
+                            <li>Promote smooth milk flow and prevent further blockage</li>
+                            <li>Relieve engorgement and reduce pain naturally</li>
+                            <li>Reduce the risk of inflammation and infection</li>
+                            <li>Improve lymphatic circulation and detoxification</li>
+                            <li>Support natural milk production and hormonal balance</li>
+                            <li>Provide emotional comfort and stress relief</li>
                         </ul>
                     </div>
+
+                    <p class="content-text">
+                        Traditional Chinese Tuina and acupoint massage around the chest, armpit, and shoulder area can be particularly effective in stimulating meridian flow, helping the body heal naturally and maintain balance. This ancient wisdom combined with modern understanding of anatomy creates a powerful therapeutic approach.
+                    </p>
+
+                    <div class="expert-profile">
+                        <h3>Meet Lisa: Your Postnatal Care Specialist</h3>
+                        <p>
+                            With over 10 years of hands-on clinical experience, Lisa combines traditional Chinese techniques with modern therapeutic care. Her approach is gentle, safe, and tailored to each mother's unique condition — ensuring comfort, relief, and effective results.
+                        </p>
+                        <p><strong>Lisa's specialized focus includes:</strong></p>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li>✓ Lymphatic and breast meridian stimulation</li>
+                            <li>✓ Gentle manual therapy for blocked ducts</li>
+                            <li>✓ Acupressure for milk flow regulation</li>
+                            <li>✓ Comprehensive postnatal relaxation and recovery</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="content-subtitle">Encouraging Healthy Breastfeeding</h2>
+
+                    <p class="content-text">
+                        Breastfeeding not only strengthens the baby's immune system but also promotes maternal recovery and creates a deep emotional bond between mother and child. The World Health Organization recommends exclusive breastfeeding for the first six months of life, making breast health a priority for new mothers.
+                    </p>
+
+                    <p class="content-text">
+                        Timely professional massage can help mothers continue breastfeeding comfortably and confidently, overcoming the physical challenges that might otherwise lead to early weaning. Many mothers find that regular maintenance treatments prevent issues before they begin.
+                    </p>
+
+                    <p class="content-text">
+                        <strong>Important:</strong> If you experience symptoms such as pain, lumps, or fever during breastfeeding, do not wait — early care is the key to recovery. What might seem like a minor discomfort can rapidly develop into a more serious condition if left unaddressed.
+                    </p>
 
                     <h2 class="content-subtitle">How Princeton Wellness Centre Can Help</h2>
 
+                    <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Wellness centre treatment room" class="featured-image">
+                    <div class="image-caption">Our peaceful treatment environment supports your healing journey</div>
+
                     <p class="content-text">
-                        At Princeton Wellness Centre, we offer a comprehensive approach to combating the effects of a sedentary lifestyle through our range of therapeutic services:
+                        Our clinic provides comprehensive therapeutic postpartum and breast care treatments that combine massage, acupuncture, and holistic wellness approaches. We understand that every mother's experience is unique, and we tailor our treatments to your specific needs and comfort level.
                     </p>
 
                     <p class="content-text">
-                        <strong>Massage Therapy:</strong> Our registered massage therapists can help address muscle tension, improve circulation, and restore proper muscle function that may be compromised by prolonged sitting.
-                    </p>
-
-                    <p class="content-text">
-                        <strong>Acupuncture:</strong> This traditional healing method can help improve energy flow, reduce inflammation, and address pain patterns associated with poor posture and sedentary behavior.
-                    </p>
-
-                    <p class="content-text">
-                        <strong>Osteopathic Treatment:</strong> Our osteopathic practitioners focus on restoring proper body mechanics and addressing structural imbalances caused by prolonged sitting.
+                        Our integrated approach aims to relieve discomfort, prevent infection, and help mothers enjoy a smoother, healthier breastfeeding journey. We also provide education on self-care techniques you can use at home between professional treatments.
                     </p>
 
                     <div class="cta-section">
-                        <h3>Ready to Combat Your Sedentary Lifestyle?</h3>
-                        <p>Don't let prolonged sitting compromise your health. Our team of wellness professionals is here to help you develop a personalized plan to address the effects of sedentary behavior and improve your overall well-being.</p>
-                        <a href="contact.html" class="cta-button">Book Your Consultation Today</a>
+                        <h3>Don't Let Blocked Ducts Compromise Your Breastfeeding Journey</h3>
+                        <p>Early intervention makes all the difference. Our experienced team is ready to provide the gentle, effective care you need to heal comfortably and continue nourishing your baby with confidence.</p>
+                        <a href="contact.html" class="cta-button">Schedule Your Consultation</a>
                     </div>
 
                     <h2 class="content-subtitle">Conclusion</h2>
 
                     <p class="content-text">
-                        While the comparison between sitting and smoking may seem dramatic, the research clearly shows that prolonged sitting poses significant health risks that shouldn't be ignored. The good news is that these risks are largely preventable through conscious lifestyle changes and regular movement.
+                        Blocked milk ducts can develop quickly, but with timely treatment and expert care, they can also be resolved just as fast. The key is recognizing the early warning signs and seeking professional help before the condition worsens.
                     </p>
 
                     <p class="content-text">
-                        At Princeton Wellness Centre, we're committed to helping you navigate the challenges of modern life while maintaining optimal health. Through our combination of traditional and Western therapeutic approaches, we can help you address the physical and mental impacts of a sedentary lifestyle and develop sustainable habits for long-term wellness.
+                        At Princeton Wellness Centre, Lisa and our team are committed to supporting every mother with compassion, expertise, and holistic therapy — helping you heal, restore comfort, and continue your breastfeeding journey with confidence. We believe that every mother deserves access to quality postnatal care that honors both traditional wisdom and modern medical understanding.
+                    </p>
+
+                    <p class="content-text">
+                        Remember: your health and comfort are essential for both you and your baby. Don't hesitate to reach out for the support you need.
                     </p>
                 </article>
 
                 <aside class="sidebar">
                     <div class="sidebar-card fade-in">
                         <h3>Recent Blog Posts</h3>
-                        <ul class="recent-posts">                            
-                            <li><a href="breastfeeding-massage.html">Breast Milk Duct Blockage: Why Timely Massage Is Essential</a></li>
+                        <ul class="recent-posts">
+                            <li><a href="Why-Sitting-Is-the-New-Smoking.html">Why Sitting Is the New Smoking: Health Risks & Solutions</a></li>
                             <li><a href="#">The Science Behind Acupuncture: How It Really Works</a></li>
                             <li><a href="#">Cupping Therapy: Ancient Healing for Modern Athletes</a></li>
                             <li><a href="#">5 Desk Stretches to Combat Office Syndrome</a></li>
-                            <li><a href="#">The Benefits of Regular Massage Therapy</a></li>
                         </ul>
                     </div>
 
@@ -1054,46 +960,44 @@
                         <h3>Our Services</h3>
                         <ul class="services-list">
                             <li>Registered Massage Therapy</li>
+                            <li>Postnatal Breast Care</li>
+                            <li>Traditional Chinese Tuina</li>
                             <li>Acupuncture Treatment</li>
                             <li>Osteopathic Manual Practice</li>
                             <li>Hot Stone Massage</li>
-                            <li>Traditional Chinese Tuina</li>
                             <li>Ear Candling</li>
                         </ul>
                     </div>
-                     
+
                     <div class="sidebar-card fade-in">
-                    <h3>Contact Information</h3>
+                        <h3>Contact Information</h3>
 
-                    <p>
-                        <strong>📞 Phone:</strong>
-                        <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
-                    </p>
+                        <p>
+                            <strong>📞 Phone:</strong>
+                            <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
+                        </p>
 
-                    <p>
-                        <strong>📧 Email:</strong>
-                        <a href="mailto:info@princetonwellness.ca" class="contact-link">info@princetonwellness.ca</a>
-                    </p>
+                        <p>
+                            <strong>📧 Email:</strong>
+                            <a href="mailto:info@princetonwellness.ca" class="contact-link">info@princetonwellness.ca</a>
+                        </p>
 
-                    <p>
-                        <strong>📍 Address:</strong>
-                        <a href="https://www.google.com/maps?q=11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2"
-                        target="_blank" rel="noopener noreferrer" class="contact-link">
-                        11 Princeton Ave<br>Richmond Hill, ON L4S 2E2
-                        </a>
-                    </p>
+                        <p>
+                            <strong>📍 Address:</strong>
+                            <a href="https://www.google.com/maps?q=11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2"
+                            target="_blank" rel="noopener noreferrer" class="contact-link">
+                            11 Princeton Ave<br>Richmond Hill, ON L4S 2E2
+                            </a>
+                        </p>
 
-                    <p><strong>🕒 Hours:</strong> Mon–Sun: 8:00 AM – 10:00 PM</p>
+                        <p><strong>🕐 Hours:</strong> Mon–Sun: 8:00 AM – 10:00 PM</p>
                     </div>
-
-
-
                 </aside>
             </div>
         </div>
     </section>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-top section">
             <div class="container">
@@ -1102,7 +1006,7 @@
                     <a href="#" class="logo">Princeton Wellness Centre.</a>
 
                     <p class="footer-text">
-                        We provide you with the best massage and acupuncture services combining traditional Chineses and Western techniques.
+                        We provide you with the best massage and acupuncture services combining traditional Chinese and Western techniques.
                     </p>
 
                     <div class="schedule">
@@ -1224,7 +1128,7 @@
                         </div>
 
                         <address class="item-text">
-                            <a href="https://www.google.com/maps/dir//11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2" 
+                            <a href="https://www.google.com/maps/dir//11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2"
                             target="_blank" rel="noopener noreferrer">
                             11 Princeton Ave<br>Richmond Hill, ON L4S 2E2</a>
                         </address>
@@ -1279,7 +1183,6 @@
         </div>
     </footer>
 
-    
     <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -1346,8 +1249,6 @@
             });
         });
     </script>
-
-
 
 </body>
 </html>

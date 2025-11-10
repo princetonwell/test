@@ -90,7 +90,7 @@
             padding: var(--section-padding) 0;
         }
 
-        /* Header Styles - Matching service.html */
+        /* Header Styles */
         .header {
             position: fixed;
             top: 0;
@@ -564,7 +564,7 @@
             transform: translateY(-2px);
         }
 
-        /* Footer Styles - Matching service.html */
+        /* Footer Styles */
         .footer-top {
             background-color: var(--orange-2);
             color: var(--white);
@@ -922,7 +922,7 @@
                     <a href="#" class="filter-tag" data-category="acupuncture">Acupuncture</a>
                     <a href="#" class="filter-tag" data-category="lifestyle">Healthy Lifestyle</a>
                     <a href="#" class="filter-tag" data-category="wellness">Wellness Tips</a>
-                    <a href="#" class="filter-tag" data-category="nutrition">Nutrition</a>
+                    <a href="#" class="filter-tag" data-category="postnatal">Postnatal Care</a>
                 </div>
                 <div class="search-box">
                     <input type="text" placeholder="Search articles..." id="searchInput">
@@ -935,33 +935,51 @@
     <section class="blog-grid-section">
         <div class="container">
             <div class="blog-grid" id="blogGrid">
-                <!-- Featured Post -->
-                <article class="featured-post" data-category="lifestyle">
-                <div class="featured-post-image">
-                    <a href="Why-Sitting-Is-the-New-Smoking.html">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Why Sitting Is the New Smoking">
-                    </a>
-                </div>
-
-                <div class="featured-post-content">
-                    <span class="featured-badge">Featured Post</span>
-                    <h2 class="featured-post-title">Why Sitting Is the New Smoking</h2>
-                    <p class="featured-post-excerpt">
-                    Discover the hidden dangers of prolonged sitting and learn practical strategies to combat
-                    the risks of a sedentary lifestyle with our holistic wellness approaches.
-                    </p>
-
-                    <div class="blog-card-meta">
-                    <span class="meta-item">📅 Feb 24, 2024</span>
-                    <span class="meta-item">⏱️ 8 min read</span>
-                    <span class="meta-item">👤 Wellness Team</span>
+                <!-- Featured Post - NEW BREASTFEEDING ARTICLE -->
+                <article class="featured-post" data-category="postnatal">
+                    <div class="featured-post-image">
+                        <a href="breastfeeding-massage.html">
+                            <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Breast Milk Duct Blockage">
+                        </a>
                     </div>
 
-                    <a href="Why-Sitting-Is-the-New-Smoking.html" class="read-more-btn">Read Full Article →</a>
-                </div>
+                    <div class="featured-post-content">
+                        <span class="featured-badge">Featured Post</span>
+                        <h2 class="featured-post-title">Breast Milk Duct Blockage: Why Timely Massage Is Essential</h2>
+                        <p class="featured-post-excerpt">
+                            Learn how professional breast massage and lymphatic drainage can prevent mastitis and support healthy breastfeeding for nursing mothers.
+                        </p>
+
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 24, 2025</span>
+                            <span class="meta-item">⏱️ 7 min read</span>
+                            <span class="meta-item">👤 Lisa, TCM Specialist</span>
+                        </div>
+
+                        <a href="breastfeeding-massage.html" class="read-more-btn">Read Full Article →</a>
+                    </div>
                 </article>
 
+                <!-- Second Featured - Sitting Article -->
+                <article class="blog-card" data-category="lifestyle">
+                    <div class="blog-card-image">
+                        <a href="Why-Sitting-Is-the-New-Smoking.html">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Why Sitting Is the New Smoking">
+                        </a>
+                        <span class="blog-category">Lifestyle</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="meta-item">📅 Feb 24, 2024</span>
+                            <span class="meta-item">⏱️ 8 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Why Sitting Is the New Smoking</h3>
+                        <p class="blog-card-excerpt">Discover the hidden dangers of prolonged sitting and learn practical strategies to combat the risks of a sedentary lifestyle.</p>
+                        <a href="Why-Sitting-Is-the-New-Smoking.html" class="read-more-btn">Read More →</a>
+                    </div>
+                </article>
 
                 <!-- Regular Blog Cards -->
                 <article class="blog-card" data-category="acupuncture">
@@ -1044,7 +1062,7 @@
                     </div>
                 </article>
 
-                <article class="blog-card" data-category="nutrition">
+                <article class="blog-card" data-category="wellness">
                     <div class="blog-card-image">
                         <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Nutrition for Recovery">
                         <span class="blog-category">Nutrition</span>
@@ -1127,7 +1145,7 @@
                     <a href="#" class="logo">Princeton Wellness Centre.</a>
 
                     <p class="footer-text">
-                        We provide you with the best massage and acupuncture services combining traditional Chineses and Western techniques.
+                        We provide you with the best massage and acupuncture services combining traditional Chinese and Western techniques.
                     </p>
 
                     <div class="schedule">
