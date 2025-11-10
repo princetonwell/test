@@ -11,19 +11,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-green: #10dc60;
-            --dark-green: #0d883d;
+           :root {
+            --light-steel-blue: hsl(218, 33%, 77%);
+            --green: #0d883d;
+            --light-green: #10dc60;
             --orange-1: #f4a942;
             --orange-2: #c67200;
             --orange-3: #d38315;
-            --white: #ffffff;
-            --light-gray: #f8f9fa;
+            --sonic-silver: hsl(0, 0%, 47%);
+            --light-gray: hsl(0, 0%, 84%);
+            --cultured: hsl(0, 0%, 97%);
+            --white: hsl(0, 0%, 100%);
+            --black: hsl(0, 0%, 0%);
+            --jet: hsl(0, 0%, 20%);
             --text-dark: #2c3e50;
             --text-light: #6c757d;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
-            --gradient: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            --border-gray: #e9ecef;
+
+            --gradient: linear-gradient(90deg, var(--light-green) 0%, var(--green) 100%);
+
+            --ff-roboto: "Roboto", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+
+            --fs-1: 4rem;
+            --fs-2: 3.6rem;
+            --fs-3: 3.2rem;
+            --fs-4: 2.4rem;
+            --fs-5: 2.2rem;
+            --fs-6: 1.8rem;
+            --fs-7: 1.6rem;
+
+            --fw-800: 800;
+            --fw-700: 700;
+            --fw-600: 600;
+            --fw-500: 500;
+
+            --section-padding: 120px;
+
+            --shadow-1: 4px 4px 15px rgba(0, 0, 0, 0.1);
+            --shadow-2: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-3: 0px 20px 60px rgba(0, 0, 0, 0.08);
+            --shadow-4: 0px 10px 30px hsla(225, 68%, 53%, 0.3);
+
+            --radius-6: 6px;
+            --radius-4: 4px;
+            --radius-20: 20px;
+
+            --transition: 0.25s ease;
         }
 
         * {
@@ -33,60 +67,165 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background-color: var(--white);
+            font-family: var(--ff-roboto);
+            font-size: 1.6rem;
+            line-height: 1.6;
+            color: var(--black);
+            background-color: var(--cultured);
+            overflow-x: hidden;
+        }
+
+        html {
+            font-size: 10px;
+            scroll-behavior: smooth;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 25px;
         }
 
-        /* Header Styles */
+        .section {
+            padding: var(--section-padding) 0;
+        }
+
+        /* Header Styles - Matching service.html */
         .header {
-            background: var(--white);
-            box-shadow: var(--shadow);
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: var(--shadow-2);
             z-index: 1000;
         }
 
-        .header-content {
+        .header-top {
+            background: var(--orange-1);
+            color: var(--white);
+            padding: 15px 0;
+            font-size: 1.4rem;
+        }
+
+        .header-top .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
         }
 
-        .logo {
-            font-family: 'Poppins', sans-serif;
+        .header-bottom {
+            padding: 20px 0;
+        }
+
+        .header-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .contact-list {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-link {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--light-green);
+        }
+
+        .social-list {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .social-link {
+            color: var(--white);
             font-size: 1.8rem;
-            font-weight: 800;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--light-green);
+        }
+
+
+        .logo {
+            font-family: var(--ff-poppins);
+            font-size: 2.4rem;
+            font-weight: var(--fw-800);
             color: var(--orange-1);
             text-decoration: none;
         }
 
-        .nav-menu {
+        .navbar {
             display: flex;
+        }
+
+        .navbar-list {
+            display: flex;
+            gap: 30px;
             list-style: none;
-            gap: 2rem;
+            align-items: center;
         }
 
-        .nav-link {
+        .navbar-link {
+            color: var(--orange-1);
+            font-family: var(--ff-poppins);
+            font-weight: var(--fw-600);
             text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
+            text-transform: capitalize;
+            transition: var(--transition);
         }
 
-        .nav-link:hover {
-            color: var(--primary-green);
+        .navbar-link:hover,
+        .navbar-link.active {
+            color: var(--green);
         }
+
+        .btn {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 15px 25px;
+            border: none;
+            border-radius: var(--radius-4);
+            font-weight: var(--fw-600);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-4);
+        }
+
+        .nav-toggle-btn {
+            display: none;
+            background: none;
+            border: 1px solid var(--orange-1);
+            color: var(--orange-1);
+            font-size: 2rem;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        
 
         /* Blog Hero Section */
         .blog-hero {
@@ -115,7 +254,7 @@
             justify-content: center;
             gap: 2rem;
             margin-top: 1.5rem;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
         }
 
         .meta-item {
@@ -147,6 +286,8 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
+
+            
         }
 
         .sidebar-card {
@@ -155,6 +296,17 @@
             border-radius: 15px;
             box-shadow: var(--shadow);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        .contact-link {
+            color: var(--orange-2);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--light-green);
+        }
+
         }
 
         .sidebar-card:hover {
@@ -180,7 +332,7 @@
         }
 
         .intro-text {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: var(--text-light);
             margin-bottom: 2rem;
             padding: 1.5rem;
@@ -191,7 +343,7 @@
 
         .content-text {
             margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             line-height: 1.8;
         }
 
@@ -214,7 +366,7 @@
             text-align: center;
             font-style: italic;
             color: var(--text-light);
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             margin-top: 0.5rem;
         }
 
@@ -248,7 +400,7 @@
         }
 
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             margin-top: 0.5rem;
             opacity: 0.9;
         }
@@ -395,23 +547,347 @@
                 transform: translateY(0);
             }
         }
+
+
+        /* Footer Styles - Matching service.html */
+        .footer-top {
+            background-color: var(--orange-2);
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .footer-top .container {
+            display: grid;
+            gap: 40px;
+        }
+
+        .footer-brand .logo { 
+            color: var(--white);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .footer-text {
+            color: var(--white);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .schedule {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: var(--radius-6);
+        }
+
+        .schedule-icon {
+            background-image: var(--gradient);
+            color: var(--white);
+            font-size: 22px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .schedule .span {
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .footer-list-title {
+            color: var(--white);
+            font-family: var(--ff-poppins);
+            font-size: var(--fs-5);
+            font-weight: var(--fw-700);
+            margin-bottom: 20px;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-link {
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0;
+            transition: var(--transition);
+            opacity: 0.85;
+        }
+
+        .footer-link ion-icon {
+            color: var(--light-green);
+            font-size: 16px;
+        }
+
+        .footer-link:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-item .item-icon {
+            background-image: var(--gradient);
+            color: var(--white);
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .footer-item .item-text,
+        .footer-item a {
+            color: var(--white);
+            line-height: 1.6;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-item a:hover {
+            color: var(--light-green);
+        }
+
+        .footer-bottom {
+            background-color: var(--orange-3);
+            padding: 30px 0;
+        }
+
+        .footer-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: var(--white);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .copyright a {
+            color: var(--white);
+            text-decoration: underline;
+            transition: var(--transition);
+        }
+
+        .copyright a:hover {
+            color: var(--light-green);
+        }
+
+        .footer .social-list {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer .social-link {
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            font-size: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            transition: var(--transition);
+        }
+
+        .footer .social-link:hover {
+            background-image: var(--gradient);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+
+            .header-bottom .btn {
+                display: none;
+            }
+
+            .nav-toggle-btn {
+                display: block;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: var(--shadow-2);
+                max-height: 0;
+                overflow: hidden;
+                transition: var(--transition);
+            }
+
+            .navbar.active {
+                max-height: 300px;
+                top: 80px;
+            }
+
+            .navbar-list {
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .blog-header {
+                padding: 140px 0 80px;
+            }
+
+            .blog-header h1 {
+                font-size: 3.5rem;
+            }
+
+            .filter-section {
+                position: static;
+            }
+
+            .filter-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-post-image {
+                height: 250px;
+            }
+
+            .featured-post-content {
+                padding: 30px 25px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-top .container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom .container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 575px) {
+            .footer-top .container { 
+                grid-template-columns: 1fr 1fr; 
+            }
+        }
+
+        @media (min-width: 992px) {
+            .footer-top .container { 
+                grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-header h1 {
+                font-size: 2.8rem;
+            }
+
+            .featured-post-title {
+                font-size: 2.2rem;
+            }
+
+            .blog-card-title {
+                font-size: 1.8rem;
+            }
+        }
+
+
+
     </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
+        <div class="header-top">
+            <div class="container">
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <a href="mailto:info@princetonwellness.ca" class="contact-link">info@princetonwellness.ca</a>
+                    </li>
+                    <li class="contact-item">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
+                    </li>
+                </ul>
+
+                <ul class="social-list">
+                    <li>
+                        <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
                 <a href="index.html" class="logo">Princeton Wellness Centre</a>
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="#services" class="nav-link">Services</a></li>
-                        <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="#blog" class="nav-link">Blog</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                
+                <nav class="navbar" id="navbar">
+                    <ul class="navbar-list">
+                        <li><a href="index.html" class="navbar-link">Home</a></li>
+                        <li><a href="service.html" class="navbar-link">Services</a></li>
+                        <li><a href="about.html" class="navbar-link">About Us</a></li>
+                        <li><a href="blog.html" class="navbar-link active">Blog</a></li>
+                        <li><a href="contact.html" class="navbar-link">Contact</a></li>
                     </ul>
                 </nav>
+
+                <a href="#" class="btn">Book Appointment</a>
+                
+                <button class="nav-toggle-btn" id="nav-toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
             </div>
         </div>
     </header>
@@ -582,20 +1058,258 @@
                             <li>Ear Candling</li>
                         </ul>
                     </div>
-
+                     
                     <div class="sidebar-card fade-in">
-                        <h3>Contact Information</h3>
-                        <p><strong>📞 Phone:</strong> 416-871-8855</p>
-                        <p><strong>📧 Email:</strong> info@princetonwellness.ca</p>
-                        <p><strong>📍 Address:</strong> 11 Princeton Ave<br>Richmond Hill, ON L4S 2E2</p>
-                        <p><strong>🕒 Hours:</strong> Mon-Sun: 8:00AM - 10:00PM</p>
+                    <h3>Contact Information</h3>
+
+                    <p>
+                        <strong>📞 Phone:</strong>
+                        <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
+                    </p>
+
+                    <p>
+                        <strong>📧 Email:</strong>
+                        <a href="mailto:info@princetonwellness.ca" class="contact-link">info@princetonwellness.ca</a>
+                    </p>
+
+                    <p>
+                        <strong>📍 Address:</strong>
+                        <a href="https://www.google.com/maps?q=11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2"
+                        target="_blank" rel="noopener noreferrer" class="contact-link">
+                        11 Princeton Ave<br>Richmond Hill, ON L4S 2E2
+                        </a>
+                    </p>
+
+                    <p><strong>🕒 Hours:</strong> Mon–Sun: 8:00 AM – 10:00 PM</p>
                     </div>
+
+
+
                 </aside>
             </div>
         </div>
     </section>
 
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+
+                <div class="footer-brand">
+                    <a href="#" class="logo">Princeton Wellness Centre.</a>
+
+                    <p class="footer-text">
+                        We provide you with the best massage and acupuncture services combining traditional Chineses and Western techniques.
+                    </p>
+
+                    <div class="schedule">
+                        <div class="schedule-icon">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </div>
+
+                        <span class="span">
+                            Monday - Sunday:<br>
+                            8:00AM - 10:00PM
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Other Links</p>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">About Us</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Services</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Our Team</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Latest Blog</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#shop" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Shop</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Our Services</p>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Massage</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Osteopathy</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Tuina</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Acupuncture</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Hot Stone</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+                            <span class="span">Ear Candling</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <address class="item-text">
+                            <a href="https://www.google.com/maps/dir//11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2" 
+                            target="_blank" rel="noopener noreferrer">
+                            11 Princeton Ave<br>Richmond Hill, ON L4S 2E2</a>
+                        </address>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+
+                        <a href="tel:+14168718855" class="footer-link">416-871-8855</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <a href="mailto:info@princetonwellness.ca" class="footer-link">info@princetonwellness.ca</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    &copy; 2025 Princeton Wellness Centre. Powered by <a href="https://www.plansale.ca" target="_blank">Plansale</a>
+                </p>
+
+                <ul class="social-list">
+                    <li>
+                        <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navbar = document.getElementById('navbar');
+
+        navToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close navigation when clicking on links
+        const navLinks = document.querySelectorAll('.navbar-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
         // Simple fade-in animation on scroll
         const observerOptions = {
             threshold: 0.1,
@@ -629,5 +1343,8 @@
             });
         });
     </script>
+
+
+
 </body>
-</html>1
+</html>
