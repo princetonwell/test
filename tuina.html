@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>About Us | Princeton Wellness Centre - Our Story & Team</title>
-
-  <meta name="description" content="Learn about Princeton Wellness Centre's mission, values, and expert team. Discover how we blend traditional Chinese and Western techniques for your holistic wellness journey in Richmond Hill, Toronto.">
+  <title>Tuina Traditional Chinese Massage | Princeton Wellness Centre - Richmond Hill</title>
+  <meta name="description" content="Professional Tuina Traditional Chinese Massage in Richmond Hill. TCM-based therapy for energy balance, muscle tension relief, Qi circulation. Insurance accepted. Book now: 416-871-8855">
 
   <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,27 +15,20 @@
   
   <style>
     :root {
-      --light-steel-blue: hsl(218, 33%, 77%);
       --green: #0d883d;
       --light-green: #10dc60;
       --orange-1: #f4a942;
       --orange-2: #c67200;
       --orange-3: #d38315;
-      --sonic-silver: hsl(0, 0%, 47%);
       --light-gray: hsl(0, 0%, 84%);
       --cultured: hsl(0, 0%, 97%);
       --white: hsl(0, 0%, 100%);
       --black: hsl(0, 0%, 0%);
       --jet: hsl(0, 0%, 20%);
-      --text-dark: #2c3e50;
-      --text-light: #6c757d;
-      --border-gray: #e9ecef;
-
+      --grey2: #666;
       --gradient: linear-gradient(90deg, var(--light-green) 0%, var(--green) 100%);
-
       --ff-roboto: "Roboto", sans-serif;
       --ff-poppins: "Poppins", sans-serif;
-
       --fs-1: 4rem;
       --fs-2: 3.6rem;
       --fs-3: 3.2rem;
@@ -45,30 +36,28 @@
       --fs-5: 2.2rem;
       --fs-6: 1.8rem;
       --fs-7: 1.6rem;
-
       --fw-800: 800;
       --fw-700: 700;
       --fw-600: 600;
       --fw-500: 500;
-
-      --section-padding: 120px;
-
-      --shadow-1: 4px 4px 15px rgba(0, 0, 0, 0.1);
+      --section-padding: 80px;
       --shadow-2: 0 10px 15px rgba(0, 0, 0, 0.1);
       --shadow-3: 0px 20px 60px rgba(0, 0, 0, 0.08);
-      --shadow-4: 0px 10px 30px hsla(225, 68%, 53%, 0.3);
-
-      --radius-6: 6px;
       --radius-4: 4px;
+      --radius-6: 6px;
       --radius-20: 20px;
-
       --transition: 0.25s ease;
     }
 
-    * {
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      font-size: 10px;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -76,13 +65,7 @@
       font-size: 1.6rem;
       line-height: 1.6;
       color: var(--black);
-      background-color: var(--cultured);
       overflow-x: hidden;
-    }
-
-    html {
-      font-size: 10px;
-      scroll-behavior: smooth;
     }
 
     .container {
@@ -91,11 +74,6 @@
       padding: 0 25px;
     }
 
-    .section {
-      padding: var(--section-padding) 0;
-    }
-
-    /* Header Styles */
     .header {
       position: fixed;
       top: 0;
@@ -211,11 +189,11 @@
       text-transform: uppercase;
       transition: var(--transition);
       cursor: pointer;
+      display: inline-block;
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: var(--shadow-4);
     }
 
     .nav-toggle-btn {
@@ -228,270 +206,362 @@
       cursor: pointer;
     }
 
-    /* Hero Section */
-    .about-hero {
+    .service-hero {
       background: linear-gradient(135deg, var(--orange-1) 0%, var(--orange-2) 100%);
-      color: var(--white);
-      padding: 150px 0 100px;
+      padding: 180px 0 100px;
       text-align: center;
+      color: var(--white);
     }
 
-    .about-hero h1 {
+    .service-hero h1 {
       font-family: var(--ff-poppins);
       font-size: var(--fs-1);
       font-weight: var(--fw-800);
       margin-bottom: 20px;
     }
 
-    .about-hero p {
-      font-size: var(--fs-6);
-      max-width: 700px;
-      margin: 0 auto;
-      opacity: 0.9;
+    .service-hero .subtitle {
+      font-size: var(--fs-5);
+      max-width: 800px;
+      margin: 0 auto 30px;
+      opacity: 0.95;
     }
 
-    /* Story Section */
-    .story-section {
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .hero-btn {
       background: var(--white);
-      padding: 80px 0;
+      color: var(--orange-1);
+      padding: 18px 35px;
+      font-size: var(--fs-7);
+      font-weight: var(--fw-700);
+      border-radius: var(--radius-4);
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-block;
     }
 
-    .story-content {
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-btn.secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+
+    .hero-btn.secondary:hover {
+      background: var(--white);
+      color: var(--orange-1);
+    }
+
+    .intro-section, .tuina-info-section, .techniques-section, .insurance-section, .why-choose-section {
+      padding: var(--section-padding) 0;
+      background: var(--white);
+    }
+
+    .highlights-section, .conditions-section, .expect-section {
+      padding: var(--section-padding) 0;
+      background: var(--cultured);
+    }
+
+    .intro-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro-content p {
+      font-size: var(--fs-6);
+      color: var(--grey2);
+      line-height: 1.8;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-2);
+      color: var(--orange-2);
+      margin-bottom: 50px;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .highlight-item {
+      background: var(--white);
+      padding: 25px;
+      border-radius: var(--radius-6);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+    }
+
+    .highlight-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-3);
+    }
+
+    .highlight-icon {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+    }
+
+    .highlight-text {
+      color: var(--grey2);
+      line-height: 1.6;
+    }
+
+    .tuina-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
     }
 
-    .story-image {
+    .tuina-content h2 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-2);
+      color: var(--orange-2);
+      margin-bottom: 25px;
+    }
+
+    .tuina-content p {
+      color: var(--grey2);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .tuina-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .tuina-list li {
+      padding: 12px 0 12px 30px;
+      position: relative;
+      color: var(--grey2);
+    }
+
+    .tuina-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    .tuina-image {
       border-radius: var(--radius-20);
       overflow: hidden;
       box-shadow: var(--shadow-3);
     }
 
-    .story-image img {
+    .tuina-image img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      display: block;
     }
 
-    .story-text h2 {
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-2);
-      color: var(--orange-2);
-      margin-bottom: 20px;
-    }
-
-    .story-text .section-subtitle {
-      color: var(--light-green);
-      font-weight: var(--fw-600);
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      font-size: 1.4rem;
-    }
-
-    .story-text p {
-      color: var(--text-light);
-      margin-bottom: 20px;
-      line-height: 1.8;
-    }
-
-    /* Values Section */
-    .values-section {
-      background: var(--cultured);
-      padding: 80px 0;
-      text-align: center;
-    }
-
-    .values-section h2 {
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-2);
-      color: var(--orange-2);
-      margin-bottom: 60px;
-    }
-
-    .values-section .section-subtitle {
-      color: var(--light-green);
-      font-weight: var(--fw-600);
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      font-size: 1.4rem;
-    }
-
-    .values-grid {
+    .conditions-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      margin-top: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
 
-    .value-card {
+    .condition-item {
       background: var(--white);
-      padding: 40px 30px;
-      border-radius: var(--radius-20);
-      box-shadow: var(--shadow-3);
+      padding: 20px 25px;
+      border-radius: var(--radius-6);
+      border-left: 4px solid var(--green);
+      display: flex;
+      align-items: center;
+      gap: 15px;
       transition: var(--transition);
     }
 
-    .value-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    .condition-item:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-3);
     }
 
-    .value-icon {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 25px;
+    .condition-icon {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+    }
+
+    .condition-text {
+      color: var(--grey2);
+      font-size: var(--fs-7);
+    }
+
+    .techniques-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .technique-card {
+      background: var(--cultured);
+      padding: 35px 30px;
+      border-radius: var(--radius-6);
+      transition: var(--transition);
+    }
+
+    .technique-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-3);
+      background: var(--white);
+    }
+
+    .technique-card h3 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-5);
+      color: var(--orange-2);
+      margin-bottom: 15px;
+    }
+
+    .technique-card p {
+      color: var(--grey2);
+      line-height: 1.7;
+    }
+
+    .expect-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 35px;
+      margin-top: 40px;
+    }
+
+    .step-card {
+      background: var(--white);
+      padding: 35px;
+      border-radius: var(--radius-6);
+      text-align: center;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
       background: var(--gradient);
+      color: var(--white);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3.5rem;
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-4);
+      font-weight: var(--fw-700);
     }
 
-    .value-card h3 {
+    .step-card h3 {
       font-family: var(--ff-poppins);
       font-size: var(--fs-5);
       color: var(--orange-2);
-      margin-bottom: 15px;
+      margin: 10px 0 15px;
     }
 
-    .value-card p {
-      color: var(--text-light);
+    .step-card p {
+      color: var(--grey2);
       line-height: 1.7;
     }
 
-    /* Team Section */
-    .team-section {
-      background: var(--white);
-      padding: 80px 0;
+    .insurance-content {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
     }
 
-    .team-section h2 {
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-2);
-      color: var(--orange-2);
-      margin-bottom: 60px;
+    .insurance-content p {
+      font-size: var(--fs-6);
+      color: var(--grey2);
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
 
-    .team-section .section-subtitle {
-      color: var(--light-green);
-      font-weight: var(--fw-600);
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      font-size: 1.4rem;
-    }
-
-    .team-grid {
+    .why-choose-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      margin-top: 50px;
+      gap: 25px;
     }
 
-    .team-card {
-      background: var(--white);
-      border-radius: var(--radius-20);
-      overflow: hidden;
-      box-shadow: var(--shadow-3);
-      transition: var(--transition);
-    }
-
-    .team-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .team-image {
-      height: 300px;
+    .why-choose-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px;
       background: var(--cultured);
-      overflow: hidden;
-    }
-
-    .team-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      border-radius: var(--radius-6);
       transition: var(--transition);
     }
 
-    .team-card:hover .team-image img {
-      transform: scale(1.1);
+    .why-choose-item:hover {
+      background: var(--white);
+      box-shadow: var(--shadow-3);
     }
 
-    .team-info {
-      padding: 30px;
+    .why-icon {
+      font-size: 2.8rem;
+      color: var(--green);
+      flex-shrink: 0;
     }
 
-    .team-info h3 {
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-5);
-      color: var(--orange-2);
-      margin-bottom: 8px;
+    .why-text {
+      color: var(--grey2);
+      line-height: 1.6;
     }
 
-    .team-role {
-      color: var(--light-green);
-      font-weight: var(--fw-600);
-      margin-bottom: 15px;
-      font-size: 1.4rem;
-    }
-
-    .team-info p {
-      color: var(--text-light);
-      line-height: 1.7;
-      font-size: 1.5rem;
-    }
-
-    /* Stats Section */
-    .stats-section {
+    .cta-section {
       background: var(--orange-1);
       color: var(--white);
-      padding: 80px 0;
       text-align: center;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 40px;
-    }
-
-    .stat-item h3 {
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-1);
-      font-weight: var(--fw-800);
-      margin-bottom: 10px;
-    }
-
-    .stat-item p {
-      font-size: var(--fs-6);
-      opacity: 0.9;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      background: var(--cultured);
       padding: 80px 0;
-      text-align: center;
     }
 
     .cta-section h2 {
       font-family: var(--ff-poppins);
       font-size: var(--fs-2);
-      color: var(--orange-2);
       margin-bottom: 20px;
     }
 
     .cta-section p {
       font-size: var(--fs-6);
-      color: var(--text-light);
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+      opacity: 0.95;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* Footer Styles */
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     .footer-top {
       background-color: var(--orange-2);
       color: var(--white);
@@ -503,9 +573,8 @@
       gap: 40px;
     }
 
-    .footer-brand .logo { 
+    .footer-brand .logo {
       color: var(--white);
-      display: inline-block;
       margin-bottom: 15px;
     }
 
@@ -630,7 +699,6 @@
     .copyright a {
       color: var(--white);
       text-decoration: underline;
-      transition: var(--transition);
     }
 
     .copyright a:hover {
@@ -661,7 +729,13 @@
       transform: translateY(-3px);
     }
 
-    /* Responsive Design */
+    @media (max-width: 992px) {
+      .tuina-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
     @media (max-width: 768px) {
       .header-top {
         display: none;
@@ -698,32 +772,17 @@
         gap: 15px;
       }
 
-      .about-hero {
-        padding: 140px 0 80px;
+      .service-hero {
+        padding: 140px 0 70px;
       }
 
-      .about-hero h1 {
-        font-size: 3.5rem;
+      .service-hero h1 {
+        font-size: 3.2rem;
       }
 
-      .story-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .story-image {
-        order: -1;
-      }
-
-      .values-grid,
-      .team-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+      .hero-btn {
+        width: 100%;
+        max-width: 300px;
       }
 
       .footer-top .container {
@@ -737,35 +796,20 @@
     }
 
     @media (min-width: 575px) {
-      .footer-top .container { 
-        grid-template-columns: 1fr 1fr; 
+      .footer-top .container {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
     @media (min-width: 992px) {
-      .footer-top .container { 
-        grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr; 
-      }
-    }
-
-    @media (max-width: 480px) {
-      .about-hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stat-item h3 {
-        font-size: 3.5rem;
+      .footer-top .container {
+        grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="header-top">
       <div class="container">
@@ -779,198 +823,219 @@
             <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
           </li>
         </ul>
-
         <ul class="social-list">
-          <li>
-            <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
+          <li><a href="https://www.facebook.com/princetonwellness.ca" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="https://www.instagram.com/princetonwellness.ca" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
         </ul>
       </div>
     </div>
-
     <div class="header-bottom">
       <div class="container">
         <a href="index.html" class="logo">Princeton Wellness Centre</a>
-        
         <nav class="navbar" id="navbar">
           <ul class="navbar-list">
             <li><a href="index.html" class="navbar-link">Home</a></li>
-            <li><a href="service.html" class="navbar-link">Services</a></li>
-            <li><a href="about.html" class="navbar-link active">About Us</a></li>
+            <li><a href="service.html" class="navbar-link active">Services</a></li>
+            <li><a href="about.html" class="navbar-link">About Us</a></li>
             <li><a href="blog.html" class="navbar-link">Blog</a></li>
             <li><a href="contact.html" class="navbar-link">Contact</a></li>
           </ul>
         </nav>
-
-        <a href="#" class="btn">Book Appointment</a>
-        
-        <button class="nav-toggle-btn" id="nav-toggle">
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
+        <a href="tel:+14168718855" class="btn">Book Appointment</a>
+        <button class="nav-toggle-btn" id="nav-toggle"><ion-icon name="menu-outline"></ion-icon></button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="about-hero">
+  <section class="service-hero">
     <div class="container">
-      <h1>About Princeton Wellness Centre</h1>
-      <p>Where Traditional Wisdom Meets Modern Wellness - Your Journey to Health Starts Here</p>
+      <h1>Tuina (Traditional Chinese Therapeutic Massage)</h1>
+      <p class="subtitle">A restorative Traditional Chinese Medicine (TCM) massage technique designed to balance energy flow, relieve muscle pain, and improve overall wellness.</p>
+      <div class="hero-cta">
+        <a href="tel:+14168718855" class="hero-btn">📞 Call to Book - 416-871-8855</a>
+        <a href="contact.html" class="hero-btn secondary">💬 Book Online</a>
+      </div>
     </div>
   </section>
 
-  <!-- Story Section -->
-  <section class="story-section">
+  <section class="intro-section">
     <div class="container">
-      <div class="story-content">
-        <div class="story-image">
-          <img src="assets/images/store.jpg" alt="Princeton Wellness Centre">
+      <div class="intro-content">
+        <p>Tuina uses rhythmic hand techniques, acupoint stimulation, and meridian-based manipulation to release tension, promote circulation, and harmonize the body's Qi (vital energy). This ancient healing practice supports both physical and energetic well-being.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights-section">
+    <div class="container">
+      <h2 class="section-title">Treatment Highlights</h2>
+      <div class="highlights-grid">
+        <div class="highlight-item"><span class="highlight-icon">🤲</span><p class="highlight-text">Traditional Chinese manual techniques</p></div>
+        <div class="highlight-item"><span class="highlight-icon">☯️</span><p class="highlight-text">Meridian and energy balancing</p></div>
+        <div class="highlight-item"><span class="highlight-icon">🎯</span><p class="highlight-text">Acupoint stimulation</p></div>
+        <div class="highlight-item"><span class="highlight-icon">💪</span><p class="highlight-text">Muscle tension & stiffness relief</p></div>
+        <div class="highlight-item"><span class="highlight-icon">🔄</span><p class="highlight-text">Improved Qi and blood circulation</p></div>
+        <div class="highlight-item"><span class="highlight-icon">🌿</span><p class="highlight-text">Complementary to acupuncture & herbal therapy</p></div>
+        <div class="highlight-item"><span class="highlight-icon">📋</span><p class="highlight-text">Insurance receipts provided (if performed by RMT)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tuina-info-section">
+    <div class="container">
+      <div class="tuina-grid">
+        <div class="tuina-content">
+          <h2>What is Tuina?</h2>
+          <p>Tuina (推拿) is one of the oldest therapeutic massage forms in Traditional Chinese Medicine. Unlike Western-style massage, Tuina focuses on restoring energetic balance through specific TCM techniques.</p>
+          <p>Practitioners use:</p>
+          <ul class="tuina-list">
+            <li>Pressing</li>
+            <li>Kneading</li>
+            <li>Rolling</li>
+            <li>Grasping</li>
+            <li>Rhythmic pushing and pulling</li>
+          </ul>
+          <p>These methods target meridians, acupoints, muscles, tendons, and soft tissues to encourage healing and release blockages that disrupt the flow of Qi.</p>
+          <p>Tuina is both therapeutic and energizing — ideal for muscular discomfort, stress, and TCM-based health support.</p>
         </div>
-        <div class="story-text">
-          <p class="section-subtitle">Our Story</p>
-          <h2>Empowering Your Wellness Journey Through Expert Hands</h2>
-          <p>
-            Founded in Richmond Hill, Princeton Wellness Centre was established with a clear vision: to bridge the gap between traditional Chinese medicine and modern Western therapeutic practices. Our journey began with a simple belief that true wellness comes from treating the whole person, not just symptoms.
-          </p>
-          <p>
-            For years, we have been dedicated to providing exceptional care through our comprehensive range of services. Our team of certified professionals brings together centuries-old healing wisdom with evidence-based modern techniques, creating a unique approach to health and wellness that has helped countless clients achieve their wellness goals.
-          </p>
-          <p>
-            At Princeton Wellness Centre, we understand that every individual's health journey is unique. That's why we take the time to listen, assess, and create personalized treatment plans that address your specific needs and concerns. Our commitment to excellence and compassionate care has made us a trusted name in holistic wellness throughout Richmond Hill and the Greater Toronto Area.
-          </p>
+        <div class="tuina-image">
+          <img src="./assets/images/tuina.jpg" alt="Tuina Traditional Chinese Massage" width="500" height="400">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Values Section -->
-  <section class="values-section">
+  <section class="conditions-section">
     <div class="container">
-      <p class="section-subtitle">Our Values</p>
-      <h2>What Drives Us</h2>
-      
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <h3>Compassionate Care</h3>
-          <p>We treat every client with empathy, respect, and genuine concern for their well-being. Your comfort and health are our top priorities.</p>
-        </div>
+      <h2 class="section-title">Conditions We Treat</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--grey2);">Tuina may help with:</p>
+      <div class="conditions-grid">
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Neck, shoulder, and lower-back tension</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Muscle stiffness and tightness</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Sciatica and nerve-related discomfort</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Stress, fatigue, and low energy</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Headaches caused by muscle tension or Qi stagnation</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Poor circulation or cold hands/feet</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Sports and overuse injuries</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Postural imbalances from long desk hours</p></div>
+      </div>
+      <p style="text-align: center; margin-top: 30px; color: var(--grey2); font-style: italic;">Tuina can be used as a standalone therapy or combined with acupuncture for deeper results.</p>
+    </div>
+  </section>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <ion-icon name="school-outline"></ion-icon>
-          </div>
-          <h3>Professional Excellence</h3>
-          <p>Our team maintains the highest standards of certification and continues education to provide you with the best care possible.</p>
+  <section class="techniques-section">
+    <div class="container">
+      <h2 class="section-title">Techniques We Use in Tuina</h2>
+      <div class="techniques-grid">
+        <div class="technique-card">
+          <h3>Traditional Chinese Techniques</h3>
+          <p>Includes kneading, grasping, rolling, and pressing to open meridians and release tension.</p>
         </div>
-
-        <div class="value-card">
-          <div class="value-icon">
-            <ion-icon name="people-outline"></ion-icon>
-          </div>
-          <h3>Holistic Approach</h3>
-          <p>We believe in treating the whole person - body, mind, and spirit - for comprehensive and lasting wellness results.</p>
+        <div class="technique-card">
+          <h3>Energy Meridian Balancing</h3>
+          <p>Restores smooth Qi flow through the 12 primary meridian pathways.</p>
         </div>
+        <div class="technique-card">
+          <h3>Acupoint Stimulation</h3>
+          <p>Targets key acupoints to address pain, stress, and internal imbalances.</p>
+        </div>
+        <div class="technique-card">
+          <h3>Soft Tissue & Muscle Relief</h3>
+          <p>Relaxes tight muscles and reduces discomfort from daily stress or repetitive strain.</p>
+        </div>
+        <div class="technique-card">
+          <h3>Qi & Blood Circulation Enhancement</h3>
+          <p>Encourages warm, free-flowing energy to support whole-body vitality.</p>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 40px; color: var(--grey2);">All techniques are adjusted for your comfort and specific health needs.</p>
+    </div>
+  </section>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <ion-icon name="leaf-outline"></ion-icon>
-          </div>
-          <h3>Natural Healing</h3>
-          <p>We harness the body's natural healing abilities through time-tested traditional methods and modern therapeutic techniques.</p>
+  <section class="expect-section">
+    <div class="container">
+      <h2 class="section-title">What to Expect During Your Visit</h2>
+      <div class="expect-steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>TCM Intake & Assessment</h3>
+          <p>Includes discussion of symptoms, lifestyle, and energetic imbalances.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Tongue & Pulse Evaluation</h3>
+          <p>Provides a deeper understanding of your internal condition (if needed).</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Hands-On Tuina Treatment</h3>
+          <p>The practitioner applies rhythmic manual techniques along meridians and acupoints.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Optional Integration</h3>
+          <p>May be combined with acupuncture or cupping for enhanced therapeutic effects.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h3>After-Care Guidance</h3>
+          <p>TCM lifestyle tips, stretching, or herbal recommendations may be provided.</p>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 40px; color: var(--grey2); font-weight: 600;">Tuina is performed clothed or with minimal draping depending on the area treated.</p>
+    </div>
+  </section>
+
+  <section class="insurance-section">
+    <div class="container">
+      <div class="insurance-content">
+        <h2 class="section-title">Insurance Coverage</h2>
+        <p>Tuina is eligible for insurance reimbursement if performed by a Registered Massage Therapist (RMT) and billed as therapeutic massage.</p>
+        <p>Please check your insurance policy for specific coverage details.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Princeton Wellness Centre</h2>
+      <div class="why-choose-grid">
+        <div class="why-choose-item">
+          <span class="why-icon">👨‍⚕️</span>
+          <p class="why-text">Experienced Tuina practitioners trained in Traditional Chinese Medicine</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">☯️</span>
+          <p class="why-text">Strong focus on energy balance and structural wellness</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">💪</span>
+          <p class="why-text">Effective for muscle tension, stress, and meridian stagnation</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">🌿</span>
+          <p class="why-text">Integration with acupuncture, cupping, or herbal therapies</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">🤝</span>
+          <p class="why-text">Personalized treatment plans tailored to your needs</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">📋</span>
+          <p class="why-text">Insurance receipts available when provided by an RMT</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Team Section -->
-  <section class="team-section">
-    <div class="container">
-      <p class="section-subtitle">Our Team</p>
-      <h2>Meet Our Expert Practitioners</h2>
-      
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-image">
-            <img src="https://blush.design/api/download?shareUri=TfqFVDu_ezddKT9L&c=Skin_0%7Eedb98a&w=800&h=800&fm=png">
-          </div>
-          <div class="team-info">
-            <h3>Lisa G</h3>
-            <p class="team-role">Acupuncturist & Tuina Massage Therapist</p>
-            <p>
-              With over 10 years of professional experience, Lisa integrates traditional Chinese acupuncture, Tuina massage, and modern therapeutic techniques to help clients relieve pain, reduce stress, and restore body balance. Her holistic approach combines precision and care to promote overall wellness.
-            </p>
-          </div>
-        </div>
-
-        <div class="team-card">
-          <div class="team-image">
-            <img src="https://blush.design/api/download?shareUri=tDFEk0Z2kNoIXtur&c=Skin_0%7Eedb98a&w=800&h=800&fm=png">
-          </div>
-          <div class="team-info">
-            <h3>David Z</h3>
-            <p class="team-role">Registered Massage Therapist</p>
-            <p>
-               With over 15 years of clinical experience, David is a highly skilled Registered Massage Therapist specializing in deep tissue, sports injury, and rehabilitative massage. His expertise in anatomy and movement allows him to design precise, results-driven treatments that relieve pain, improve mobility, and support long-term recovery.
-            </p>
-          </div>
-        </div>
-
-        <div class="team-card">
-          <div class="team-image">
-            <img src="https://blush.design/api/download?shareUri=R3MtDyymR4h6f-A6&c=Skin_0%7Effdbb4&w=800&h=800&fm=png">
-          </div>
-          <div class="team-info">
-            <h3>Dr. Helen </h3>
-            <p class="team-role">Senior Traditional Chinese Medicine Practitioner</p>
-            <p>
-With over 30 years of clinical experience in traditional Chinese medicine, Dr. Helen is a highly respected practitioner known for her deep expertise in herbal therapy, acupuncture, and holistic health restoration. Her practice focuses on treating chronic conditions, restoring internal balance, and promoting long-term wellness through individualized care.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <h3>1000+</h3>
-          <p>Happy Clients</p>
-        </div>
-        <div class="stat-item">
-          <h3>15+</h3>
-          <p>Years Experience</p>
-        </div>
-        <div class="stat-item">
-          <h3>10+</h3>
-          <p>Expert Practitioners</p>
-        </div>
-        <div class="stat-item">
-          <h3>96%</h3>
-          <p>Satisfaction Rate</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <h2>Ready to Start Your Wellness Journey?</h2>
-      <p>Experience the difference that expert, compassionate care can make in your life. Book your appointment today.</p>
-      <a href="tel:+14168718855" class="btn">Book Now</a>
+      <h2>Book Your Appointment</h2>
+      <p>Rebalance your energy, release muscle tension, and experience the healing power of traditional Tuina. Our practitioners combine ancient techniques with modern understanding to support your health and well-being.</p>
+      <div class="cta-buttons">
+        <a href="tel:+14168718855" class="hero-btn">📞 Call Us to Book - 416-871-8855</a>
+        <a href="contact.html" class="hero-btn secondary">💬 Book Online</a>
+      </div>
     </div>
   </section>
 
@@ -1173,9 +1238,7 @@ With over 30 years of clinical experience in traditional Chinese medicine, Dr. H
 
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Mobile Navigation Toggle
     const navToggle = document.getElementById('nav-toggle');
     const navbar = document.getElementById('navbar');
 
@@ -1183,7 +1246,6 @@ With over 30 years of clinical experience in traditional Chinese medicine, Dr. H
       navbar.classList.toggle('active');
     });
 
-    // Close navigation when clicking on links
     const navLinks = document.querySelectorAll('.navbar-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -1191,19 +1253,6 @@ With over 30 years of clinical experience in traditional Chinese medicine, Dr. H
       });
     });
 
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('.header');
-      if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
-      } else {
-        header.style.background = 'var(--white)';
-        header.style.backdropFilter = 'none';
-      }
-    });
-
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1217,30 +1266,16 @@ With over 30 years of clinical experience in traditional Chinese medicine, Dr. H
       });
     });
 
-    // Animation on scroll for value cards and team cards
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.value-card, .team-card').forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(card);
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+      } else {
+        header.style.background = 'var(--white)';
+      }
     });
   </script>
 
-  <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Registered Massage Therapy | Princeton Wellness Centre - Richmond Hill</title>
+  <meta name="description" content="Professional Registered Massage Therapy in Richmond Hill. Licensed RMTs for pain relief, injury recovery, stress reduction. Insurance accepted. Book now: 416-871-8855">
+
+  <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --green: #0d883d;
+      --light-green: #10dc60;
+      --orange-1: #f4a942;
+      --orange-2: #c67200;
+      --orange-3: #d38315;
+      --light-gray: hsl(0, 0%, 84%);
+      --cultured: hsl(0, 0%, 97%);
+      --white: hsl(0, 0%, 100%);
+      --black: hsl(0, 0%, 0%);
+      --jet: hsl(0, 0%, 20%);
+      --grey2: #666;
+      --gradient: linear-gradient(90deg, var(--light-green) 0%, var(--green) 100%);
+      --ff-roboto: "Roboto", sans-serif;
+      --ff-poppins: "Poppins", sans-serif;
+      --fs-1: 4rem;
+      --fs-2: 3.6rem;
+      --fs-3: 3.2rem;
+      --fs-4: 2.4rem;
+      --fs-5: 2.2rem;
+      --fs-6: 1.8rem;
+      --fs-7: 1.6rem;
+      --fw-800: 800;
+      --fw-700: 700;
+      --fw-600: 600;
+      --fw-500: 500;
+      --section-padding: 80px;
+      --shadow-2: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --shadow-3: 0px 20px 60px rgba(0, 0, 0, 0.08);
+      --radius-4: 4px;
+      --radius-6: 6px;
+      --radius-20: 20px;
+      --transition: 0.25s ease;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 10px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--ff-roboto);
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: var(--black);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 25px;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      box-shadow: var(--shadow-2);
+      z-index: 1000;
+    }
+
+    .header-top {
+      background: var(--orange-1);
+      color: var(--white);
+      padding: 15px 0;
+      font-size: 1.4rem;
+    }
+
+    .header-top .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact-list {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-link {
+      color: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-link:hover {
+      color: var(--light-green);
+    }
+
+    .social-list {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .social-link {
+      color: var(--white);
+      font-size: 1.8rem;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      color: var(--light-green);
+    }
+
+    .header-bottom {
+      padding: 20px 0;
+    }
+
+    .header-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--ff-poppins);
+      font-size: 2.4rem;
+      font-weight: var(--fw-800);
+      color: var(--orange-1);
+      text-decoration: none;
+    }
+
+    .navbar {
+      display: flex;
+    }
+
+    .navbar-list {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .navbar-link {
+      color: var(--orange-1);
+      font-family: var(--ff-poppins);
+      font-weight: var(--fw-600);
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: var(--transition);
+    }
+
+    .navbar-link:hover,
+    .navbar-link.active {
+      color: var(--green);
+    }
+
+    .btn {
+      background: var(--gradient);
+      color: var(--white);
+      padding: 15px 25px;
+      border: none;
+      border-radius: var(--radius-4);
+      font-weight: var(--fw-600);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: var(--transition);
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .nav-toggle-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--orange-1);
+      color: var(--orange-1);
+      font-size: 2rem;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .service-hero {
+      background: linear-gradient(135deg, var(--orange-1) 0%, var(--orange-2) 100%);
+      padding: 180px 0 100px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .service-hero h1 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-1);
+      font-weight: var(--fw-800);
+      margin-bottom: 20px;
+    }
+
+    .service-hero .subtitle {
+      font-size: var(--fs-5);
+      max-width: 800px;
+      margin: 0 auto 30px;
+      opacity: 0.95;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .hero-btn {
+      background: var(--white);
+      color: var(--orange-1);
+      padding: 18px 35px;
+      font-size: var(--fs-7);
+      font-weight: var(--fw-700);
+      border-radius: var(--radius-4);
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-btn.secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+
+    .hero-btn.secondary:hover {
+      background: var(--white);
+      color: var(--orange-1);
+    }
+
+    .intro-section, .rmt-info-section, .techniques-section, .insurance-section, .why-choose-section {
+      padding: var(--section-padding) 0;
+      background: var(--white);
+    }
+
+    .highlights-section, .conditions-section, .expect-section, .pricing-section {
+      padding: var(--section-padding) 0;
+      background: var(--cultured);
+    }
+
+    .intro-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro-content p {
+      font-size: var(--fs-6);
+      color: var(--grey2);
+      line-height: 1.8;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-2);
+      color: var(--orange-2);
+      margin-bottom: 50px;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .highlight-item {
+      background: var(--white);
+      padding: 25px;
+      border-radius: var(--radius-6);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+    }
+
+    .highlight-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-3);
+    }
+
+    .highlight-icon {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+    }
+
+    .highlight-text {
+      color: var(--grey2);
+      line-height: 1.6;
+    }
+
+    .rmt-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .rmt-content h2 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-2);
+      color: var(--orange-2);
+      margin-bottom: 25px;
+    }
+
+    .rmt-content p {
+      color: var(--grey2);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .rmt-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .rmt-list li {
+      padding: 12px 0 12px 30px;
+      position: relative;
+      color: var(--grey2);
+    }
+
+    .rmt-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    .rmt-image {
+      border-radius: var(--radius-20);
+      overflow: hidden;
+      box-shadow: var(--shadow-3);
+    }
+
+    .rmt-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .condition-item {
+      background: var(--white);
+      padding: 20px 25px;
+      border-radius: var(--radius-6);
+      border-left: 4px solid var(--green);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: var(--transition);
+    }
+
+    .condition-item:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-3);
+    }
+
+    .condition-icon {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+    }
+
+    .condition-text {
+      color: var(--grey2);
+      font-size: var(--fs-7);
+    }
+
+    .techniques-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .technique-card {
+      background: var(--cultured);
+      padding: 35px 30px;
+      border-radius: var(--radius-6);
+      transition: var(--transition);
+    }
+
+    .technique-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-3);
+      background: var(--white);
+    }
+
+    .technique-card h3 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-5);
+      color: var(--orange-2);
+      margin-bottom: 15px;
+    }
+
+    .technique-card p {
+      color: var(--grey2);
+      line-height: 1.7;
+    }
+
+    .expect-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 35px;
+      margin-top: 40px;
+    }
+
+    .step-card {
+      background: var(--white);
+      padding: 35px;
+      border-radius: var(--radius-6);
+      text-align: center;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      background: var(--gradient);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-4);
+      font-weight: var(--fw-700);
+    }
+
+    .step-card h3 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-5);
+      color: var(--orange-2);
+      margin: 10px 0 15px;
+    }
+
+    .step-card p {
+      color: var(--grey2);
+      line-height: 1.7;
+    }
+
+    .insurance-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .insurance-content p {
+      font-size: var(--fs-6);
+      color: var(--grey2);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .insurance-highlight {
+      background: var(--cultured);
+      padding: 30px;
+      border-radius: var(--radius-6);
+      margin-top: 30px;
+      border: 2px solid var(--green);
+    }
+
+    .insurance-highlight p {
+      font-size: var(--fs-6);
+      color: var(--green);
+      font-weight: var(--fw-600);
+      margin: 0;
+    }
+
+    .pricing-table {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-6);
+      overflow: hidden;
+      box-shadow: var(--shadow-3);
+    }
+
+    .pricing-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+      padding: 20px 30px;
+      text-align: left;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .pricing-table th {
+      background: var(--gradient);
+      color: var(--white);
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-700);
+    }
+
+    .pricing-table td {
+      font-size: var(--fs-6);
+      color: var(--grey2);
+    }
+
+    .pricing-table td:last-child {
+      font-weight: var(--fw-600);
+      color: var(--orange-2);
+      font-size: var(--fs-5);
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pricing-table tr:hover {
+      background: var(--cultured);
+    }
+
+    .pricing-note {
+      text-align: center;
+      margin-top: 30px;
+      font-size: var(--fs-7);
+      color: var(--grey2);
+      font-style: italic;
+    }
+
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .why-choose-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px;
+      background: var(--cultured);
+      border-radius: var(--radius-6);
+      transition: var(--transition);
+    }
+
+    .why-choose-item:hover {
+      background: var(--white);
+      box-shadow: var(--shadow-3);
+    }
+
+    .why-icon {
+      font-size: 2.8rem;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .why-text {
+      color: var(--grey2);
+      line-height: 1.6;
+    }
+
+    .cta-section {
+      background: var(--orange-1);
+      color: var(--white);
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .cta-section h2 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-2);
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: var(--fs-6);
+      margin-bottom: 35px;
+      opacity: 0.95;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-top {
+      background-color: var(--orange-2);
+      color: var(--white);
+      padding: 60px 0;
+    }
+
+    .footer-top .container {
+      display: grid;
+      gap: 40px;
+    }
+
+    .footer-brand .logo {
+      color: var(--white);
+      margin-bottom: 15px;
+    }
+
+    .footer-text {
+      color: var(--white);
+      line-height: 1.8;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    .schedule {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: var(--radius-6);
+    }
+
+    .schedule-icon {
+      background-image: var(--gradient);
+      color: var(--white);
+      font-size: 22px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .schedule .span {
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    .footer-list-title {
+      color: var(--white);
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-5);
+      font-weight: var(--fw-700);
+      margin-bottom: 20px;
+    }
+
+    .footer-list {
+      list-style: none;
+    }
+
+    .footer-link {
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      transition: var(--transition);
+      opacity: 0.85;
+    }
+
+    .footer-link ion-icon {
+      color: var(--light-green);
+      font-size: 16px;
+    }
+
+    .footer-link:hover {
+      opacity: 1;
+      padding-left: 5px;
+    }
+
+    .footer-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .footer-item .item-icon {
+      background-image: var(--gradient);
+      color: var(--white);
+      font-size: 20px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .footer-item .item-text,
+    .footer-item a {
+      color: var(--white);
+      line-height: 1.6;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-item a:hover {
+      color: var(--light-green);
+    }
+
+    .footer-bottom {
+      background-color: var(--orange-3);
+      padding: 30px 0;
+    }
+
+    .footer-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .copyright {
+      color: var(--white);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .copyright a {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .copyright a:hover {
+      color: var(--light-green);
+    }
+
+    .footer .social-list {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer .social-link {
+      padding: 12px;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: var(--white);
+      font-size: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      transition: var(--transition);
+    }
+
+    .footer .social-link:hover {
+      background-image: var(--gradient);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 992px) {
+      .rmt-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-top {
+        display: none;
+      }
+
+      .header-bottom .btn {
+        display: none;
+      }
+
+      .nav-toggle-btn {
+        display: block;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: var(--shadow-2);
+        max-height: 0;
+        overflow: hidden;
+        transition: var(--transition);
+      }
+
+      .navbar.active {
+        max-height: 300px;
+        top: 80px;
+      }
+
+      .navbar-list {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+      }
+
+      .service-hero {
+        padding: 140px 0 70px;
+      }
+
+      .service-hero h1 {
+        font-size: 3.2rem;
+      }
+
+      .hero-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .footer-top .container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 575px) {
+      .footer-top .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .footer-top .container {
+        grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <ul class="contact-list">
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:info@princetonwellness.ca" class="contact-link">info@princetonwellness.ca</a>
+          </li>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
+          </li>
+        </ul>
+        <ul class="social-list">
+          <li><a href="https://www.facebook.com/princetonwellness.ca" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="https://www.instagram.com/princetonwellness.ca" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <a href="index.html" class="logo">Princeton Wellness Centre</a>
+        <nav class="navbar" id="navbar">
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="service.html" class="navbar-link active">Services</a></li>
+            <li><a href="about.html" class="navbar-link">About Us</a></li>
+            <li><a href="blog.html" class="navbar-link">Blog</a></li>
+            <li><a href="contact.html" class="navbar-link">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="tel:+14168718855" class="btn">Book Appointment</a>
+        <button class="nav-toggle-btn" id="nav-toggle"><ion-icon name="menu-outline"></ion-icon></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="service-hero">
+    <div class="container">
+      <h1>Registered Massage Therapy</h1>
+      <p class="subtitle">Clinical massage care for pain relief, stress reduction, and whole-body wellness.</p>
+      <div class="hero-cta">
+        <a href="tel:+14168718855" class="hero-btn">📞 Call to Book - 416-871-8855</a>
+        <a href="#pricing" class="hero-btn secondary">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-content">
+        <p>Our Registered Massage Therapists (RMTs) provide evidence-based, therapeutic massage tailored to your individual needs. Whether you're managing chronic pain, recovering from an injury, or simply seeking deep relaxation, each treatment is focused on restoring balance and improving your overall well-being.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights-section">
+    <div class="container">
+      <h2 class="section-title">Treatment Highlights</h2>
+      <div class="highlights-grid">
+        <div class="highlight-item"><span class="highlight-icon">💪</span><p class="highlight-text">Deep tissue & Swedish techniques</p></div>
+        <div class="highlight-item"><span class="highlight-icon">🏃</span><p class="highlight-text">Injury & mobility rehabilitation</p></div>
+        <div class="highlight-item"><span class="highlight-icon">🎯</span><p class="highlight-text">Headache, neck, and lower-back pain relief</p></div>
+        <div class="highlight-item"><span class="highlight-icon">😌</span><p class="highlight-text">Stress reduction & improved sleep</p></div>
+        <div class="highlight-item"><span class="highlight-icon">📋</span><p class="highlight-text">Insurance receipts provided — all major insurance accepted</p></div>
+        <div class="highlight-item"><span class="highlight-icon">✨</span><p class="highlight-text">Combination treatments available (Massage + Acupuncture)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rmt-info-section">
+    <div class="container">
+      <div class="rmt-grid">
+        <div class="rmt-content">
+          <h2>What is Registered Massage Therapy?</h2>
+          <p>Registered Massage Therapy (RMT) is a regulated healthcare profession in Ontario. RMTs are trained in anatomy, soft-tissue assessment, therapeutic techniques, injury management, and clinical treatment planning.</p>
+          <p>Unlike general relaxation massage, RMT sessions are designed to treat:</p>
+          <ul class="rmt-list">
+            <li>Muscle tension & stiffness</li>
+            <li>Posture-related pain</li>
+            <li>Stress-related headaches</li>
+            <li>Sports & overuse injuries</li>
+            <li>Chronic tightness affecting daily movement</li>
+          </ul>
+          <p>Each treatment includes assessment, targeted therapy, and personalized home-care suggestions.</p>
+        </div>
+        <div class="rmt-image">
+          <img src="./assets/images/massage-therapy.jpg" alt="Registered Massage Therapy Session" width="500" height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="conditions-section">
+    <div class="container">
+      <h2 class="section-title">Conditions We Treat</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--grey2);">Massage therapy may help with:</p>
+      <div class="conditions-grid">
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Neck, shoulder, and lower-back pain</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Sciatica, nerve tension, tight hips</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Shoulder stiffness & frozen shoulder</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Headaches / migraines caused by muscle tension</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Stress, anxiety, and sleep difficulties</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Posture-related discomfort from long desk hours</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Muscle strains, sports injuries, or repetitive-strain pain</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Post-accident recovery (as advised by your doctor)</p></div>
+      </div>
+      <p style="text-align: center; margin-top: 30px; color: var(--grey2); font-style: italic;">If you're unsure whether massage therapy is suitable for you, our practitioners can guide you.</p>
+    </div>
+  </section>
+
+  <section class="techniques-section">
+    <div class="container">
+      <h2 class="section-title">Massage Techniques We Use</h2>
+      <div class="techniques-grid">
+        <div class="technique-card">
+          <h3>Deep Tissue Massage</h3>
+          <p>Targets deeper layers of muscles and fascia to reduce chronic tension and knots.</p>
+        </div>
+        <div class="technique-card">
+          <h3>Swedish Massage</h3>
+          <p>Gentle, flowing techniques to improve circulation and promote relaxation.</p>
+        </div>
+        <div class="technique-card">
+          <h3>Rehabilitation-Focused Massage</h3>
+          <p>Ideal for sports injuries, overuse conditions, and mobility restrictions.</p>
+        </div>
+        <div class="technique-card">
+          <h3>Stress & Nervous System Relief</h3>
+          <p>Helps reduce anxiety, calm the body, and support better sleep quality.</p>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 40px; color: var(--grey2);">We adjust pressure and technique based on your comfort and clinical needs.</p>
+    </div>
+  </section>
+
+  <section class="expect-section">
+    <div class="container">
+      <h2 class="section-title">What to Expect During Your Visit</h2>
+      <div class="expect-steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Health Intake & Consultation</h3>
+          <p>Your RMT will review your health history and discuss your concerns.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Assessment</h3>
+          <p>Simple movement tests help identify the source of pain or tension.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Personalized Hands-On Treatment</h3>
+          <p>You are comfortably draped; only the area being worked on is uncovered.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>After-Care Guidance</h3>
+          <p>Your RMT may recommend stretches, heat/ice therapy, and follow-up frequency.</p>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 40px; color: var(--grey2); font-weight: 600;">Your comfort and safety are always the priority.</p>
+    </div>
+  </section>
+
+  <section class="insurance-section">
+    <div class="container">
+      <div class="insurance-content">
+        <h2 class="section-title">Insurance Coverage</h2>
+        <p>We accept all major extended health insurance plans. You will receive an official RMT receipt that can be submitted for reimbursement.</p>
+        <div class="insurance-highlight">
+          <p>✅ Some plans may also allow direct billing — please check with your insurance provider.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Registered Massage Therapy Pricing</h2>
+      <div class="pricing-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>30-Min Massage</td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>45-Min Massage</td>
+              <td>$90</td>
+            </tr>
+            <tr>
+              <td>60-Min Massage</td>
+              <td>$110</td>
+            </tr>
+            <tr>
+              <td>90-Min Massage</td>
+              <td>$160</td>
+            </tr>
+            <tr>
+              <td>60-Min Acupuncture</td>
+              <td>$110</td>
+            </tr>
+            <tr>
+              <td>60-Min Massage + Acupuncture</td>
+              <td>$120</td>
+            </tr>
+            <tr>
+              <td>90-Min Massage + Acupuncture</td>
+              <td>$170</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="pricing-note">HST included. Combination treatments (Massage + Acupuncture) are designed to enhance muscle recovery, improve circulation, and support deeper therapeutic results.</p>
+    </div>
+  </section>
+
+  <section class="why-choose-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Princeton Wellness Centre</h2>
+      <div class="why-choose-grid">
+        <div class="why-choose-item">
+          <span class="why-icon">👨‍⚕️</span>
+          <p class="why-text">Licensed and experienced Registered Massage Therapists</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">🎯</span>
+          <p class="why-text">Clinical, result-oriented treatments</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">🏡</span>
+          <p class="why-text">Clean, quiet, and relaxing environment</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">✨</span>
+          <p class="why-text">Convenient combination treatments (RMT + Acupuncture)</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">🤝</span>
+          <p class="why-text">Supportive integrated care for long-term wellness</p>
+        </div>
+        <div class="why-choose-item">
+          <span class="why-icon">📋</span>
+          <p class="why-text">Insurance receipts & flexible scheduling</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Book Your Appointment</h2>
+      <p>Ready to feel better in your body? Whether you're dealing with pain, recovering from an injury, or simply need a moment to relax — we're here to help.</p>
+      <div class="cta-buttons">
+        <a href="tel:+14168718855" class="hero-btn">📞 Call Us to Book - 416-871-8855</a>
+        <a href="contact.html" class="hero-btn secondary">💬 Book Online</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Princeton Wellness Centre.</a>
+
+          <p class="footer-text">
+            We provide you with the best massage and acupuncture services combining traditional Chineses and Western techniques.
+          </p>
+
+          <div class="schedule">
+            <div class="schedule-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+
+            <span class="span">
+              Monday - Sunday:<br>
+              8:00AM - 10:00PM
+            </span>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Other Links</p>
+          </li>
+
+          <li>
+            <a href="index.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#service" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Services</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Our Team</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="blog.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Latest Blog</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#shop" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Shop</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+         <li>
+            <a href="Massage.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Massage</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="osteopathy.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Osteopathy</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="tuina.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Tuina</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="acupuncture.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Acupuncture</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="hotstone.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Hot Stone</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="earcandling.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Ear Candling</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="item-text">
+              <a href="https://www.google.com/maps/dir//11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2" 
+              target="_blank" rel="noopener noreferrer">
+              11 Princeton Ave<br>Richmond Hill, ON L4S 2E2</a>
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+14168718855" class="footer-link">416-871-8855</a>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:info@princetonwellness.ca" class="footer-link">info@princetonwellness.ca</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2025 Princeton Wellness Centre. Powered by <a href="https://www.plansale.ca" target="_blank">Plansale</a>
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navbar = document.getElementById('navbar');
+
+    navToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.navbar-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+      } else {
+        header.style.background = 'var(--white)';
+      }
+    });
+  </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
