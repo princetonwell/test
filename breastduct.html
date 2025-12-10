@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Registered Acupuncture | Princeton Wellness Centre - Richmond Hill</title>
-  <meta name="description" content="Professional Registered Acupuncture in Richmond Hill. Licensed R.Ac. for pain relief, healing, stress reduction. Traditional Chinese Medicine. Insurance accepted. Book now: 416-871-8855">
+
+  <title>Breast Milk Duct Blockage Support | Princeton Wellness Centre Richmond Hill</title>
+
+  <meta name="description"
+    content="Gentle therapeutic treatment for clogged milk ducts at Princeton Wellness Centre on Princeton Avenue in Richmond Hill. We help breastfeeding mothers relieve breast pain, improve milk flow, and reduce the risk of mastitis, serving Richmond Hill, Thornhill, Vaughan, Markham, Aurora and Newmarket in York Region.">
+
+  <meta name="geo.region" content="CA-ON" />
+  <meta name="geo.placename" content="Richmond Hill" />
 
   <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
   <style>
     :root {
+      --light-steel-blue: hsl(218, 33%, 77%);
       --green: #0d883d;
       --light-green: #10dc60;
       --orange-1: #f4a942;
       --orange-2: #c67200;
       --orange-3: #d38315;
+      --sonic-silver: hsl(0, 0%, 47%);
       --light-gray: hsl(0, 0%, 84%);
       --cultured: hsl(0, 0%, 97%);
       --white: hsl(0, 0%, 100%);
       --black: hsl(0, 0%, 0%);
       --jet: hsl(0, 0%, 20%);
+      --primaryColor: #f1f1f1;
+      --black2: #555;
+      --grey: #959595;
       --grey2: #666;
+      --grey3: #ccc;
+
       --gradient: linear-gradient(90deg, var(--light-green) 0%, var(--green) 100%);
+
       --ff-roboto: "Roboto", sans-serif;
       --ff-poppins: "Poppins", sans-serif;
+
       --fs-1: 4rem;
       --fs-2: 3.6rem;
       --fs-3: 3.2rem;
@@ -36,20 +53,27 @@
       --fs-5: 2.2rem;
       --fs-6: 1.8rem;
       --fs-7: 1.6rem;
+
       --fw-800: 800;
       --fw-700: 700;
       --fw-600: 600;
       --fw-500: 500;
-      --section-padding: 80px;
+
+      --section-padding: 120px;
+
+      --shadow-1: 4px 4px 15px rgba(0, 0, 0, 0.1);
       --shadow-2: 0 10px 15px rgba(0, 0, 0, 0.1);
       --shadow-3: 0px 20px 60px rgba(0, 0, 0, 0.08);
+      --shadow-4: 0px 10px 30px hsla(225, 68%, 53%, 0.3);
+
       --radius-4: 4px;
       --radius-6: 6px;
       --radius-20: 20px;
+
       --transition: 0.25s ease;
     }
 
-    *, *::before, *::after {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -66,6 +90,7 @@
       line-height: 1.6;
       color: var(--black);
       overflow-x: hidden;
+      background-color: var(--cultured);
     }
 
     .container {
@@ -74,6 +99,11 @@
       padding: 0 25px;
     }
 
+    .section {
+      padding: var(--section-padding) 0;
+    }
+
+    /* Header */
     .header {
       position: fixed;
       top: 0;
@@ -137,6 +167,7 @@
 
     .header-bottom {
       padding: 20px 0;
+      background-color: var(--white);
     }
 
     .header-bottom .container {
@@ -189,11 +220,12 @@
       text-transform: uppercase;
       transition: var(--transition);
       cursor: pointer;
-      display: inline-block;
+      font-size: 1.4rem;
     }
 
     .btn:hover {
       transform: translateY(-2px);
+      box-shadow: var(--shadow-4);
     }
 
     .nav-toggle-btn {
@@ -206,357 +238,278 @@
       cursor: pointer;
     }
 
-    .service-hero {
+    /* Hero */
+    .hero {
       background: linear-gradient(135deg, var(--orange-1) 0%, var(--orange-2) 100%);
-      padding: 180px 0 100px;
-      text-align: center;
       color: var(--white);
+      padding: 150px 0 100px;
+      text-align: center;
     }
 
-    .service-hero h1 {
+    .hero h1 {
       font-family: var(--ff-poppins);
       font-size: var(--fs-1);
       font-weight: var(--fw-800);
       margin-bottom: 20px;
     }
 
-    .service-hero .subtitle {
-      font-size: var(--fs-5);
-      max-width: 800px;
-      margin: 0 auto 30px;
+    .hero p {
+      font-size: var(--fs-6);
+      max-width: 700px;
+      margin: 0 auto 20px;
       opacity: 0.95;
     }
 
-    .hero-cta {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 35px;
+    .hero-location {
+      font-weight: var(--fw-600);
+      margin-top: 10px;
     }
 
-    .hero-btn {
-      background: var(--white);
-      color: var(--orange-1);
-      padding: 18px 35px;
-      font-size: var(--fs-7);
-      font-weight: var(--fw-700);
-      border-radius: var(--radius-4);
-      text-decoration: none;
-      transition: var(--transition);
-      display: inline-block;
+    /* Content Layout */
+    .content-section {
+      background-color: var(--cultured);
     }
 
-    .hero-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-btn.secondary {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid var(--white);
-    }
-
-    .hero-btn.secondary:hover {
-      background: var(--white);
-      color: var(--orange-1);
-    }
-
-    .intro-section, .acu-info-section, .techniques-section, .insurance-section, .why-choose-section {
-      padding: var(--section-padding) 0;
-      background: var(--white);
-    }
-
-    .highlights-section, .conditions-section, .expect-section {
-      padding: var(--section-padding) 0;
-      background: var(--cultured);
-    }
-
-    .intro-content {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .intro-content p {
-      font-size: var(--fs-6);
-      color: var(--grey2);
-      line-height: 1.8;
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-2);
-      color: var(--orange-2);
-      margin-bottom: 50px;
-    }
-
-    .highlights-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      max-width: 1000px;
+    .content-wrapper {
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    .highlight-item {
+    .intro-card {
       background: var(--white);
-      padding: 25px;
-      border-radius: var(--radius-6);
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: var(--transition);
-    }
-
-    .highlight-item:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-3);
-    }
-
-    .highlight-icon {
-      font-size: 2.4rem;
-      flex-shrink: 0;
-    }
-
-    .highlight-text {
-      color: var(--grey2);
-      line-height: 1.6;
-    }
-
-    .acu-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .acu-content h2 {
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-2);
-      color: var(--orange-2);
-      margin-bottom: 25px;
-    }
-
-    .acu-content p {
-      color: var(--grey2);
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .acu-image {
-      border-radius: var(--radius-20);
-      overflow: hidden;
-      box-shadow: var(--shadow-3);
-    }
-
-    .acu-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .conditions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .condition-item {
-      background: var(--white);
-      padding: 20px 25px;
-      border-radius: var(--radius-6);
-      border-left: 4px solid var(--green);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      transition: var(--transition);
-    }
-
-    .condition-item:hover {
-      transform: translateX(5px);
-      box-shadow: var(--shadow-3);
-    }
-
-    .condition-icon {
-      font-size: 2.4rem;
-      flex-shrink: 0;
-    }
-
-    .condition-text {
-      color: var(--grey2);
-      font-size: var(--fs-7);
-    }
-
-    .techniques-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .technique-card {
-      background: var(--cultured);
+      border-radius: 24px;
       padding: 35px 30px;
-      border-radius: var(--radius-6);
-      transition: var(--transition);
-    }
-
-    .technique-card:hover {
-      transform: translateY(-5px);
       box-shadow: var(--shadow-3);
-      background: var(--white);
+      margin-bottom: 40px;
     }
 
-    .technique-card h3 {
+    .intro-card h2 {
       font-family: var(--ff-poppins);
-      font-size: var(--fs-5);
+      font-size: var(--fs-3);
       color: var(--orange-2);
       margin-bottom: 15px;
     }
 
-    .technique-card p {
+    .intro-card p {
       color: var(--grey2);
-      line-height: 1.7;
+      margin-bottom: 8px;
     }
 
-    .expect-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 35px;
-      margin-top: 40px;
-    }
-
-    .step-card {
-      background: var(--white);
-      padding: 35px;
-      border-radius: var(--radius-6);
-      text-align: center;
-      position: relative;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .step-number {
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50px;
-      height: 50px;
-      background: var(--gradient);
-      color: var(--white);
-      border-radius: 50%;
+    .badge-row {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-4);
-      font-weight: var(--fw-700);
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
     }
 
-    .step-card h3 {
+    .badge {
+      background: rgba(13, 136, 61, 0.08);
+      color: var(--green);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 1.3rem;
+      font-weight: var(--fw-600);
+    }
+
+    /* Two-column section */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+      align-items: center;
+    }
+
+    .text-block h2 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-3);
+      color: var(--orange-2);
+      margin-bottom: 15px;
+    }
+
+    .text-block h3 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-5);
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    .text-block p {
+      color: var(--grey2);
+      margin-bottom: 10px;
+    }
+
+    .text-block ul {
+      margin-top: 10px;
+      padding-left: 18px;
+      color: var(--jet);
+    }
+
+    .text-block ul li {
+      margin-bottom: 6px;
+    }
+
+    .image-block {
+      background: var(--cultured);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-3);
+      height: 100%;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Cards grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 22px 22px 20px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .info-card h3 {
       font-family: var(--ff-poppins);
       font-size: var(--fs-5);
       color: var(--orange-2);
-      margin: 10px 0 15px;
+      margin-bottom: 10px;
     }
 
-    .step-card p {
+    .info-card p,
+    .info-card ul {
       color: var(--grey2);
-      line-height: 1.7;
+      font-size: 1.5rem;
     }
 
-    .insurance-content {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
+    .info-card ul {
+      padding-left: 18px;
+      margin-top: 8px;
     }
 
-    .insurance-content p {
-      font-size: var(--fs-6);
-      color: var(--grey2);
-      line-height: 1.8;
-      margin-bottom: 20px;
+    .info-card ul li {
+      margin-bottom: 4px;
     }
 
-    .insurance-highlight {
-      background: var(--cultured);
-      padding: 30px;
-      border-radius: var(--radius-6);
-      margin-top: 30px;
-      border: 2px solid var(--green);
+    /* Steps / What to expect */
+    .steps-section {
+      margin-bottom: 70px;
     }
 
-    .insurance-highlight p {
-      font-size: var(--fs-6);
+    .section-label {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
       color: var(--green);
-      font-weight: var(--fw-600);
-      margin: 0;
+      font-weight: var(--fw-700);
+      margin-bottom: 6px;
     }
 
-    .why-choose-grid {
+    .section-title {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-3);
+      color: var(--orange-2);
+      margin-bottom: 18px;
+    }
+
+    .section-lead {
+      color: var(--grey2);
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 25px;
     }
 
-    .why-choose-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      padding: 20px;
-      background: var(--cultured);
-      border-radius: var(--radius-6);
-      transition: var(--transition);
-    }
-
-    .why-choose-item:hover {
+    .step {
       background: var(--white);
-      box-shadow: var(--shadow-3);
+      border-radius: 18px;
+      padding: 20px 18px 18px;
+      box-shadow: var(--shadow-1);
+      position: relative;
     }
 
-    .why-icon {
-      font-size: 2.8rem;
-      color: var(--green);
-      flex-shrink: 0;
+    .step-number {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--gradient);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: var(--fw-700);
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
 
-    .why-text {
+    .step h3 {
+      font-family: var(--ff-poppins);
+      font-size: 1.8rem;
+      color: var(--orange-2);
+      margin-bottom: 8px;
+    }
+
+    .step p {
       color: var(--grey2);
-      line-height: 1.6;
+      font-size: 1.5rem;
     }
 
-    .cta-section {
+    /* CTA */
+    .cta-strip {
       background: var(--orange-1);
       color: var(--white);
-      text-align: center;
-      padding: 80px 0;
-    }
-
-    .cta-section h2 {
-      font-family: var(--ff-poppins);
-      font-size: var(--fs-2);
+      padding: 55px 30px;
+      border-radius: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      box-shadow: var(--shadow-3);
       margin-bottom: 20px;
     }
 
-    .cta-section p {
-      font-size: var(--fs-6);
-      margin-bottom: 35px;
+    .cta-strip h2 {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-3);
+      margin-bottom: 8px;
+    }
+
+    .cta-strip p {
+      font-size: 1.6rem;
       opacity: 0.95;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    .cta-buttons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
+    .cta-phone {
+      font-size: 2.0rem;
+      font-weight: var(--fw-700);
     }
 
+    .cta-phone a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .cta-phone a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer （与 service.html 保持一致） */
     .footer-top {
       background-color: var(--orange-2);
       color: var(--white);
@@ -570,6 +523,7 @@
 
     .footer-brand .logo {
       color: var(--white);
+      display: inline-block;
       margin-bottom: 15px;
     }
 
@@ -694,6 +648,7 @@
     .copyright a {
       color: var(--white);
       text-decoration: underline;
+      transition: var(--transition);
     }
 
     .copyright a:hover {
@@ -724,13 +679,7 @@
       transform: translateY(-3px);
     }
 
-    @media (max-width: 992px) {
-      .acu-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-    }
-
+    /* Responsive */
     @media (max-width: 768px) {
       .header-top {
         display: none;
@@ -767,17 +716,28 @@
         gap: 15px;
       }
 
-      .service-hero {
-        padding: 140px 0 70px;
+      .hero {
+        padding: 140px 0 80px;
       }
 
-      .service-hero h1 {
-        font-size: 3.2rem;
+      .hero h1 {
+        font-size: 3.4rem;
       }
 
-      .hero-btn {
-        width: 100%;
-        max-width: 300px;
+      .hero p {
+        font-size: 1.7rem;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .image-block {
+        order: -1;
+      }
+
+      .cta-strip {
+        padding: 35px 24px;
       }
 
       .footer-top .container {
@@ -801,10 +761,33 @@
         grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr;
       }
     }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+      }
+
+      .intro-card {
+        padding: 28px 22px;
+      }
+
+      .cta-strip h2 {
+        font-size: 2.4rem;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="header-top">
       <div class="container">
@@ -818,15 +801,26 @@
             <a href="tel:+14168718855" class="contact-link">416-871-8855</a>
           </li>
         </ul>
+
         <ul class="social-list">
-          <li><a href="https://www.facebook.com/princetonwellness.ca" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-          <li><a href="https://www.instagram.com/princetonwellness.ca" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li>
+            <a href="https://www.facebook.com/princetonwellness.ca" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/princetonwellness.ca" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
+
     <div class="header-bottom">
       <div class="container">
         <a href="index.html" class="logo">Princeton Wellness Centre</a>
+
         <nav class="navbar" id="navbar">
           <ul class="navbar-list">
             <li><a href="index.html" class="navbar-link">Home</a></li>
@@ -836,195 +830,230 @@
             <li><a href="contact.html" class="navbar-link">Contact</a></li>
           </ul>
         </nav>
+
         <a href="tel:+14168718855" class="btn">Book Appointment</a>
-        <button class="nav-toggle-btn" id="nav-toggle"><ion-icon name="menu-outline"></ion-icon></button>
+
+        <button class="nav-toggle-btn" id="nav-toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
       </div>
     </div>
   </header>
 
-  <section class="service-hero">
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <h1>Registered Acupuncture</h1>
-      <p class="subtitle">Holistic acupuncture care for pain relief, healing, and overall wellness.</p>
-      <div class="hero-cta">
-        <a href="tel:+14168718855" class="hero-btn">📞 Call to Book - 416-871-8855</a>
-        <a href="contact.html" class="hero-btn secondary">💬 Book Online</a>
-      </div>
+      <h1>Breast Milk Duct Blockage Support</h1>
+      <p>Gentle, targeted treatment to relieve clogged milk ducts, ease breast pain, and support more
+        comfortable breastfeeding at our Princeton Avenue clinic in Richmond Hill.</p>
+      <p class="hero-location">Supporting breastfeeding mothers from Richmond Hill, Thornhill, Vaughan, Markham, Aurora
+        &amp; Newmarket.</p>
     </div>
   </section>
 
-  <section class="intro-section">
-    <div class="container">
-      <div class="intro-content">
-        <p>Our Registered Acupuncturists use Traditional Chinese Medicine (TCM) principles to restore balance, improve circulation, and activate the body's natural healing mechanisms. Whether you are dealing with chronic pain, stress, digestive issues, or sleep difficulties, treatments are tailored to your unique condition and long-term health goals.</p>
+  <!-- Content -->
+  <section class="section content-section">
+    <div class="container content-wrapper">
+
+      <!-- Intro -->
+      <div class="intro-card">
+        <h2>Relief for Clogged Milk Ducts & Painful Breastfeeding</h2>
+        <p>Breast milk duct blockage can cause tender lumps, swelling, and sharp pain during feeding – and if left
+          untreated, it may lead to infection or mastitis.</p>
+        <p>At Princeton Wellness Centre on <strong>Princeton Avenue in Richmond Hill</strong>, we offer gentle,
+          professional breast care to help relieve clogged ducts, improve milk flow, and support breastfeeding mothers
+          through the postpartum period.</p>
+        <p>Our goal is to reduce discomfort, support continued breastfeeding where possible, and work
+          together with your existing medical care.</p>
+
+        <div class="badge-row">
+          <span class="badge">Clogged milk ducts</span>
+          <span class="badge">Painful breastfeeding</span>
+          <span class="badge">Breast lumps and engorgement</span>
+          <span class="badge">Early mastitis risk</span>
+          <span class="badge">Postpartum recovery</span>
+          <span class="badge">Support for new mothers</span>
+        </div>
       </div>
+
+      <!-- What is it -->
+      <div class="two-column">
+        <div class="text-block">
+          <h2>What Is Breast Milk Duct Blockage?</h2>
+          <p>Milk ducts can become blocked when milk is not fully drained, pressure builds up in the breast, or feeding
+            patterns suddenly change. Common signs include:</p>
+          <ul>
+            <li>Tender or painful lump in part of the breast</li>
+            <li>Area of warmth, firmness, or swelling</li>
+            <li>Discomfort or sharp pain during feeding or pumping</li>
+            <li>Milk flow that seems slower or reduced on one side</li>
+          </ul>
+          <p>Early care can often relieve the blockage and reduce the chance of developing mastitis. If you develop
+            fever, chills, flu-like symptoms, or intense redness, you should contact your doctor or midwife immediately.
+          </p>
+          <p><strong>Our service is supportive and complementary and does not replace medical diagnosis or treatment.</strong></p>
+        </div>
+
+        <div class="image-block">
+          <!-- developer: replace with real breastfeeding / clinic care image -->
+          <img src="./assets/images/breast_duct_hero.webp"
+            alt="Breast milk duct blockage treatment at Princeton Wellness Centre in Richmond Hill">
+        </div>
+      </div>
+
+      <!-- How we help / cards -->
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>How Our Treatment Helps</h3>
+          <p>We use gentle, targeted manual techniques around the breast and surrounding tissues to:</p>
+          <ul>
+            <li>Soften firm or lumpy areas related to clogged ducts</li>
+            <li>Improve local circulation and lymphatic flow</li>
+            <li>Encourage more complete milk drainage</li>
+            <li>Reduce pressure, discomfort, and sensitivity</li>
+            <li>Support your body’s natural healing response</li>
+          </ul>
+          <p>Treatment is always adjusted to your comfort level, with clear communication throughout the session.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>What a Session Looks Like</h3>
+          <p>A typical visit at our Princeton Avenue clinic includes:</p>
+          <ul>
+            <li>Brief review of your symptoms, feeding pattern, and medical history</li>
+            <li>Explanation of the areas that will be treated and how we’ll protect privacy and comfort</li>
+            <li>Warm compresses and gentle breast tissue work around the blocked area</li>
+            <li>Guidance on positions, feeding or pumping strategies that may help drainage</li>
+          </ul>
+          <p>Partners or support persons are welcome in the room if you prefer.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Who This Service Is For</h3>
+          <p>Our breast milk duct blockage support is designed for:</p>
+          <ul>
+            <li>Breastfeeding mothers with clogged ducts or recurring blockages</li>
+            <li>Postpartum mothers experiencing engorgement or uneven milk flow</li>
+            <li>Parents wishing to continue breastfeeding but struggling with pain</li>
+          </ul>
+          <p>If you recently had surgery, severe infection, or any complex medical condition, we recommend speaking with
+            your doctor first to confirm that local manual treatment is appropriate.</p>
+        </div>
+      </div>
+
+      <!-- More details -->
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Comfort, Privacy & Respect</h3>
+          <p>We understand that breast health is a sensitive topic. During your visit:</p>
+          <ul>
+            <li>Your comfort, privacy, and consent are our top priorities</li>
+            <li>You’ll be draped appropriately, with only the necessary area uncovered</li>
+            <li>You can pause, stop, or adjust treatment at any time</li>
+            <li>Clear explanations are given before any technique is used</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>Working Alongside Your Health Team</h3>
+          <p>Our practitioners do not prescribe medication or make medical diagnoses. We strongly encourage you to:</p>
+          <ul>
+            <li>Maintain regular contact with your family doctor, OB, midwife, or pediatrician</li>
+            <li>Seek immediate medical help if you notice fever, chills, spreading redness, or feel very unwell</li>
+            <li>Use our service as a complement to, not a replacement for, medical care</li>
+          </ul>
+          <p>We’re happy to coordinate with your healthcare providers when appropriate.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Integrating Other Therapies</h3>
+          <p>At Princeton Wellness Centre in Richmond Hill, some mothers benefit from combining breast care with:</p>
+          <ul>
+            <li>Massage therapy for shoulder, neck, and upper back tension</li>
+            <li>Acupuncture or moxibustion to support overall circulation and recovery</li>
+            <li>Postpartum-focused Tuina or osteopathic manual treatment</li>
+          </ul>
+          <p>Your practitioner can discuss which options may be suitable for your situation.</p>
+        </div>
+      </div>
+
+      <!-- Steps / What to Expect -->
+      <div class="steps-section">
+        <div class="section-label">What to Expect</div>
+        <h2 class="section-title">Your Breast Milk Duct Blockage Visit</h2>
+        <p class="section-lead">
+          We aim to create a calm, supportive space for new mothers at our Princeton Avenue clinic in Richmond Hill.
+          Here’s how a typical visit may look:
+        </p>
+
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Intake & Screening</h3>
+            <p>We review your symptoms, medical history, and any guidance from your doctor or midwife to confirm that
+              this treatment is appropriate for you.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Treatment Plan & Consent</h3>
+            <p>Your practitioner explains the areas that will be treated, how your privacy will be protected, and what
+              sensations to expect. Your questions are always welcome.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Gentle Manual Treatment</h3>
+            <p>Using warm compresses and soft, targeted techniques, we work to encourage drainage of the blocked duct
+              while you rest in a supported position.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Aftercare & Home Strategies</h3>
+            <p>Before you leave, we review simple strategies you can try at home – such as feeding or pumping positions,
+              warm showers, or supportive self-care – to help maintain results.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Insurance / Why choose -->
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Receipts & Insurance</h3>
+          <p>Depending on who provides your session, services may be billed as therapeutic massage or other eligible
+            modalities.</p>
+          <p>We issue official receipts that you can submit to your extended health insurance if breast-related manual
+            therapy is covered under your plan. Please confirm your coverage details with your provider.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Why Choose Our Princeton Avenue Clinic?</h3>
+          <ul>
+            <li>Gentle, focused care for breastfeeding mothers with clogged milk ducts</li>
+            <li>Practitioners experienced in postpartum support and manual therapy</li>
+            <li>Convenient Richmond Hill location on Princeton Avenue, close to Thornhill, Vaughan, Markham, Aurora &amp;
+              Newmarket</li>
+            <li>Option to integrate massage, acupuncture, Tuina, or moxibustion where appropriate</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-strip">
+        <div>
+          <h2>Need Help with a Clogged Milk Duct?</h2>
+          <p>Book an appointment at Princeton Wellness Centre on Princeton Avenue in Richmond Hill for gentle support
+            with breast milk duct blockage and postpartum recovery.</p>
+        </div>
+        <div class="cta-phone">
+          📞 <a href="tel:+14168718855">Call 416-871-8855</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section class="highlights-section">
-    <div class="container">
-      <h2 class="section-title">Treatment Highlights</h2>
-      <div class="highlights-grid">
-        <div class="highlight-item"><span class="highlight-icon">💉</span><p class="highlight-text">Traditional needle acupuncture</p></div>
-        <div class="highlight-item"><span class="highlight-icon">⚡</span><p class="highlight-text">Electroacupuncture</p></div>
-        <div class="highlight-item"><span class="highlight-icon">🔥</span><p class="highlight-text">Cupping therapy</p></div>
-        <div class="highlight-item"><span class="highlight-icon">🌿</span><p class="highlight-text">Moxibustion treatment</p></div>
-        <div class="highlight-item"><span class="highlight-icon">💪</span><p class="highlight-text">Chronic pain & inflammation management</p></div>
-        <div class="highlight-item"><span class="highlight-icon">😌</span><p class="highlight-text">Stress, insomnia, and digestive health support</p></div>
-        <div class="highlight-item"><span class="highlight-icon">📋</span><p class="highlight-text">Insurance receipts provided — all major insurance accepted</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="acu-info-section">
-    <div class="container">
-      <div class="acu-grid">
-        <div class="acu-content">
-          <h2>What is Acupuncture?</h2>
-          <p>Acupuncture is a core treatment in Traditional Chinese Medicine, using fine, sterile needles to stimulate specific points on the body. These points help regulate Qi (energy flow), enhance blood circulation, and support the function of internal organs.</p>
-          <p>Modern research shows acupuncture can help reduce pain, relax the nervous system, and promote recovery from physical and emotional stress.</p>
-          <p>Acupuncture is commonly used to treat both acute and chronic conditions, and can be safely combined with massage therapy, cupping, or herbal medicine for enhanced results.</p>
-        </div>
-        <div class="acu-image">
-          <img src="./assets/images/acupuncture.jpg" alt="Acupuncture Treatment Session" width="500" height="400">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="conditions-section">
-    <div class="container">
-      <h2 class="section-title">Conditions We Treat</h2>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--grey2);">Acupuncture may help with:</p>
-      <div class="conditions-grid">
-        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Neck, shoulder, and lower-back pain</p></div>
-        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Sciatica, joint pain, and muscle stiffness</p></div>
-        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Headaches and migraines</p></div>
-        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Stress, anxiety, and insomnia</p></div>
-        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Digestive issues (bloating, acid reflux, IBS)</p></div>
-        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Female health concerns (menstrual pain, PMS, irregular cycles)</p></div>
-        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Fatigue, low energy, and immune weakness</p></div>
-        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Allergies, sinus congestion, and seasonal symptoms</p></div>
-      </div>
-      <p style="text-align: center; margin-top: 30px; color: var(--grey2); font-style: italic;">If you're unsure whether acupuncture is suitable for your condition, our practitioners can provide guidance and personalized recommendations.</p>
-    </div>
-  </section>
-
-  <section class="techniques-section">
-    <div class="container">
-      <h2 class="section-title">Acupuncture Techniques We Use</h2>
-      <div class="techniques-grid">
-        <div class="technique-card">
-          <h3>Traditional Needle Acupuncture</h3>
-          <p>Stimulates acupoints along meridians to rebalance Qi and relieve pain.</p>
-        </div>
-        <div class="technique-card">
-          <h3>Electroacupuncture</h3>
-          <p>Gentle electrical stimulation enhances muscle relaxation and promotes healing in chronic pain or nerve-related conditions.</p>
-        </div>
-        <div class="technique-card">
-          <h3>Cupping Therapy</h3>
-          <p>Helps release deep tension, improve blood flow, and reduce stagnation.</p>
-        </div>
-        <div class="technique-card">
-          <h3>Moxibustion (Moxa)</h3>
-          <p>Herbal heat therapy used to warm meridians, strengthen Qi, and support digestive and immune function.</p>
-        </div>
-        <div class="technique-card">
-          <h3>Tuina / Manual Therapy</h3>
-          <p>Hands-on techniques to improve circulation, loosen tight muscles, and enhance treatment outcomes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="expect-section">
-    <div class="container">
-      <h2 class="section-title">What to Expect During Your Visit</h2>
-      <div class="expect-steps">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3>TCM Intake & Consultation</h3>
-          <p>The practitioner reviews your health history, symptoms, and lifestyle factors.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Tongue & Pulse Diagnosis</h3>
-          <p>TCM method helps identify patterns of imbalance within the body.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Personalized Acupuncture Treatment</h3>
-          <p>Sterile, single-use needles are inserted gently and comfortably into selected acupoints.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">4</div>
-          <h3>Adjunct Therapies (if needed)</h3>
-          <p>May include electroacupuncture, cupping, or moxibustion.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">5</div>
-          <h3>After-Care Guidance</h3>
-          <p>Recommendations may include herbal supplements, lifestyle advice, or follow-up timing.</p>
-        </div>
-      </div>
-      <p style="text-align: center; margin-top: 40px; color: var(--grey2); font-weight: 600;">Your comfort and safety are always the priority.</p>
-    </div>
-  </section>
-
-  <section class="insurance-section">
-    <div class="container">
-      <div class="insurance-content">
-        <h2 class="section-title">Insurance Coverage</h2>
-        <p>We accept all major extended health insurance plans. You will receive an official receipt from a Registered Acupuncturist (R.Ac.), which can be submitted to your insurance provider for reimbursement.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-choose-section">
-    <div class="container">
-      <h2 class="section-title">Why Choose Princeton Wellness Centre</h2>
-      <div class="why-choose-grid">
-        <div class="why-choose-item">
-          <span class="why-icon">👨‍⚕️</span>
-          <p class="why-text">Licensed & experienced Registered Acupuncturists (R.Ac.)</p>
-        </div>
-        <div class="why-choose-item">
-          <span class="why-icon">🎯</span>
-          <p class="why-text">Evidence-informed Traditional Chinese Medicine</p>
-        </div>
-        <div class="why-choose-item">
-          <span class="why-icon">🏡</span>
-          <p class="why-text">Safe, clean, and relaxing treatment environment</p>
-        </div>
-        <div class="why-choose-item">
-          <span class="why-icon">✨</span>
-          <p class="why-text">Integrated care with massage therapy available</p>
-        </div>
-        <div class="why-choose-item">
-          <span class="why-icon">🤝</span>
-          <p class="why-text">Personalized treatment plans for long-term wellness</p>
-        </div>
-        <div class="why-choose-item">
-          <span class="why-icon">📋</span>
-          <p class="why-text">Insurance receipts & flexible scheduling</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="container">
-      <h2>Book Your Appointment</h2>
-      <p>Restore balance and improve your health naturally. Whether you're dealing with pain, stress, or chronic health concerns, our acupuncturists are here to support your healing journey.</p>
-      <div class="cta-buttons">
-        <a href="tel:+14168718855" class="hero-btn">📞 Call Us to Book - 416-871-8855</a>
-        <a href="contact.html" class="hero-btn secondary">💬 Book Online</a>
-      </div>
-    </div>
-  </section>
-
-    <!-- FOOTER -->
   <!-- FOOTER -->
   <footer class="footer">
 
@@ -1209,13 +1238,16 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
     const navToggle = document.getElementById('nav-toggle');
     const navbar = document.getElementById('navbar');
 
-    navToggle.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-    });
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+      });
+    }
 
     const navLinks = document.querySelectorAll('.navbar-link');
     navLinks.forEach(link => {
@@ -1223,32 +1255,12 @@
         navbar.classList.remove('active');
       });
     });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('.header');
-      if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-      } else {
-        header.style.background = 'var(--white)';
-      }
-    });
   </script>
 
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
