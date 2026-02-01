@@ -1334,11 +1334,6 @@
 
 
 <!-- Square Booking Modal -->
-
-<div id="square-appointments" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-  Loading booking...
-</div>
-
 <div id="booking-modal" style="
   position:fixed; inset:0; background:rgba(0,0,0,.55);
   display:none; align-items:center; justify-content:center;
@@ -1360,8 +1355,8 @@
       z-index:2;
     ">✕</button>
 
-    <!-- Square 会在这里生成 iframe -->
-    <div id="square-appointments" style="width:100%; height:100%;"></div>
+    <!-- ✅ 只保留一个容器，并且用唯一 ID -->
+    <div id="square-appointments-modal" style="width:100%; height:100%;"></div>
   </div>
 </div>
 
@@ -1370,7 +1365,7 @@
   const openBtn = document.getElementById('open-booking');
   const modal = document.getElementById('booking-modal');
   const closeBtn = document.getElementById('close-booking');
-  const container = document.getElementById('square-appointments');
+  const container = document.getElementById('square-appointments-modal');
 
   let squareLoaded = false;
 
@@ -1378,12 +1373,9 @@
     if (squareLoaded) return;
     squareLoaded = true;
 
-    // ✅ 用 Square 官方 embed 域名 + 正确的 ID（lffatdmy...）
     const s = document.createElement('script');
     s.src = "https://square.site/appointments/buyer/widget/lffatdmy7gh4jw/LQ0WC42MSNC6W.js";
     s.async = true;
-
-    // ✅ 让它在弹窗容器里生成 iframe
     container.appendChild(s);
   }
 
