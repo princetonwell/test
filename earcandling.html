@@ -887,6 +887,7 @@
           </ul>
         </nav>
 
+        <!-- 你的按钮（必须在 script 外面） -->
         <a href="javascript:void(0)" class="btn" id="open-booking">Book Appointment</a>
         <button class="nav-toggle-btn" id="nav-toggle">
           <ion-icon name="menu-outline"></ion-icon>
@@ -1330,6 +1331,8 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+
+
 <!-- Square Booking Modal -->
 <div id="booking-modal" style="
   position:fixed; inset:0; background:rgba(0,0,0,.55);
@@ -1352,51 +1355,55 @@
       z-index:2;
     ">✕</button>
 
-    <!-- ✅ 关键：让 Square 官方脚本把预约 iframe 注入到这个容器里 -->
+    <!-- Square 会在这里生成 iframe -->
     <div id="square-appointments" style="width:100%; height:100%;"></div>
   </div>
 </div>
 
 <script>
-  (function () {
-    const openBtn = document.getElementById('open-booking');
-    const modal = document.getElementById('booking-modal');
-    const closeBtn = document.getElementById('close-booking');
+(function () {
+  const openBtn = document.getElementById('open-booking');
+  const modal = document.getElementById('booking-modal');
+  const closeBtn = document.getElementById('close-booking');
+  const container = document.getElementById('square-appointments');
 
-    let squareLoaded = false;
+  let squareLoaded = false;
 
-    function loadSquareOnce() {
-      if (squareLoaded) return;
-      squareLoaded = true;
+  function loadSquareOnce() {
+    if (squareLoaded) return;
+    squareLoaded = true;
 
-      const s = document.createElement('script');
-      s.src = "https://app.squareup.com/appointments/buyer/widget/lfatdmy7gh4jw/LQ0WC42MSNC6W.js";
-      s.async = true;
-      document.body.appendChild(s);
-    }
+    // ✅ 把 script 放进容器里，这样 iframe 会生成在弹窗内
+    const s = document.createElement('script');
+    s.src = "https://app.squareup.com/appointments/buyer/widget/lfatdmy7gh4jw/LQ0WC42MSNC6W.js";
+    s.async = true;
+    container.appendChild(s);
+  }
 
-    function openModal() {
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      loadSquareOnce(); // ✅ 打开弹窗时再加载，避免首页就加载一堆东西
-    }
-    function closeModal() {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    }
+  function openModal() {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    loadSquareOnce();
+  }
 
-    openBtn?.addEventListener('click', openModal);
-    closeBtn?.addEventListener('click', closeModal);
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
 
-    modal?.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
+  openBtn && openBtn.addEventListener('click', openModal);
+  closeBtn && closeBtn.addEventListener('click', closeModal);
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
-    });
-  })();
+  modal && modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
 </script>
+
 
 
 
