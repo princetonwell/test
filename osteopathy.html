@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Osteopathic Manual Practitioner | Princeton Wellness Centre - Richmond Hill</title>
-  <meta name="description" content="Professional Osteopathic Manual Practice in Richmond Hill. Experienced OMPs for pain relief, mobility improvement, postural correction. Insurance accepted. Book now: 416-871-8855">
+  <meta name="description" content="Professional Osteopathic Manual Practice in Richmond Hill. Experienced OMPs for pain relief, mobility improvement, postural correction. Insurance accepted. Book appointment online">
 
   <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -841,7 +841,7 @@
             <li><a href="contact.html" class="navbar-link">Contact</a></li>
           </ul>
         </nav>
-        <a href="tel:+14168718855" class="btn">Book Appointment</a>
+        <a href="javascript:void(0)" class="btn booking-trigger" data-booking="square">Book Online</a>
         <button class="nav-toggle-btn" id="nav-toggle"><ion-icon name="menu-outline"></ion-icon></button>
       </div>
     </div>
@@ -852,8 +852,8 @@
       <h1>Osteopathic Manual Practitioner</h1>
       <p class="subtitle">Hands-on, holistic osteopathic care for long-lasting pain relief, improved mobility, and whole-body wellness.</p>
       <div class="hero-cta">
-        <a href="tel:+14168718855" class="hero-btn">📞 Call to Book - 416-871-8855</a>
-        <a href="contact.html" class="hero-btn secondary">💬 Book Online</a>
+        <a href="javascript:void(0)" class="hero-btn booking-trigger" data-booking="square">📅 Book Appointment</a>
+        <a href="service.html" class="hero-btn secondary">View All Services</a>
       </div>
     </div>
   </section>
@@ -1027,8 +1027,8 @@
       <h2>Book Your Appointment</h2>
       <p>Restore alignment, reduce pain, and improve your movement. Whether you're struggling with chronic pain or recovering from an injury, our osteopathic practitioners are here to support your healing.</p>
       <div class="cta-buttons">
-        <a href="tel:+14168718855" class="hero-btn">📞 Call Us to Book - 416-871-8855</a>
-        <a href="contact.html" class="hero-btn secondary">💬 Book Online</a>
+        <a href="javascript:void(0)" class="hero-btn booking-trigger" data-booking="square">📅 Book Appointment</a>
+        <a href="service.html" class="hero-btn secondary">View All Services</a>
       </div>
     </div>
   </section>
@@ -1258,6 +1258,76 @@
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<!-- Square Booking Modal -->
+<div id="booking-modal" style="
+  position:fixed; inset:0; background:rgba(0,0,0,.55);
+  display:none; align-items:center; justify-content:center;
+  padding:18px; z-index:9999;
+">
+  <div style="
+    width:min(980px, 96vw);
+    height:min(86vh, 820px);
+    background:#fff; border-radius:12px;
+    overflow:hidden; position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+  ">
+    <button id="close-booking" style="
+      position:absolute; top:10px; right:10px;
+      width:38px; height:38px; border:none;
+      border-radius:10px; cursor:pointer;
+      background:rgba(0,0,0,.06);
+      font-size:18px; line-height:38px;
+      z-index:2;
+    ">✕</button>
+
+    <div id="square-appointments-modal" style="width:100%; height:100%;"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const openBtns = document.querySelectorAll('.booking-trigger');
+  const modal = document.getElementById('booking-modal');
+  const closeBtn = document.getElementById('close-booking');
+  const container = document.getElementById('square-appointments-modal');
+
+  let squareLoaded = false;
+
+  function loadSquareOnce() {
+    if (squareLoaded) return;
+    squareLoaded = true;
+    const sc = document.createElement('script');
+    sc.src = "https://square.site/appointments/buyer/widget/lffatdmy7gh4jw/LQ0WC42MSNC6W.js";
+    sc.async = true;
+    container.appendChild(sc);
+  }
+
+  function openModal() {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    loadSquareOnce();
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
+</script>
+
 
 </body>
 </html>

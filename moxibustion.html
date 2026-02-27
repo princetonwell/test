@@ -783,7 +783,45 @@
         font-size: 2.4rem;
       }
     }
-  </style>
+  
+    /* Hero CTA Buttons */
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+    .hero-btn {
+      background: var(--white);
+      color: var(--orange-1);
+      padding: 18px 35px;
+      font-size: var(--fs-7);
+      font-weight: var(--fw-700);
+      border-radius: var(--radius-4);
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 240px;
+    }
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .hero-btn.secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+    .hero-btn.secondary:hover {
+      background: var(--white);
+      color: var(--orange-1);
+    }
+
+</style>
 </head>
 
 <body>
@@ -831,7 +869,7 @@
           </ul>
         </nav>
 
-        <a href="tel:+14168718855" class="btn">Book Appointment</a>
+        <a href="javascript:void(0)" class="btn booking-trigger" data-booking="square">Book Online</a>
 
         <button class="nav-toggle-btn" id="nav-toggle">
           <ion-icon name="menu-outline"></ion-icon>
@@ -847,7 +885,11 @@
       <p>Traditional Chinese heat therapy using moxa to gently warm the meridians, boost circulation, dispel cold,
         and support the body’s natural healing from our Princeton Avenue clinic in Richmond Hill.</p>
       <p class="hero-location">Serving Richmond Hill, Thornhill, Vaughan, Markham, Aurora, Newmarket & York Region.</p>
-    </div>
+          <div class="hero-cta">
+        <a href="javascript:void(0)" class="hero-btn booking-trigger" data-booking="square">📅 Book Appointment</a>
+        <a href="service.html" class="hero-btn secondary">View All Services</a>
+      </div>
+</div>
   </section>
 
   <!-- Content -->
@@ -892,8 +934,7 @@
 
         <div class="image-block">
           <!-- developer: replace with real moxibustion image -->
-          <img src="./assets/images/moxibustion-treatment-princeton-wellness-centre.webp" alt="Moxibustion treatment session at Princeton Wellness Centre in Richmond Hill, using traditional moxa heat therapy to warm meridians and improve circulation."
-
+          <img src="./assets/images/moxibustion-treatment-princeton-wellness-centre.webp" alt="Moxibustion treatment session at Princeton Wellness Centre in Richmond Hill, using traditional moxa heat therapy to warm meridians and improve circulation." />
         </div>
       </div>
 
@@ -1042,8 +1083,9 @@
           <p>Book your session at Princeton Wellness Centre on Princeton Avenue to gently warm the body, relieve pain,
             and support long-term wellness.</p>
         </div>
-        <div class="cta-phone">
-          📞 <a href="tel:+14168718855">Call 416-871-8855</a>
+        <div class="cta-actions" style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+          <a href="javascript:void(0)" class="btn booking-trigger" data-booking="square" style="background:#fff; color: var(--orange-2); text-transform:none; font-size:1.5rem;">📅 Book Appointment</a>
+          <a href="service.html" class="btn" style="background:transparent; border:2px solid #fff; color:#fff; text-transform:none; font-size:1.5rem;">View All Services</a>
         </div>
       </div>
 
@@ -1257,6 +1299,77 @@
     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule
     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- Square Booking Modal -->
+<div id="booking-modal" style="
+  position:fixed; inset:0; background:rgba(0,0,0,.55);
+  display:none; align-items:center; justify-content:center;
+  padding:18px; z-index:9999;
+">
+  <div style="
+    width:min(980px, 96vw);
+    height:min(86vh, 820px);
+    background:#fff; border-radius:12px;
+    overflow:hidden; position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+  ">
+    <button id="close-booking" aria-label="Close" style="
+      position:absolute; top:10px; right:10px;
+      width:38px; height:38px; border:none;
+      border-radius:10px; cursor:pointer;
+      background:rgba(0,0,0,.06);
+      font-size:18px; line-height:38px;
+      z-index:2;
+    ">✕</button>
+
+    <div id="square-appointments-modal" style="width:100%; height:100%;"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const openBtns = document.querySelectorAll('.booking-trigger');
+  const modal = document.getElementById('booking-modal');
+  const closeBtn = document.getElementById('close-booking');
+  const container = document.getElementById('square-appointments-modal');
+
+  let squareLoaded = false;
+
+  function loadSquareOnce() {
+    if (squareLoaded) return;
+    squareLoaded = true;
+
+    const s = document.createElement('script');
+    s.src = "https://square.site/appointments/buyer/widget/lffatdmy7gh4jw/LQ0WC42MSNC6W.js";
+    s.async = true;
+    container.appendChild(s);
+  }
+
+  function openModal() {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    loadSquareOnce();
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  openBtns && openBtns.forEach((btn) => btn.addEventListener('click', openModal));
+  closeBtn && closeBtn.addEventListener('click', closeModal);
+
+  modal && modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
+</script>
+
+
 </body>
 
 </html>

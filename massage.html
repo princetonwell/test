@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Hot Stone Massage | Princeton Wellness Centre - Richmond Hill</title>
-  <meta name="description" content="Luxurious Hot Stone Massage in Richmond Hill. Heated basalt stones for deep relaxation, stress relief, and improved circulation. Book appointment online">
+  <title>Registered Massage Therapy | Princeton Wellness Centre - Richmond Hill</title>
+  <meta name="description" content="Professional Registered Massage Therapy in Richmond Hill. Licensed RMTs for pain relief, injury recovery, stress reduction. Insurance accepted. Book appointment online">
 
   <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -222,10 +222,9 @@
 
     .service-hero .subtitle {
       font-size: var(--fs-5);
-      max-width: 900px;
+      max-width: 800px;
       margin: 0 auto 30px;
       opacity: 0.95;
-      line-height: 1.6;
     }
 
     .hero-cta {
@@ -264,12 +263,12 @@
       color: var(--orange-1);
     }
 
-    .intro-section, .info-section, .insurance-section, .why-choose-section {
+    .intro-section, .rmt-info-section, .techniques-section, .insurance-section, .why-choose-section {
       padding: var(--section-padding) 0;
       background: var(--white);
     }
 
-    .highlights-section, .benefits-section, .how-works-section, .expect-section {
+    .highlights-section, .conditions-section, .expect-section, .pricing-section {
       padding: var(--section-padding) 0;
       background: var(--cultured);
     }
@@ -328,38 +327,38 @@
       line-height: 1.6;
     }
 
-    .info-grid {
+    .rmt-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
     }
 
-    .info-content h2 {
+    .rmt-content h2 {
       font-family: var(--ff-poppins);
       font-size: var(--fs-2);
       color: var(--orange-2);
       margin-bottom: 25px;
     }
 
-    .info-content p {
+    .rmt-content p {
       color: var(--grey2);
       line-height: 1.8;
       margin-bottom: 20px;
     }
 
-    .info-list {
+    .rmt-list {
       list-style: none;
       margin-top: 25px;
     }
 
-    .info-list li {
+    .rmt-list li {
       padding: 12px 0 12px 30px;
       position: relative;
       color: var(--grey2);
     }
 
-    .info-list li::before {
+    .rmt-list li::before {
       content: '✓';
       position: absolute;
       left: 0;
@@ -368,25 +367,25 @@
       font-size: 1.8rem;
     }
 
-    .info-image {
+    .rmt-image {
       border-radius: var(--radius-20);
       overflow: hidden;
       box-shadow: var(--shadow-3);
     }
 
-    .info-image img {
+    .rmt-image img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .benefits-grid {
+    .conditions-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
     }
 
-    .benefit-item {
+    .condition-item {
       background: var(--white);
       padding: 20px 25px;
       border-radius: var(--radius-6);
@@ -397,54 +396,48 @@
       transition: var(--transition);
     }
 
-    .benefit-item:hover {
+    .condition-item:hover {
       transform: translateX(5px);
       box-shadow: var(--shadow-3);
     }
 
-    .benefit-icon {
+    .condition-icon {
       font-size: 2.4rem;
       flex-shrink: 0;
     }
 
-    .benefit-text {
+    .condition-text {
       color: var(--grey2);
       font-size: var(--fs-7);
     }
 
-    .how-works-grid {
+    .techniques-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      margin-top: 30px;
     }
 
-    .work-card {
-      background: var(--white);
+    .technique-card {
+      background: var(--cultured);
       padding: 35px 30px;
       border-radius: var(--radius-6);
       transition: var(--transition);
-      text-align: center;
     }
 
-    .work-card:hover {
+    .technique-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-3);
+      background: var(--white);
     }
 
-    .work-card .card-icon {
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
-
-    .work-card h3 {
+    .technique-card h3 {
       font-family: var(--ff-poppins);
       font-size: var(--fs-5);
       color: var(--orange-2);
       margin-bottom: 15px;
     }
 
-    .work-card p {
+    .technique-card p {
       color: var(--grey2);
       line-height: 1.7;
     }
@@ -513,14 +506,70 @@
       padding: 30px;
       border-radius: var(--radius-6);
       margin-top: 30px;
-      border: 2px solid var(--orange-2);
+      border: 2px solid var(--green);
     }
 
     .insurance-highlight p {
       font-size: var(--fs-6);
-      color: var(--orange-2);
+      color: var(--green);
       font-weight: var(--fw-600);
       margin: 0;
+    }
+
+    .pricing-table {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-6);
+      overflow: hidden;
+      box-shadow: var(--shadow-3);
+    }
+
+    .pricing-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+      padding: 20px 30px;
+      text-align: left;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .pricing-table th {
+      background: var(--gradient);
+      color: var(--white);
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-700);
+    }
+
+    .pricing-table td {
+      font-size: var(--fs-6);
+      color: var(--grey2);
+    }
+
+    .pricing-table td:last-child {
+      font-weight: var(--fw-600);
+      color: var(--orange-2);
+      font-size: var(--fs-5);
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pricing-table tr:hover {
+      background: var(--cultured);
+    }
+
+    .pricing-note {
+      text-align: center;
+      margin-top: 30px;
+      font-size: var(--fs-7);
+      color: var(--grey2);
+      font-style: italic;
     }
 
     .why-choose-grid {
@@ -572,10 +621,9 @@
       font-size: var(--fs-6);
       margin-bottom: 35px;
       opacity: 0.95;
-      max-width: 800px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
-      line-height: 1.7;
     }
 
     .cta-buttons {
@@ -753,7 +801,7 @@
     }
 
     @media (max-width: 992px) {
-      .info-grid {
+      .rmt-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
@@ -872,8 +920,8 @@
 
   <section class="service-hero">
     <div class="container">
-      <h1>Hot Stone Massage</h1>
-      <p class="subtitle">A deeply soothing, luxurious warm stone treatment designed to melt away stress, release muscle tension, and promote total-body relaxation.</p>
+      <h1>Registered Massage Therapy</h1>
+      <p class="subtitle">Clinical massage care for pain relief, stress reduction, and whole-body wellness.</p>
       <div class="hero-cta">
         <a href="javascript:void(0)" class="hero-btn booking-trigger" data-booking="square">📅 Book Appointment</a>
         <a href="service.html" class="hero-btn secondary">View All Services</a>
@@ -884,7 +932,7 @@
   <section class="intro-section">
     <div class="container">
       <div class="intro-content">
-        <p>Hot Stone Massage uses smooth, heated basalt stones to warm the muscles, allowing deeper therapeutic work with minimal pressure. The gentle heat improves circulation, calms the nervous system, and provides a uniquely comforting, grounding experience.</p>
+        <p>Our Registered Massage Therapists (RMTs) provide evidence-based, therapeutic massage tailored to your individual needs. Whether you're managing chronic pain, recovering from an injury, or simply seeking deep relaxation, each treatment is focused on restoring balance and improving your overall well-being.</p>
       </div>
     </div>
   </section>
@@ -893,83 +941,79 @@
     <div class="container">
       <h2 class="section-title">Treatment Highlights</h2>
       <div class="highlights-grid">
-        <div class="highlight-item"><span class="highlight-icon">🪨</span><p class="highlight-text">Heated basalt stones</p></div>
-        <div class="highlight-item"><span class="highlight-icon">💆</span><p class="highlight-text">Deep muscle relaxation</p></div>
-        <div class="highlight-item"><span class="highlight-icon">❤️</span><p class="highlight-text">Improved blood circulation</p></div>
-        <div class="highlight-item"><span class="highlight-icon">😌</span><p class="highlight-text">Stress and anxiety reduction</p></div>
-        <div class="highlight-item"><span class="highlight-icon">✨</span><p class="highlight-text">Ultimate relaxation experience</p></div>
-        <div class="highlight-item"><span class="highlight-icon">💪</span><p class="highlight-text">Perfect for tension, stiffness, and chronic stress</p></div>
-        <div class="highlight-item"><span class="highlight-icon">📋</span><p class="highlight-text">Insurance receipts provided (if performed by an RMT)</p></div>
+        <div class="highlight-item"><span class="highlight-icon">💪</span><p class="highlight-text">Deep tissue & Swedish techniques</p></div>
+        <div class="highlight-item"><span class="highlight-icon">🏃</span><p class="highlight-text">Injury & mobility rehabilitation</p></div>
+        <div class="highlight-item"><span class="highlight-icon">🎯</span><p class="highlight-text">Headache, neck, and lower-back pain relief</p></div>
+        <div class="highlight-item"><span class="highlight-icon">😌</span><p class="highlight-text">Stress reduction & improved sleep</p></div>
+        <div class="highlight-item"><span class="highlight-icon">📋</span><p class="highlight-text">Insurance receipts provided — all major insurance accepted</p></div>
+        <div class="highlight-item"><span class="highlight-icon">✨</span><p class="highlight-text">Combination treatments available (Massage + Acupuncture)</p></div>
       </div>
     </div>
   </section>
 
-  <section class="info-section">
+  <section class="rmt-info-section">
     <div class="container">
-      <div class="info-grid">
-        <div class="info-content">
-          <h2>What is Hot Stone Massage?</h2>
-          <p>Hot Stone Massage is a specialized massage technique that combines traditional manual therapy with the therapeutic benefits of heat. Smooth volcanic stones are heated to a comfortable temperature and used as an extension of the therapist's hands, allowing for deeper muscle release with less pressure.</p>
-          <p>This treatment helps:</p>
-          <ul class="info-list">
-            <li>Relax the entire body</li>
-            <li>Warm tight muscles</li>
-            <li>Improve circulation and energy flow</li>
-            <li>Reduce anxiety and mental fatigue</li>
-            <li>Ease chronic stiffness and tension</li>
+      <div class="rmt-grid">
+        <div class="rmt-content">
+          <h2>What is Registered Massage Therapy?</h2>
+          <p>Registered Massage Therapy (RMT) is a regulated healthcare profession in Ontario. RMTs are trained in anatomy, soft-tissue assessment, therapeutic techniques, injury management, and clinical treatment planning.</p>
+          <p>Unlike general relaxation massage, RMT sessions are designed to treat:</p>
+          <ul class="rmt-list">
+            <li>Muscle tension & stiffness</li>
+            <li>Posture-related pain</li>
+            <li>Stress-related headaches</li>
+            <li>Sports & overuse injuries</li>
+            <li>Chronic tightness affecting daily movement</li>
           </ul>
-          <p>The result is a deeply restorative and luxurious wellness experience.</p>
+          <p>Each treatment includes assessment, targeted therapy, and personalized home-care suggestions.</p>
         </div>
-        <div class="info-image">
-          <img src="./assets/images/hot-stone-massage-treatment-princeton-wellness-centre.webp" alt="Relaxing hot stone massage session with heated basalt stones at Princeton Wellness Centre in Richmond Hill." width="500" height="400">
+        <div class="rmt-image">
+          <img src="./assets/images/massage-therapy-princeton-wellness-centre.webp" alt="Registered Massage Therapy Session" width="500" height="400">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="benefits-section">
+  <section class="conditions-section">
     <div class="container">
-      <h2 class="section-title">Benefits of Hot Stone Massage</h2>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--grey2);">Hot Stone Massage may help with:</p>
-      <div class="benefits-grid">
-        <div class="benefit-item"><span class="benefit-icon">🔸</span><p class="benefit-text">Shoulder, neck, and lower-back tension</p></div>
-        <div class="benefit-item"><span class="benefit-icon">🔸</span><p class="benefit-text">Difficulty relaxing or falling asleep</p></div>
-        <div class="benefit-item"><span class="benefit-icon">🔸</span><p class="benefit-text">General fatigue and burnout</p></div>
+      <h2 class="section-title">Conditions We Treat</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--grey2);">Massage therapy may help with:</p>
+      <div class="conditions-grid">
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Neck, shoulder, and lower-back pain</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Sciatica, nerve tension, tight hips</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Shoulder stiffness & frozen shoulder</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Headaches / migraines caused by muscle tension</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Stress, anxiety, and sleep difficulties</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Posture-related discomfort from long desk hours</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Muscle strains, sports injuries, or repetitive-strain pain</p></div>
+        <div class="condition-item"><span class="condition-icon">🔸</span><p class="condition-text">Post-accident recovery (as advised by your doctor)</p></div>
       </div>
-      <p style="text-align: center; margin-top: 30px; color: var(--grey2);">The combination of heat + therapeutic massage encourages both physical and mental relaxation.</p>
+      <p style="text-align: center; margin-top: 30px; color: var(--grey2); font-style: italic;">If you're unsure whether massage therapy is suitable for you, our practitioners can guide you.</p>
     </div>
   </section>
 
-  <section class="how-works-section">
+  <section class="techniques-section">
     <div class="container">
-      <h2 class="section-title">How Hot Stone Massage Works</h2>
-      <div class="how-works-grid">
-        <div class="work-card">
-          <div class="card-icon">🪨</div>
-          <h3>Heated Basalt Stones</h3>
-          <p>Basalt stones retain heat exceptionally well, allowing warmth to penetrate deep into the muscles.</p>
+      <h2 class="section-title">Massage Techniques We Use</h2>
+      <div class="techniques-grid">
+        <div class="technique-card">
+          <h3>Deep Tissue Massage</h3>
+          <p>Targets deeper layers of muscles and fascia to reduce chronic tension and knots.</p>
         </div>
-        <div class="work-card">
-          <div class="card-icon">💆</div>
-          <h3>Deep Muscle Relaxation</h3>
-          <p>Warm muscles loosen more quickly, enabling deeper therapeutic work with enhanced comfort.</p>
+        <div class="technique-card">
+          <h3>Swedish Massage</h3>
+          <p>Gentle, flowing techniques to improve circulation and promote relaxation.</p>
         </div>
-        <div class="work-card">
-          <div class="card-icon">❤️</div>
-          <h3>Improved Circulation</h3>
-          <p>Heat increases blood flow, supporting oxygen delivery and muscle recovery.</p>
+        <div class="technique-card">
+          <h3>Rehabilitation-Focused Massage</h3>
+          <p>Ideal for sports injuries, overuse conditions, and mobility restrictions.</p>
         </div>
-        <div class="work-card">
-          <div class="card-icon">😌</div>
-          <h3>Stress Reduction & Nervous System Calming</h3>
-          <p>Warmth signals the body to relax, lowering stress hormones and promoting a sense of calm.</p>
-        </div>
-        <div class="work-card">
-          <div class="card-icon">✨</div>
-          <h3>Enhanced Massage Effectiveness</h3>
-          <p>The stones act as both a heat source and a massage tool, amplifying the benefits of hands-on therapy.</p>
+        <div class="technique-card">
+          <h3>Stress & Nervous System Relief</h3>
+          <p>Helps reduce anxiety, calm the body, and support better sleep quality.</p>
         </div>
       </div>
+      <p style="text-align: center; margin-top: 40px; color: var(--grey2);">We adjust pressure and technique based on your comfort and clinical needs.</p>
     </div>
   </section>
 
@@ -979,31 +1023,26 @@
       <div class="expect-steps">
         <div class="step-card">
           <div class="step-number">1</div>
-          <h3>Consultation</h3>
-          <p>Your therapist will review your health history and ensure Hot Stone Massage is suitable for you.</p>
+          <h3>Health Intake & Consultation</h3>
+          <p>Your RMT will review your health history and discuss your concerns.</p>
         </div>
         <div class="step-card">
           <div class="step-number">2</div>
-          <h3>Warm Stone Placement</h3>
-          <p>Heated stones may be placed on areas of tension such as the back, shoulders, or hands.</p>
+          <h3>Assessment</h3>
+          <p>Simple movement tests help identify the source of pain or tension.</p>
         </div>
         <div class="step-card">
           <div class="step-number">3</div>
-          <h3>Stone-Assisted Massage</h3>
-          <p>The therapist uses smooth stones with gentle gliding motions to relax muscles and melt away stress.</p>
+          <h3>Personalized Hands-On Treatment</h3>
+          <p>You are comfortably draped; only the area being worked on is uncovered.</p>
         </div>
         <div class="step-card">
           <div class="step-number">4</div>
-          <h3>Deep Relaxation Phase</h3>
-          <p>Many clients experience a deep sense of calm, warmth, and grounding throughout the treatment.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">5</div>
           <h3>After-Care Guidance</h3>
-          <p>Hydration and gentle stretching may be recommended to maintain benefits.</p>
+          <p>Your RMT may recommend stretches, heat/ice therapy, and follow-up frequency.</p>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 40px; color: var(--grey2); font-weight: 600;">Your comfort and safety are always the top priority.</p>
+      <p style="text-align: center; margin-top: 40px; color: var(--grey2); font-weight: 600;">Your comfort and safety are always the priority.</p>
     </div>
   </section>
 
@@ -1011,11 +1050,58 @@
     <div class="container">
       <div class="insurance-content">
         <h2 class="section-title">Insurance Coverage</h2>
-        <p>Hot Stone Massage is eligible for insurance reimbursement only when performed by a Registered Massage Therapist (RMT) and billed as a therapeutic massage.</p>
+        <p>We accept all major extended health insurance plans. You will receive an official RMT receipt that can be submitted for reimbursement.</p>
         <div class="insurance-highlight">
-          <p>⚠️ Please check your insurance plan for details.</p>
+          <p>✅ Some plans may also allow direct billing — please check with your insurance provider.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Registered Massage Therapy Pricing</h2>
+      <div class="pricing-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>30-Min Massage</td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>45-Min Massage</td>
+              <td>$90</td>
+            </tr>
+            <tr>
+              <td>60-Min Massage</td>
+              <td>$110</td>
+            </tr>
+            <tr>
+              <td>90-Min Massage</td>
+              <td>$160</td>
+            </tr>
+            <tr>
+              <td>60-Min Acupuncture</td>
+              <td>$110</td>
+            </tr>
+            <tr>
+              <td>60-Min Massage + Acupuncture</td>
+              <td>$120</td>
+            </tr>
+            <tr>
+              <td>90-Min Massage + Acupuncture</td>
+              <td>$170</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="pricing-note">HST included. Combination treatments (Massage + Acupuncture) are designed to enhance muscle recovery, improve circulation, and support deeper therapeutic results.</p>
     </div>
   </section>
 
@@ -1025,27 +1111,27 @@
       <div class="why-choose-grid">
         <div class="why-choose-item">
           <span class="why-icon">👨‍⚕️</span>
-          <p class="why-text">Professional therapists trained in Hot Stone techniques</p>
+          <p class="why-text">Licensed and experienced Registered Massage Therapists</p>
         </div>
         <div class="why-choose-item">
-          <span class="why-icon">🪨</span>
-          <p class="why-text">Heated basalt stones for superior heat retention</p>
+          <span class="why-icon">🎯</span>
+          <p class="why-text">Clinical, result-oriented treatments</p>
         </div>
         <div class="why-choose-item">
           <span class="why-icon">🏡</span>
-          <p class="why-text">Calm, spa-like environment for maximum relaxation</p>
+          <p class="why-text">Clean, quiet, and relaxing environment</p>
         </div>
         <div class="why-choose-item">
           <span class="why-icon">✨</span>
-          <p class="why-text">Integration with massage therapy and wellness services</p>
+          <p class="why-text">Convenient combination treatments (RMT + Acupuncture)</p>
         </div>
         <div class="why-choose-item">
           <span class="why-icon">🤝</span>
-          <p class="why-text">Personalized treatment based on your comfort level</p>
+          <p class="why-text">Supportive integrated care for long-term wellness</p>
         </div>
         <div class="why-choose-item">
           <span class="why-icon">📋</span>
-          <p class="why-text">Insurance receipts available when performed by RMT</p>
+          <p class="why-text">Insurance receipts & flexible scheduling</p>
         </div>
       </div>
     </div>
@@ -1054,7 +1140,7 @@
   <section class="cta-section">
     <div class="container">
       <h2>Book Your Appointment</h2>
-      <p>Experience deep warmth, full-body relaxation, and stress relief. Whether you're feeling burnt out, tense, or simply need time to unwind, Hot Stone Massage offers a deeply soothing therapeutic escape.</p>
+      <p>Ready to feel better in your body? Whether you're dealing with pain, recovering from an injury, or simply need a moment to relax — we're here to help.</p>
       <div class="cta-buttons">
         <a href="javascript:void(0)" class="hero-btn booking-trigger" data-booking="square">📅 Book Appointment</a>
         <a href="service.html" class="hero-btn secondary">View All Services</a>

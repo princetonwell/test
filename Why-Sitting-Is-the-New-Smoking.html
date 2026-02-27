@@ -899,7 +899,7 @@
                     </ul>
                 </nav>
 
-                <a href="#" class="btn">Book Appointment</a>
+                <a href="javascript:void(0)" class="btn booking-trigger" data-booking="square">Book Appointment</a>
                 
                 <button class="nav-toggle-btn" id="nav-toggle">
                     <ion-icon name="menu-outline"></ion-icon>
@@ -1038,7 +1038,7 @@
                     <div class="cta-section">
                         <h3>Ready to Combat Your Sedentary Lifestyle?</h3>
                         <p>Don't let prolonged sitting compromise your health. Our team of wellness professionals is here to help you develop a personalized plan to address the effects of sedentary behavior and improve your overall well-being.</p>
-                        <a href="contact.html" class="cta-button">Book Your Consultation Today</a>
+                        <a href="javascript:void(0)" class="cta-button booking-trigger" data-booking="square">📅 Book Appointment</a>
                     </div>
 
                     <h2 class="content-subtitle">Conclusion</h2>
@@ -1384,7 +1384,7 @@
         });
 
         // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
@@ -1398,6 +1398,76 @@
         });
     </script>
 
+
+
+
+<!-- Square Booking Modal -->
+<div id="booking-modal" style="
+  position:fixed; inset:0; background:rgba(0,0,0,.55);
+  display:none; align-items:center; justify-content:center;
+  padding:18px; z-index:9999;
+">
+  <div style="
+    width:min(980px, 96vw);
+    height:min(86vh, 820px);
+    background:#fff; border-radius:12px;
+    overflow:hidden; position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+  ">
+    <button id="close-booking" style="
+      position:absolute; top:10px; right:10px;
+      width:38px; height:38px; border:none;
+      border-radius:10px; cursor:pointer;
+      background:rgba(0,0,0,.06);
+      font-size:18px; line-height:38px;
+      z-index:2;
+    ">✕</button>
+    <div id="square-appointments-modal" style="width:100%; height:100%;"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const openBtns = document.querySelectorAll('.booking-trigger');
+  const modal = document.getElementById('booking-modal');
+  const closeBtn = document.getElementById('close-booking');
+  const container = document.getElementById('square-appointments-modal');
+
+  let squareLoaded = false;
+
+  function loadSquareOnce() {
+    if (squareLoaded) return;
+    squareLoaded = true;
+    const sc = document.createElement('script');
+    sc.src = "https://square.site/appointments/buyer/widget/lffatdmy7gh4jw/LQ0WC42MSNC6W.js";
+    sc.async = true;
+    container.appendChild(sc);
+  }
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    loadSquareOnce();
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
+</script>
 
 
 </body>

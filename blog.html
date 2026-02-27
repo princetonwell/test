@@ -236,6 +236,7 @@
             font-size: var(--fs-1);
             font-weight: var(--fw-800);
             margin-bottom: 20px;
+            margin-top: 100px;
         }
 
         .blog-header p {
@@ -895,7 +896,7 @@
                     </ul>
                 </nav>
 
-                <a href="#" class="btn">Book Appointment</a>
+                <a href="javascript:void(0)" class="btn booking-trigger" data-booking="square">Book Appointment</a>
                 
                 <button class="nav-toggle-btn" id="nav-toggle">
                     <ion-icon name="menu-outline"></ion-icon>
@@ -1487,6 +1488,78 @@
     }
   ]
 }
+</script>
+
+
+
+<!-- Square Booking Modal -->
+<div id="booking-modal" style="
+  position:fixed; inset:0; background:rgba(0,0,0,.55);
+  display:none; align-items:center; justify-content:center;
+  padding:18px; z-index:9999;
+">
+  <div style="
+    width:min(980px, 96vw);
+    height:min(86vh, 820px);
+    background:#fff; border-radius:12px;
+    overflow:hidden; position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+  ">
+    <button id="close-booking" aria-label="Close" style="
+      position:absolute; top:10px; right:10px;
+      width:38px; height:38px; border:none;
+      border-radius:10px; cursor:pointer;
+      background:rgba(0,0,0,.06);
+      font-size:18px; line-height:38px;
+      z-index:2;
+    ">✕</button>
+
+    <div id="square-appointments-modal" style="width:100%; height:100%;"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const openBtns = document.querySelectorAll('.booking-trigger');
+  const modal = document.getElementById('booking-modal');
+  const closeBtn = document.getElementById('close-booking');
+  const container = document.getElementById('square-appointments-modal');
+
+  let squareLoaded = false;
+
+  function loadSquareOnce() {
+    if (squareLoaded) return;
+    squareLoaded = true;
+
+    const sc = document.createElement('script');
+    sc.src = "https://square.site/appointments/buyer/widget/lffatdmy7gh4jw/LQ0WC42MSNC6W.js";
+    sc.async = true;
+    container.appendChild(sc);
+  }
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    loadSquareOnce();
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  openBtns && openBtns.forEach((btn) => btn.addEventListener('click', openModal));
+  closeBtn && closeBtn.addEventListener('click', closeModal);
+
+  modal && modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
 </script>
 
 

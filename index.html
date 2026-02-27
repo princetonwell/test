@@ -53,6 +53,99 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== Service Areas (index) - Match service.html style ===== */
+#service-areas .section-subtitle{
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--green, #0d883d);
+  font-size: 1.2rem;
+  text-align:center;
+  margin-bottom: 12px;
+}
+#service-areas .section-title{
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+  font-weight: 800;
+  color: var(--orange-2, #c67200);
+  text-align:center;
+  line-height:1.1;
+  font-size: clamp(28px, 4vw, 44px);
+  margin-bottom: 18px;
+}
+#service-areas .section-lead{
+  max-width: 920px;
+  margin: 0 auto 10px;
+  text-align:center;
+  color: rgba(0,0,0,.72);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+#service-areas .service-area-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-top: 26px;
+}
+#service-areas .service-area-card{
+  background: #fff;
+  border-radius: 20px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+#service-areas .service-area-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.10);
+}
+#service-areas .service-area-card h3{
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+  font-weight: 700;
+  color: var(--orange-2, #c67200);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+#service-areas .service-area-card p{
+  color: rgba(0,0,0,.68);
+  font-size: 1.45rem;
+  line-height: 1.65;
+}
+#service-areas .service-areas-cta{
+  margin-top: 40px;
+  padding: 34px 18px;
+  background: var(--orange-1, #f4a942);
+  color:#fff;
+  border-radius: 20px;
+  text-align:center;
+}
+#service-areas .service-areas-cta h3{
+  font-family: var(--ff-poppins, "Poppins", sans-serif);
+  font-weight: 800;
+  font-size: clamp(22px, 3vw, 30px);
+  margin-bottom: 10px;
+}
+#service-areas .service-areas-cta p{
+  max-width: 820px;
+  margin: 0 auto 18px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  opacity: .95;
+}
+#service-areas .service-areas-cta .cta-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration:none;
+}
+@media (max-width: 768px){
+  #service-areas .service-area-card{ padding: 18px 16px 16px; }
+  #service-areas .section-lead{ font-size: 1.5rem; }
+}
+</style>
 </head>
 
 
@@ -140,7 +233,7 @@
           </ul>
         </nav>
 
-        <a href="tel:+14168718855" class="btn">Book appointment</a>
+        <a href="javascript:void(0)" class="btn" class="btn booking-trigger" data-booking="square">Book Appointment</a>
 
         <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
           <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
@@ -186,7 +279,7 @@
                        </p>
                   </ul>
               
-                  <a href="tel:+14168718855" class="btn">📞 Book Now</a>
+                  <a href="javascript:void(0)" class="btn" class="btn booking-trigger" data-booking="square">📅 Book Appointment</a>
 
                   </div>
                 </div>
@@ -212,7 +305,7 @@
                        </p>
                   </ul>
               
-                    <a href="tel:+14168718855" class="btn">📞 Book Now</a>
+                    <a href="javascript:void(0)" class="btn" class="btn booking-trigger" data-booking="square">📅 Book Appointment</a>
                   </div>
                 </div>
               </div>
@@ -235,7 +328,7 @@
                        </p>
                   </ul>
               
-                  <a href="tel:+14168718855" class="btn">📞 Book Now</a>
+                  <a href="javascript:void(0)" class="btn" class="btn booking-trigger" data-booking="square">📅 Book Appointment</a>
                   </div>
                 </div>
               </div>
@@ -259,7 +352,7 @@
                        </p>
                   </ul>
               
-                  <a href="tel:+14168718855" class="btn">📞 Book Now</a>
+                  <a href="javascript:void(0)" class="btn" class="btn booking-trigger" data-booking="square">📅 Book Appointment</a>
                   </div>
                 </div>
               </div>
@@ -484,87 +577,67 @@
 
 
             <!-- SERVICE AREAS SECTION - NEW -->
-      <section id="service-areas" class="section">
-        <div class="container">
-          <p class="section-subtitle text-center">SERVICE AREAS</p>
-          <h2 class="h2 section-title text-center">
-            Proudly Serving Richmond Hill & York Region from Princeton Avenue
-          </h2>
+      
+<!-- SERVICE AREAS - Local SEO (Service.html style) -->
+<section class="section" id="service-areas">
+  <div class="container">
+    <p class="section-subtitle">SERVICE AREAS</p>
 
-          <p class="section-subtext">
-            Our clinic on <strong>Princeton Avenue in Richmond Hill</strong> welcomes clients from across
-            York Region and the Greater Toronto Area. We provide massage therapy, acupuncture, tuina,
-            osteopathic care, moxibustion, Bell's Palsy treatment, and breast milk duct blockage support to
-            residents of <strong>Richmond Hill, Thornhill, Vaughan, Markham, Aurora, Newmarket and the Greater Toronto Area. </strong>.
-          </p>
+    <h2 class="h2 section-title">
+      Proudly Serving Richmond Hill &amp; York Region<br>
+      from Our Princeton Avenue Clinic
+    </h2>
 
-          <div class="service-area-grid">
-            <article class="service-area-card">
-              <div class="service-area-icon">📍</div>
-              <h3 class="service-area-title">Richmond Hill (Princeton Avenue)</h3>
-              <p class="service-area-text">
-                Our main clinic is located directly on Princeton Avenue in Richmond Hill, offering
-                convenient access for local residents seeking massage therapy, acupuncture, tuina,
-                Bell's Palsy care, and breast milk duct blockage treatment.
-              </p>
-            </article>
+    <p class="section-lead">
+      Located on <strong>Princeton Avenue in Richmond Hill</strong>, Princeton Wellness Centre welcomes clients from across
+      <strong>York Region and the Greater Toronto Area</strong>.
+    </p>
 
-            <article class="service-area-card">
-              <div class="service-area-icon">📍</div>
-              <h3 class="service-area-title">Thornhill</h3>
-              <p class="service-area-text">
-                Only minutes away from Princeton Avenue – a nearby wellness option for Thornhill clients
-                looking for acupuncture, facial nerve rehabilitation, and therapeutic massage.
-              </p>
-            </article>
+    <p class="section-lead">
+      We provide massage therapy, acupuncture, tuina, osteopathic care, moxibustion, Bell&apos;s Palsy treatment, and breast milk duct blockage support to residents of
+      <strong>Richmond Hill, Thornhill, Vaughan, Markham, Aurora</strong> and <strong>Newmarket</strong>.
+    </p>
 
-            <article class="service-area-card">
-              <div class="service-area-icon">📍</div>
-              <h3 class="service-area-title">Vaughan</h3>
-              <p class="service-area-text">
-                A convenient drive for Vaughan residents seeking registered massage therapy, tuina, and
-                natural treatments at our Richmond Hill clinic.
-              </p>
-            </article>
+    <div class="service-area-grid">
+      <article class="service-area-card">
+        <h3>📍 Richmond Hill (Princeton Avenue)</h3>
+        <p>Our main clinic is located directly on Princeton Avenue in Richmond Hill, offering convenient access for local residents seeking massage therapy, acupuncture, tuina, Bell&apos;s Palsy care, and breast milk duct blockage treatment.</p>
+      </article>
 
-            <article class="service-area-card">
-              <div class="service-area-icon">📍</div>
-              <h3 class="service-area-title">Markham</h3>
-              <p class="service-area-text">
-                Quick access from Markham via major routes, ideal for clients looking for postpartum and
-                breastfeeding support, clogged milk duct treatment, and pain relief services.
-              </p>
-            </article>
+      <article class="service-area-card">
+        <h3>📍 Thornhill</h3>
+        <p>Only minutes away from Princeton Avenue — a nearby wellness option for Thornhill clients looking for acupuncture, facial nerve rehabilitation, and therapeutic massage.</p>
+      </article>
 
-            <article class="service-area-card">
-              <div class="service-area-icon">📍</div>
-              <h3 class="service-area-title">Aurora</h3>
-              <p class="service-area-text">
-                Just north along Yonge Street, our Princeton Avenue location serves Aurora residents
-                seeking holistic care including massage therapy, acupuncture, and osteopathic treatment.
-              </p>
-            </article>
+      <article class="service-area-card">
+        <h3>📍 Vaughan</h3>
+        <p>A convenient drive for Vaughan residents seeking registered massage therapy, tuina, and natural treatments at our Richmond Hill clinic.</p>
+      </article>
 
-            <article class="service-area-card">
-              <div class="service-area-icon">📍</div>
-              <h3 class="service-area-title">Newmarket</h3>
-              <p class="service-area-text">
-                A trusted destination for Newmarket clients who prefer to travel to Richmond Hill for
-                specialized Bell's Palsy therapy, tuina, and therapeutic breast milk duct care.
-              </p>
-            </article>
-          </div>
+      <article class="service-area-card">
+        <h3>📍 Markham</h3>
+        <p>Quick access from Markham via major routes, ideal for clients looking for postpartum and breastfeeding support, clogged milk duct treatment, and pain relief services.</p>
+      </article>
 
-          <div class="service-areas-cta">
-            <h3 class="cta-title">Visit Our Princeton Avenue Richmond Hill Clinic</h3>
-            <p class="cta-text">
-              Book your appointment today for massage therapy, acupuncture, tuina, moxibustion, Bell's Palsy
-              treatment, or breast milk duct blockage care.
-            </p>
-            <a href="tel:14168718855" class="cta-button">CALL 416-871-8855</a>
-          </div>
-        </div>
-      </section>
+      <article class="service-area-card">
+        <h3>📍 Aurora</h3>
+        <p>Just north along Yonge Street, our Princeton Avenue location serves Aurora residents seeking holistic care including massage therapy, acupuncture, and osteopathic treatment.</p>
+      </article>
+
+      <article class="service-area-card">
+        <h3>📍 Newmarket</h3>
+        <p>A trusted destination for Newmarket clients who prefer to travel to Richmond Hill for specialized Bell&apos;s Palsy therapy, tuina, and therapeutic breast milk duct care.</p>
+      </article>
+    </div>
+
+    <div class="service-areas-cta">
+      <h3>Visit Our Princeton Avenue Richmond Hill Clinic</h3>
+      <p>Book your appointment today for massage therapy, acupuncture, tuina, moxibustion, Bell&apos;s Palsy treatment, or breast milk duct blockage care.</p>
+      <a href="javascript:void(0)" class="cta-btn booking-trigger" data-booking="square">📅 Book Appointment</a>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -580,7 +653,7 @@
 
             <h2 class="h2 section-title">We Are open And Welcoming Patients</h2>
 
-            <a  href="tel:+14168718855" class="btn">Book appointment</a>
+            <a href="javascript:void(0)" class="btn" class="btn booking-trigger" data-booking="square">📅 Book Appointment</a>
 
           </div>
 
@@ -603,8 +676,7 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
-                  <img
-                   <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" width="1180" height="800" loading="lazy"
+                  <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" width="1180" height="800" loading="lazy"
                     alt="多伦多无痛催乳通乳按摩疗程"
                     class="img-cover">
 
@@ -725,7 +797,7 @@
                       We provide you with the best massage and acupuncture services combining traditional Chineses and Western techniques.
                   </p>
               </ul>
-                  <a href="tel:+14168718855" class="btn">📞 Book Now</a>
+                  <a href="javascript:void(0)" class="btn" class="btn booking-trigger" data-booking="square">📅 Book Appointment</a>
               </div>
 
           </div>
@@ -1015,6 +1087,77 @@
 </script>
 
 
+
+
+<!-- Square Booking Modal -->
+<div id="booking-modal" style="
+  position:fixed; inset:0; background:rgba(0,0,0,.55);
+  display:none; align-items:center; justify-content:center;
+  padding:18px; z-index:9999;
+">
+  <div style="
+    width:min(980px, 96vw);
+    height:min(86vh, 820px);
+    background:#fff; border-radius:12px;
+    overflow:hidden; position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+  ">
+    <button id="close-booking" aria-label="Close" style="
+      position:absolute; top:10px; right:10px;
+      width:38px; height:38px; border:none;
+      border-radius:10px; cursor:pointer;
+      background:rgba(0,0,0,.06);
+      font-size:18px; line-height:38px;
+      z-index:2;
+    ">✕</button>
+
+    <div id="square-appointments-modal" style="width:100%; height:100%;"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const openBtns = document.querySelectorAll('.booking-trigger');
+  const modal = document.getElementById('booking-modal');
+  const closeBtn = document.getElementById('close-booking');
+  const container = document.getElementById('square-appointments-modal');
+
+  let squareLoaded = false;
+
+  function loadSquareOnce() {
+    if (squareLoaded) return;
+    squareLoaded = true;
+
+    const sc = document.createElement('script');
+    sc.src = "https://square.site/appointments/buyer/widget/lffatdmy7gh4jw/LQ0WC42MSNC6W.js";
+    sc.async = true;
+    container.appendChild(sc);
+  }
+
+  function openModal(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    loadSquareOnce();
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
+</script>
 
 </body>
 
