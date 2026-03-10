@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page Not Found | Princeton Wellness Centre</title>
+  <meta name="description" content="The page you are looking for could not be found. Return to Princeton Wellness Centre's homepage, explore services, or contact our Richmond Hill clinic for assistance.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://www.princetonwellness.ca/404.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Page Not Found | Princeton Wellness Centre">
+  <meta property="og:description" content="This page may have been moved, renamed, or is temporarily unavailable. Visit our homepage or contact Princeton Wellness Centre for help.">
+  <meta property="og:url" content="https://www.princetonwellness.ca/404.html">
+  <meta property="og:site_name" content="Princeton Wellness Centre">
+
+  <link rel="shortcut icon" href="./assets/images/favicon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #0d883d;
+      --light-green: #10dc60;
+      --orange-1: #f4a942;
+      --orange-2: #c67200;
+      --text-dark: #2c3e50;
+      --text-light: #6c757d;
+      --white: hsl(0, 0%, 100%);
+      --hero-bg: linear-gradient(135deg, #fff4e2 0%, #ffffff 45%, #eefaf1 100%);
+      --gradient: linear-gradient(90deg, var(--light-green) 0%, var(--green) 100%);
+      --ff-roboto: "Roboto", sans-serif;
+      --ff-poppins: "Poppins", sans-serif;
+      --fs-1: clamp(4.2rem, 6vw, 7.2rem);
+      --fw-800: 800;
+      --fw-700: 700;
+      --fw-600: 600;
+      --shadow-1: 0 10px 15px rgba(0, 0, 0, 0.08);
+      --shadow-2: 0 20px 60px rgba(0, 0, 0, 0.08);
+      --radius-6: 6px;
+      --radius-24: 24px;
+      --transition: 0.25s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 10px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--ff-roboto);
+      font-size: 1.6rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background: #fff;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    .container { max-width: 1220px; margin: 0 auto; padding: 0 24px; }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      box-shadow: var(--shadow-1);
+      z-index: 1000;
+    }
+    .header-top {
+      background: var(--orange-1);
+      color: var(--white);
+      padding: 14px 0;
+      font-size: 1.4rem;
+    }
+    .header-top .container,
+    .header-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .contact-list,
+    .social-list,
+    .navbar-list {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .contact-link,
+    .social-link {
+      color: var(--white);
+      transition: var(--transition);
+    }
+    .contact-link:hover,
+    .social-link:hover { color: #f7ffe6; }
+    .header-bottom { padding: 20px 0; }
+    .logo {
+      font-family: var(--ff-poppins);
+      font-size: 2.4rem;
+      font-weight: var(--fw-800);
+      color: var(--orange-1);
+      line-height: 1.1;
+    }
+    .navbar-link {
+      color: var(--orange-1);
+      font-family: var(--ff-poppins);
+      font-weight: var(--fw-600);
+      transition: var(--transition);
+    }
+    .navbar-link:hover { color: var(--green); }
+    .nav-toggle-btn {
+      display: none;
+      border: 1px solid var(--orange-1);
+      background: transparent;
+      color: var(--orange-1);
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-6);
+      cursor: pointer;
+      font-size: 2.2rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn,
+    .btn-secondary,
+    .call-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: var(--radius-6);
+      font-weight: var(--fw-700);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn {
+      background: var(--gradient);
+      color: var(--white);
+      box-shadow: 0 10px 28px rgba(13, 136, 61, 0.18);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--green);
+      border: 1px solid rgba(13, 136, 61, 0.2);
+    }
+    .call-btn {
+      background: rgba(244, 169, 66, 0.12);
+      color: var(--orange-2);
+      border: 1px solid rgba(198, 114, 0, 0.18);
+    }
+
+    .notfound-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 190px 0 90px;
+      background: var(--hero-bg);
+      position: relative;
+      overflow: hidden;
+    }
+    .notfound-section::before,
+    .notfound-section::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(10px);
+      opacity: 0.45;
+      pointer-events: none;
+    }
+    .notfound-section::before {
+      width: 320px;
+      height: 320px;
+      background: rgba(244,169,66,0.18);
+      top: -80px;
+      left: -100px;
+    }
+    .notfound-section::after {
+      width: 260px;
+      height: 260px;
+      background: rgba(16,220,96,0.12);
+      right: -80px;
+      bottom: -60px;
+    }
+    .notfound-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      font-family: var(--ff-poppins);
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: var(--fw-700);
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+    .error-code {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      font-family: var(--ff-poppins);
+      font-size: 1.5rem;
+      font-weight: var(--fw-700);
+      color: var(--orange-2);
+    }
+    .notfound-title {
+      font-family: var(--ff-poppins);
+      font-size: var(--fs-1);
+      line-height: 1.02;
+      color: var(--orange-2);
+      margin-bottom: 18px;
+    }
+    .notfound-text {
+      font-size: 1.9rem;
+      color: var(--text-light);
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+    .notfound-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .helper-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 620px;
+    }
+    .helper-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      color: var(--green);
+      font-weight: var(--fw-700);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+    .notfound-card {
+      background: var(--white);
+      border-radius: var(--radius-24);
+      padding: 28px;
+      box-shadow: var(--shadow-2);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .graphic-404 {
+      width: 100%;
+      min-height: 360px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(244,169,66,0.10), rgba(16,220,96,0.10));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .graphic-404 span {
+      font-family: var(--ff-poppins);
+      font-size: clamp(8rem, 16vw, 15rem);
+      line-height: 1;
+      font-weight: var(--fw-800);
+      color: var(--orange-2);
+      letter-spacing: -0.05em;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .info-box {
+      background: #faf8f3;
+      border-radius: 16px;
+      padding: 16px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .info-box strong {
+      display: block;
+      font-family: var(--ff-poppins);
+      color: var(--orange-2);
+      font-size: 1.65rem;
+      margin-bottom: 6px;
+    }
+
+    .footer-top {
+      background: #8d5f0e;
+      color: var(--white);
+      padding: 80px 0 40px;
+    }
+    .footer-top .container {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+    .footer-brand .logo {
+      color: #fff;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .footer-text { color: rgba(255,255,255,0.88); margin-bottom: 20px; }
+    .footer-list { display: grid; gap: 12px; }
+    .footer-list-title {
+      font-family: var(--ff-poppins);
+      font-size: 2rem;
+      font-weight: var(--fw-700);
+      margin-bottom: 18px;
+    }
+    .footer-link,
+    .footer address a {
+      color: rgba(255,255,255,0.9);
+      transition: var(--transition);
+    }
+    .footer-link:hover,
+    .footer address a:hover { color: #fff; }
+    .footer-bottom {
+      background: #724a05;
+      color: rgba(255,255,255,0.9);
+      padding: 16px 0;
+    }
+    .footer-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom a { color: #fff; }
+
+    @media (max-width: 1100px) {
+      .notfound-grid,
+      .footer-top .container { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 991px) {
+      .nav-toggle-btn { display: inline-flex; }
+      .navbar {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 16px;
+        right: 16px;
+        background: #fff;
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        box-shadow: 0 16px 36px rgba(0,0,0,.08);
+        display: none;
+      }
+      .navbar.active { display: block; }
+      .navbar-list { display: block; width: 100%; }
+      .navbar-link {
+        display: block;
+        width: 100%;
+        padding: 18px 20px;
+        border-bottom: 1px solid #e9e9e9;
+        color: #333;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+      }
+      .header-top .container { flex-direction: column; }
+      .contact-list { flex-wrap: wrap; justify-content: center; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 18px; }
+      .helper-links, .info-grid { grid-template-columns: 1fr; }
+      .notfound-title { font-size: 4.4rem; }
+      .notfound-actions { flex-direction: column; align-items: stretch; }
+      .graphic-404 { min-height: 260px; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <ul class="contact-list">
+          <li><a href="mailto:info@princetonwellness.ca" class="contact-link">info@princetonwellness.ca</a></li>
+          <li><a href="tel:+14168718855" class="contact-link">416-871-8855</a></li>
+        </ul>
+        <ul class="social-list">
+          <li><a href="https://www.facebook.com/princetonwellness.ca" class="social-link" aria-label="Facebook">Facebook</a></li>
+          <li><a href="https://www.instagram.com/princetonwellness.ca" class="social-link" aria-label="Instagram">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <a href="index.html" class="logo">Princeton Wellness Centre</a>
+
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="service.html" class="navbar-link">Services</a></li>
+            <li><a href="about.html" class="navbar-link">About Us</a></li>
+            <li><a href="blog.html" class="navbar-link">Blog</a></li>
+            <li><a href="contact.html" class="navbar-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div style="display:flex;align-items:center;gap:14px;">
+          <a href="index.html" class="btn">Back Home</a>
+          <button class="nav-toggle-btn" id="nav-toggle" aria-label="Toggle Menu">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="notfound-section" aria-label="404 page not found">
+      <div class="container">
+        <div class="notfound-grid">
+          <div>
+            <p class="eyebrow">Page Not Found</p>
+            <span class="error-code">Error 404</span>
+            <h1 class="notfound-title">Sorry, this page could not be found.</h1>
+            <p class="notfound-text">The page may have been moved, renamed, or the link may be outdated. You can return to the Princeton Wellness Centre homepage, explore our services, or contact our Richmond Hill clinic for help.</p>
+
+            <div class="notfound-actions">
+              <a href="index.html" class="btn">Go to Homepage</a>
+              <a href="service.html" class="btn-secondary">Browse Services</a>
+              <a href="tel:+14168718855" class="call-btn">Call 416-871-8855</a>
+            </div>
+
+            <div class="helper-links">
+              <a href="about.html">About Princeton Wellness Centre <span>→</span></a>
+              <a href="contact.html">Contact & Directions <span>→</span></a>
+              <a href="acupuncture.html">Acupuncture <span>→</span></a>
+              <a href="massage.html">Massage Therapy <span>→</span></a>
+            </div>
+          </div>
+
+          <div class="notfound-card">
+            <div class="graphic-404"><span>404</span></div>
+            <div class="info-grid">
+              <div class="info-box">
+                <strong>Open 7 Days</strong>
+                <span>Monday to Sunday, 8:00AM - 10:00PM.</span>
+              </div>
+              <div class="info-box">
+                <strong>Richmond Hill Clinic</strong>
+                <span>11 Princeton Ave, Richmond Hill, ON L4S 2E2.</span>
+              </div>
+              <div class="info-box">
+                <strong>Online Booking</strong>
+                <span>Use the homepage or contact page to access booking quickly.</span>
+              </div>
+              <div class="info-box">
+                <strong>Need Help?</strong>
+                <span>Email info@princetonwellness.ca for assistance.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Princeton Wellness Centre.</a>
+          <p class="footer-text">We provide professional massage, acupuncture, and traditional wellness therapies, combining Eastern wisdom with modern hands-on care.</p>
+          <p class="footer-text">Monday - Sunday: 8:00AM - 10:00PM</p>
+        </div>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Other Links</p></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="service.html" class="footer-link">Services</a></li>
+          <li><a href="blog.html" class="footer-link">Latest Blog</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Our Services</p></li>
+          <li><a href="massage.html" class="footer-link">Massage</a></li>
+          <li><a href="osteopathy.html" class="footer-link">Osteopathy</a></li>
+          <li><a href="tuina.html" class="footer-link">Tuina</a></li>
+          <li><a href="acupuncture.html" class="footer-link">Acupuncture</a></li>
+          <li><a href="moxibustion.html" class="footer-link">Moxibustion</a></li>
+          <li><a href="bellpalsy.html" class="footer-link">Bell's Palsy Treatment</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Contact Us</p></li>
+          <li><address><a href="https://www.google.com/maps/dir//11+Princeton+Ave,+Richmond+Hill,+ON+L4S+2E2" target="_blank" rel="noopener noreferrer">11 Princeton Ave<br>Richmond Hill, ON L4S 2E2</a></address></li>
+          <li><a href="tel:+14168718855" class="footer-link">416-871-8855</a></li>
+          <li><a href="mailto:info@princetonwellness.ca" class="footer-link">info@princetonwellness.ca</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Princeton Wellness Centre. Powered by <a href="https://www.plansale.ca" target="_blank" rel="noopener noreferrer">Plansale</a></p>
+        <div><a href="index.html">Home</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navbar = document.getElementById('navbar');
+    if (navToggle && navbar) {
+      navToggle.addEventListener('click', () => navbar.classList.toggle('active'));
+      document.querySelectorAll('.navbar-link').forEach(link => {
+        link.addEventListener('click', () => navbar.classList.remove('active'));
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 30) {
+        header.style.background = 'rgba(255,255,255,.96)';
+        header.style.backdropFilter = 'blur(12px)';
+      } else {
+        header.style.background = '#fff';
+        header.style.backdropFilter = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
